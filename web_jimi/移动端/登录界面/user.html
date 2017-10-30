@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<title>用户列表</title>
+		<link rel="stylesheet" href="css/pullToRefresh.css"/>
+
+		<link href="css/style3.css" rel="stylesheet" type="text/css" />
+		<style>
+			
+			.user-list{
+
+			}
+			.user-list li{
+				border-bottom:1px solid #dad9d9;
+				padding: 1rem;
+			}
+			.user-list li img{
+				width:3.5rem;
+				height:3.5rem;
+				border-radius: 50%;
+				float: left;
+
+			}
+			.user-txt{
+				padding-left: 0.5rem;
+				float: left;
+
+			}
+			.user-txt1{
+				color:#322f30;
+				line-height: 2rem;
+			}
+			.user-txt2{
+				color:#a49aa5;
+				font-size: 0.8rem;
+			}
+			.user-time{
+				float:right;
+				color:#a49aa5;
+				font-size: 0.8rem;
+			}
+			#scroller li{
+				height: auto;
+			}
+		</style>
+	</head>
+
+	<body class="warper">
+		<header class="brand-title">
+			<a class="title-btn" href="javascript:history:back;"><img src="images/arrow03.png"></a>
+			用户列表
+		</header>
+		<div id="wrapper">
+			<ul class="user-list">
+				<li class="clearfix">
+					<img src="images/banner01.jpg" />
+					<div class="user-txt">
+						<p class="user-txt1">李文</p>
+						<p class="user-txt2">22张图片</p>
+					</div>
+					<div class="user-time">2017-03-25 15:50:46</div>
+				</li>
+				<li class="clearfix">
+					<img src="images/banner01.jpg" />
+					<div class="user-txt">
+						<p class="user-txt1">李文</p>
+						<p class="user-txt2">22张图片</p>
+					</div>
+					<div class="user-time">2017-03-25 15:50:46</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="js/iscroll.js"></script>
+	<script src="js/pullToRefresh.js"></script>
+	<script >
+		refresher.init({
+			id:"wrapper",
+			pullDownAction:Refresh,
+			pullUpAction:Load
+		});
+		function Refresh() {
+			setTimeout(function () {	
+					
+				myScroll.refresh();
+			}, 1000);
+		}
+
+		function Load() {
+			setTimeout(function () {
+				
+				myScroll.refresh();
+			}, 1000);
+		}
+	</script>
+</html>

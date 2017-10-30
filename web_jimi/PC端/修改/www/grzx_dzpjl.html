@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>个人中心</title>
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="css/tal.css?v=0.02" rel="stylesheet" type="text/css"/>
+<link href="css/index.css" rel="stylesheet" type="text/css"/>
+<link href="css/foot.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="js/foot.js"></script>
+<style>
+html,body{
+width:100%;
+height:auto;
+background-color:#f5f5f5;
+}
+.djjb img{
+width:3.5em;
+height:3.5em;
+}
+.djjb{
+line-height:3.5em;
+}
+.lbtn1{
+padding:0.3em 0.5em;
+margin:1em 0em;
+margin-right:0.5em;
+height:1.3em;
+background-color:#f61d4b;
+line-height:1.3em;
+color:#fff;
+font-size:0.9em;
+border-radius:.3em;
+border:0.1em solid #f61d4b;
+}
+.lbtn2{
+padding:0.3em 0.5em;
+margin:1em 0em;
+height:1.3em;
+background-color:#fff;
+line-height:1.3em;
+color:#f61d4b;
+font-size:0.9em;
+border-radius:.3em;
+border:0.1em solid #f61d4b;
+}
+
+.yzok{
+z-index:100;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+top:0em;
+left:0em;
+background-image:url(./img/grzx/sy01.png);
+background-position:85% center;
+background-repeat:no-repeat;
+background-size:auto 80%;
+}
+
+.yzmbox{
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+z-index:1500;
+top:0em;
+left:0em;
+}
+.yzmbox .rwmb{
+width:65%;
+max-width:15em;
+height:auto;
+margin:0em auto;
+}
+.yzm1{
+background-image:url(./img/grzx/yz01.png);
+background-position:center bottom;
+background-repeat:no-repeat;
+background-size:100% auto;
+background-color:#f61d4b;
+height:3em;
+line-height:2.5em;
+text-align:center;
+border-radius:.6em .6em 0em 0em;
+color:#fff;
+font-size:1.2em;
+}
+.yzm2{
+padding:0em 0.8em 0.8em 0.8em;
+text-align:center;
+background-color:#fff;
+font-size:0.9em;
+color:#666;
+line-height:130%;
+}
+.yzm2 img{
+width:60%;
+}
+.yzm3{
+background-color:#1075cf;
+height:1em;
+text-align:center;
+border-radius:0em 0em .6em .6em;
+color:#fff;
+font-size:0.8em;
+padding:0.5em;
+}
+</style>
+</head>
+<body>
+<div class="topSdiv" style="height:3em;">
+  <div class="topSdiv_T boxu boxu-h" style="">
+    <div sbjgbg="#f5f5f5" onclick="goback()" class="goback01"></div>
+    <div class="boxbf1 tb1 tc">活动奖品</div>
+	<div class="goback00"></div>
+  </div>
+</div>
+<!--没有内容开始-->
+<div class="tbox boxu boxu-s pos3" style="display:">
+  <div class="m5">
+    <div class="divmargin imgw1" style="width:16em;"><img src="img/grzx/no02.png"></div>
+	<div class="tc tcol-w6 ts-1d2">您还没有中奖记录！</div>
+  </div>
+  <div sbjgbg="#c71439" class="divmargin notbtncs" >立即参与</div>
+</div>
+<!--没有内容结束-->
+
+<!--有内容开始-->
+<div class="divmargin boxu boxu-s p4 bj-w1 mb3 pos3">
+  <div class="divmargin mb3 bx0 tline3 go0 tcol-w8 tzt2">中奖时间 16/07/06</div>
+  <div class="boxu boxu-h djjb">
+    <div class="mr4" ><img src="./img/grzx/dzp.png"></div>
+	<div class="boxbf1 mt4 tline2 ts-0d9 tzt3" style="">
+	  <p class="tb1">一等奖</p>
+	  <p class="tcol-r1 ts-0d8">高档空调电风扇</p>
+	</div>
+	<div onclick="openyzM(this.parentNode)" class="lbtn1">立即使用</div>
+	<div onclick="gotourl('grzx_dzpjl_com.html')" class="lbtn2 ">使用说明</div>
+  </div>
+  <div class="pos1 yzok "></div>
+  <!--兑奖二维码开始-->
+  <yzB class="pos2 yzmbox boxu boxu-s" onclick="openyzM(this)" style="display:none;">
+    <div class="boxbf1"></div>
+	<div class="rwmb">
+	  <div class="yzm1 tzt3">兑奖二维码</div>
+	  <div class="yzm2 imgw1">
+	    <p class="mb3"><img src="./img/grzx/rwm.jpg"></p>
+	    <p>扫描二维码即可兑奖</p>
+	    <p>此二维码为商家扫码验证</p>
+	    <p class="tcol-r1">不要自己扫哦，会领不到奖品的哦</p>
+	  </div>
+	  <div class="yzm3 tzt3">客服电话 : 4001231234</div>
+	</div>
+	<div class="boxbf1"></div>
+  </yzB>
+  <!--兑奖二维码结束-->
+</div>
+
+
+<div class="divmargin boxu boxu-s p4 bj-w1 mb3 pos3">
+  <div class="divmargin mb3 bx0 tline3 go0 tcol-w8 tzt2">中奖时间 16/07/06</div>
+  <div class="boxu boxu-h djjb">
+    <div class="mr4" ><img src="./img/grzx/dzp.png"></div>
+	<div class="boxbf1 mt4 tline2 ts-0d9 tzt3" style="">
+	  <p class="tb1">一等奖</p>
+	  <p class="tcol-r1 ts-0d8">高档空调电风扇</p>
+	</div>
+	<div onclick="openyzM(this.parentNode)" class="lbtn1">立即使用</div>
+	<div onclick="gotourl('grzx_dzpjl_com.html')" class="lbtn2 ">使用说明</div>
+  </div>
+  <div class="pos1 yznot "></div>
+  <!--兑奖二维码开始-->
+  <yzB class="pos2 yzmbox boxu boxu-s" onclick="openyzM(this)" style="display:none;">
+    <div class="boxbf1"></div>
+	<div class="rwmb">
+	  <div class="yzm1 tzt3">兑奖二维码</div>
+	  <div class="yzm2 imgw1">
+	    <p class="mb3"><img src="./img/grzx/rwm.jpg"></p>
+	    <p>扫描二维码即可兑奖</p>
+	    <p>此二维码为商家扫码验证</p>
+	    <p class="tcol-r1">不要自己扫哦，会领不到奖品的哦</p>
+	  </div>
+	  <div class="yzm3 tzt3">客服电话 : 4001231234</div>
+	</div>
+	<div class="boxbf1"></div>
+  </yzB>
+  <!--兑奖二维码结束-->
+</div>
+
+<!--有内容结束-->
+
+</body>
+</html>
+<script>
+var btnnn=5;
+getlink();//按钮鼠标经过样式
+setFootbtn();
+//window.addEventListener('load', pageLoadok, false);
+
+function openyzM(e){
+  var Td=e.parentNode;
+  var yzB=Td.getElementsByTagName("yzB")[0];
+    if(yzB.style.display=='none'){
+		yzB.style.display='';
+	}else{
+		yzB.style.display='none';
+	}
+}
+</script>

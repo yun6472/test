@@ -1,0 +1,158 @@
+
+.show-header{
+	background-color: #3fa9f5;
+	line-height: 3rem;
+	height: 3rem;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+}
+.show-header a{
+	width: 4.75rem;
+	text-align: center;
+	line-height: 1;
+	font-size: 0.8125rem;
+	color: #fff;
+}
+.show-header .reHeader-btn1 img{
+	width: 0.7rem;
+	position: relative;
+	top: 0.2rem;
+}
+.show-header .reHeader-btn2{
+	text-align: center;
+	line-height: 1;
+	font-size: 0.8125rem;
+	color:#fff;
+}
+.show-header .reHeader-btn1 span{
+	float: right;
+	padding-right: 1.2rem;
+}
+.reHeader-btn2 img{
+	width: 1.6rem;
+	vertical-align: sub;
+}
+.show-tab{
+	padding: 1rem 0;
+	border-bottom: 1px solid #dcdddd;
+}
+.show-tab ul{
+	overflow: hidden;
+}
+.show-tab li{
+	float: left;
+	font-size: 0.875rem;
+	width: 25%;
+	text-align: center;
+	position: relative;
+}
+.show-tab li:after{
+	content: '';
+	display: block;
+	width: 1px;
+	height: 1rem;
+	background-color: #dbdbdb;
+	position: absolute;
+	right: 0;
+	top: 0.1rem;
+}
+.show-tab li:last-of-type:after{
+	width: 0;
+}
+.show-tab li.active{
+	color:#3fa9f5;
+}
+.show-tab .show-arrow{
+	display: block;
+	position: absolute;
+	width: 0.6rem;
+	height: 0.4rem;
+	background: url(../images/arrow01.png) no-repeat center;
+	background-size: cover;
+	right: 0.3rem;
+	top: 0.5rem;
+}
+.resources-txt1 img{
+	width: 1rem;
+	vertical-align: sub;
+}
+.resources-txt5{
+	position: absolute;
+	right: 0.5rem;
+	top: 1.3rem;
+	font-size: 0.6875rem;
+	color:#2c2c2c;
+	vertical-align: sub;
+}
+.resources-txt5 img{
+	width: 1.2rem;
+	padding-right: 0.2rem;
+}
+.resources-list li .resources-txt3{
+	color:#a9a9a9;
+}
+.show-detail-txt1{
+	color:#787878;
+	font-size: 0.875rem;
+	padding: 0 0.625rem;
+}
+.show-detail-tab ul{
+	overflow: hidden;
+	border-bottom: 1px solid #d1d1d1;
+	margin-top: 1rem;
+}
+.show-detail-tab li{
+	width: 33.3%;
+	float: left;
+	line-height: 3rem;
+	text-align: center;
+	font-size: 0.9375rem;
+	border-bottom: 2px solid #fff;
+}
+.show-detail-tab li.active{
+	border-bottom: 2px solid #3fa9f5;
+}
+.show-detail-content1{
+	padding: 1rem;
+}
+.show-detail-content1 li{
+	line-height: 2.5rem;
+	font-size: 0.9375rem;
+	color:#787878;
+}
+.show-detail-content1 li img{
+	width: 1.2rem;
+	vertical-align: sub;
+	margin-right: 0.5rem;
+}
+.show-detail-content1 li span{
+	color:#000;
+}
+.show-detail-content{
+	display: none;
+}
+.show-detail-content.active{
+	display: block;
+}
+
+.show-detail-list1,.show-detail-list2{
+	margin:0 0.625rem ;
+}
+
+.show-detail-list1 > li,.show-detail-list2 li{
+	padding: 1rem 0;
+	border-bottom: 1px solid #d6d6d6;
+}
+.show-detail-txt3{
+	font-size: 0.9375rem;
+}
+.show-detail-txt4{
+	color:#787878;
+	font-size: 0.75rem;
+	line-height: 1.5;
+}
+.show-detail-list2 img{
+	width: 100%;
+	margin: 0.5rem 0;
+}

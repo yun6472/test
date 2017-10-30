@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title></title>
+	<style type="text/css">
+		*{margin:0;padding:0;}
+
+		.bill-title{
+			padding-top: 1.5rem;
+			text-align: center;
+		}
+		.bill-title img{
+			width:1.5rem;
+			vertical-align: bottom;
+			padding-right: 0.5rem;
+		}
+		.bill-num{
+			font-weight: bold;
+			font-size: 2rem;
+			text-align: center;
+			padding: 1rem 0 0.5rem 0;
+		}
+		.bill-txt1{
+			text-align: center;
+			color:#a8a8a8;
+			padding-bottom: 1.5rem;
+		}
+		.bill-txt2{
+			overflow: hidden;
+			padding:0 1em;
+			color:#656565;
+			padding-bottom: 2rem;
+		}
+		.bill-txt3{
+			float:left;
+		}
+		.bill-txt4{
+			float:right;
+		}
+		.bill-txt5{
+			text-align: center;
+			color:#128fe9;
+		}
+	</style>
+</head>
+<body>
+	<div class="bill">
+		<h3 class="bill-title"><img src="images/icon04.png" />天弘基金管理有限公司</h3>
+		<div class="bill-num">+0.22</div>
+		<div class="bill-txt1">交易成功</div>
+		<div class="bill-txt2">
+			<div class="bill-txt3">对方账户</div>
+			<div class="bill-txt4">天弘基金管理有限公司</div>
+		</div>
+		<div class="bill-txt2">
+			<div class="bill-txt3">创建时间</div>
+			<div class="bill-txt4">2016-12-03 04:23</div>
+		</div>
+		<div class="bill-txt5">对此订单有疑问</div>
+	</div>
+</body>
+<script type="text/javascript">
+	/*var scope = "global scope";
+	function checkcope(){
+		var scope = "local scope";
+		function f(){
+			return scope;
+		}
+		return f;
+	}
+	console.log(checkcope()());*/
+	var a = [];
+	for (var i = 0; i < 10; i++) {
+	  a[i] = function () {
+	    console.log(i);
+	  };
+	}
+	a[6](); // 10
+</script>
+</html>

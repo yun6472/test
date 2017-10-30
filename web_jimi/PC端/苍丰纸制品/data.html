@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>苍丰纸制品</title>
+		<link rel="stylesheet" href="css/detail.css">
+		<style type="text/css">
+			.footer{
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="header clearfix">
+			<div class="header-content clearfix">
+				<a href="index.html"><img class="logo" src="images/logo.png" /></a>
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="aboutUs.html">关于我们</a></li>
+					<li><a href="group.html">纸板团购</a></li>
+					<li><a href="order.html">我的订单</a></li>
+				</ul>
+				<div class="header-right">
+					<a class="header-txt1" href="javascript:void(0);">登录</a>|
+					<a href="register.html">注册</a>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="container clearfix">
+			<div class="nav2">
+				<ul class="clearfix">
+					<li>纸板团购</li>
+					<li>我的订单</li>
+					<li>购物车</li>
+					<li>购买须知</li>
+					<li class="active">地址管理</li>
+				</ul>
+			</div>
+			<div class="content-r">
+				<div class="data-title"><span>材料：B=C(美牛)</span>  <span>层数：5层</span>  <span>瓦楞：BC瓦</span></div>
+				<div class="data-content clearfix">
+					<p class="data-txt1">箱型：<span class="active">普通</span></p>
+					<p class="data-txt1">压线方式：<span  class="active">普通压线</span><span>内压</span></p>
+					<div class="data-txt2">纸箱规格：
+						<input class="data-btn1" type="text" placeholder="cm" />X
+						<input class="data-btn1" type="text" placeholder="cm" />X
+						<input class="data-btn1" type="text" placeholder="cm" />
+					</div>
+					<div class="data-txt2">纸箱规格：
+						<input class="data-btn1" type="text" placeholder="cm" />X
+						<input class="data-btn1" type="text" placeholder="cm" />
+						<span>（规格单位：厘米）</span>
+					</div>
+					<div class="data-txt2">成型方式：
+						<select class="data-btn2">
+							<option>111</option>
+						</select>
+					</div>
+					<div class="data-txt2">数　　量：
+						<input class="data-btn1" type="text" placeholder="只" />X片
+					</div>
+					<div class="data-txt2">横向公式：
+						<input class="data-btn1" type="text" placeholder="3.5" />+长+宽+长+宽
+					</div>
+					<div class="data-txt2">纵向公式： (宽+
+						<input class="data-btn1" type="text" placeholder="0.4" />/2+高+(宽+
+						<input class="data-btn1" type="text" placeholder="0.4" />)/2 
+					</div>
+					<div class="data-txt2">横向压线：
+						<input class="data-btn2" type="text" placeholder="横向不压线" />X片
+					</div>
+					<div class="data-txt2">纵向压线：
+						<input class="data-btn2" type="text" placeholder="" />X片
+					</div>
+					<p class="data-txt3">本单合计面积：<span>0</span>平方，您已经赚：<span>0</span>元 </p>
+					<p class="data-txt3">支付金额：<span>￥0</span> <br />运费：温州地区包运费</p>
+					<input class="data-btn3" type="submit" value="加入购物车" />
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<ul class="clearfix">
+				<li>
+					<a href="aboutUs.html">关于我们</a>
+				</li>
+				<li>
+					<a href="group.html">纸板团购</a>
+				</li>
+				<li>
+					<a href="address.html">地址管理</a>
+				</li>
+				<li>
+					<a href="contacts.html">联系我们</a>
+				</li>
+			</ul>
+			<p class="footer-txt1">Copyright © 2006-2017 温州苍丰纸制品　浙ICP备11017824号-4</p>
+		</div>
+
+		<div class="mask"></div>
+		<div class="join">
+			<img src="images/logo.png" />
+			<p class="join-txt1">使用手机号码/邮箱登录</p>
+			<div class="join-btn1">
+				<input type="text" />
+				<p>输入手机号或邮箱</p>
+			</div>
+			<div class="join-btn1">
+				<input type="text" />
+				<p>密码</p>
+			</div>
+			<input class="join-btn2" type="submit" value="登录" />
+			<a class="join-txt2" href="##">忘记密码&gt;&gt;</a>
+			<span class="join-txt3">还没有账号？</span>
+			<a class="join-txt2" href="register.html">点击注册&gt;&gt;</a>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script >
+			$(function(){
+				//登录页面
+				$(".header-txt1").click(function(){
+					$(".mask").show();
+					$(".join").show();
+				})
+				$(".mask").click(function(){
+					$(".mask").hide();
+					$(".join").hide();
+				})
+				$(".join-btn1 p").click(function() {
+					$(this).hide();
+					$(this).siblings("input").focus();
+				});
+				$(".join-btn1 input").blur(function() {
+					if($(this).val() == ""){
+						$(this).siblings("p").show();
+					}
+				});
+
+
+			})
+		</script>
+	</body>
+</html>

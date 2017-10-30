@@ -1,0 +1,156 @@
+/* reset */
+html,blockquote,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul,section,body {margin:0;padding:0}
+ol,ul {list-style:none}
+a {text-decoration:none}
+fieldset,img {border:0}
+:focus{outline: none;}
+input[type="button"], input[type="submit"], input[type="reset"] {
+	-webkit-appearance: none;
+}
+textarea {  -webkit-appearance: none;}
+.clearfix:after{
+	content:"";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix{
+	zoom:1;
+}
+
+
+.banner{
+	width:100%;
+}
+.banner img{
+	width:100%;
+}
+.list-txt1{
+	border:0 none;
+	font-size: 14px;
+	padding: 4% 3%;
+}
+.list-cell1{
+	padding:0 3%;
+	line-height: 40px;
+	position: relative;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #f1f1f1;
+}
+.list-txt2{
+	border:0 none;
+	color:#b1b0b0;
+	font-size: 14px;
+	float: left;
+}
+.list-img1{
+	float:right;
+	width:8%;
+	position: relative;
+	top:5px;
+}
+.list-cell1:before{
+	content: '';
+	position: absolute;
+	width:1px;
+	height: 38px;
+	top:1px;
+	right:20%;
+	background: #f6f6f6;
+}
+.list-cell2{
+	padding:4% 3% 2.5%;
+	position: relative;
+	border-bottom: 1px solid #f1f1f1;
+	border-top: 1px solid #f1f1f1;
+	margin-top: 8px;
+}
+.list-cell2:before{
+	content: '';
+	position: absolute;
+	width:100%;
+	height: 7px;
+	top: -8px;
+	left: 0;
+	background: #faf9f9;
+}
+.list-txt3{
+	float: left;
+	font-size: 14px;
+	margin-right: 3%;
+}
+.list-txt4{
+	font-size: 14px;
+	float: left;
+	border:0 none;
+	color: #b1b0b0;
+}
+.list-img2{
+	width:8%;
+	float: right;
+	vertical-align: center;
+}
+.listd-cell{
+	padding:4% 4% 8%;
+	border-bottom: 1px solid #e4e4e4;
+}
+.listd-cell img{
+	float:left;
+	width:40%;
+}
+.listd-txt1{
+	float:left;
+	width: 55%;
+	padding-left: 3%;
+	overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+	top: -3px;
+	font-size: 14px;
+	text-overflow: ellipsis;
+}
+.listd-txt2{
+	float:left;
+	width:55%;
+	font-size: 12px;
+	color:#999;
+	padding: 2% 0 0 3%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.listd-txt4{
+	float:left;
+	width:55%;
+	font-size: 12px;
+	color: #ff5959;
+	padding: 2% 0 0 3%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.listd-txt4 img{
+	width:14px;
+	position: relative;
+	top: 1px;
+}
+.header{
+	padding:3%;
+	background: #f8f8f8;
+	border-bottom: 1px solid #e1e1e1;
+	border-top: 1px solid #e1e1e1;
+}
+.header img{
+	width:14px;
+	position: relative;
+	top: 1px;
+}
+.header .listd-txt3{
+	font-size: 14px;
+
+}
+.header .listd-txt3 b{
+	font-weight: normal;
+	color:#ff5151;
+}

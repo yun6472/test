@@ -1,0 +1,121 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+		<title>商城名称</title>
+		<link rel="stylesheet" type="text/css" href="css/web.css">
+	</head>
+
+	<body>
+		<div id="content">
+			<header>
+				<h1>商城名称</h1>
+			
+			</header>
+			<!-- 热销爆款 -->
+			<section class="floor">
+				<div class="hot-keys">
+					<a class="on" href="##">皮鞋</a>
+					<a href="##">测试</a>
+				</div>
+
+				<!--轮播图-->
+				<div class="flexslider clearfix">
+					<ul class="slides">
+						<li>
+							<a href="##" ><img src="images/pic02.jpg" /></a>
+						</li>
+						<li>
+							<a href="##" ><img src="images/pic02.jpg" /></a>
+						</li>
+						<li>
+							<a href="##" ><img src="images/pic02.jpg" /></a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="floor2 clearfix">
+				<div class="pic">
+					<a href="##"><img src="images/pic01.jpg"></a>
+				</div>
+				<div class="title">
+					<a href="##">俊斯特-7819-1</a>
+				</div>
+				<div class="price clearfix">
+					<b>折扣价：258元</b>
+					<span>原价：860元</span>
+				</div>
+			</section>
+			<section class="floor3">
+				<div class="for-item">
+					<div class="item-wrap">
+						<a href="##">
+							<div class="pic"><img alt="俊斯特-7819-1" title="俊斯特-7819-1" src="images/pic01.jpg"></div>
+							<div class="title">俊斯特-7819-1</div>
+							<div class="price">
+								<b>折扣价：258元</b>
+								<span>原价：860元</span>
+							</div>
+						</a>
+					</div>
+					<div class="item-wrap">
+						<a href="##">
+							<div class="pic"><img alt="俊斯特-7819-1" title="俊斯特-7819-1" src="images/pic01.jpg"></div>
+							<div class="title">俊斯特-7819-1</div>
+							<div class="price">
+								<b>折扣价：258元</b>
+								<span>原价：860元</span>
+							</div>
+						</a>
+					</div>
+					<div class="item-wrap">
+						<a href="##">
+							<div class="pic"><img alt="俊斯特-7819-1" title="俊斯特-7819-1" src="images/pic01.jpg"></div>
+							<div class="title">俊斯特-7819-1</div>
+							<div class="price">
+								<b>折扣价：258元</b>
+								<span>原价：860元</span>
+							</div>
+						</a>
+					</div>
+					<div class="item-wrap">
+						<a href="##">
+							<div class="pic"><img alt="俊斯特-7819-1" title="俊斯特-7819-1" src="images/pic01.jpg"></div>
+							<div class="title">俊斯特-7819-1</div>
+							<div class="price">
+								<b>折扣价：258元</b>
+								<span>原价：860元</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/jquery.fontflex.js"></script>
+		<script type="text/javascript" src="js/owl.carousel.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('html').fontFlex(10, 32, 20);
+
+				$(".flexslider").flexslider({
+					slideshowSpeed: 4000, //展示时间间隔ms
+					animationSpeed: 400, //滚动时间ms
+					touch: true //是否支持触屏滑动
+				});
+				$(".hot-keys a").click(function(event) {
+					$(".hot-keys a").removeClass('on');
+					$(this).addClass('on');
+				});
+			});
+		</script>
+	</body>
+
+</html>

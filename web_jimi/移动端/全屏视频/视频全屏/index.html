@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/video.css">
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <video class="video1"  autoplay="autoplay"  preload="auto"  webkit-playsinline="true">
+                    <source src="images/glasses.mp4" type="video/mp4">
+                </video>
+
+                <img class="video-img1" src="images/video01.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <div id="container">
+                    <video id="background_video" loop muted></video>
+                    <div id="video_cover"></div>
+                    <div id="overlay"></div>
+
+                    <div id="video_controls">
+                        <span id="play">
+                            <img src="images/play.png">
+                        </span>
+                        <span id="pause">
+                            <img src="images/pause.png">
+                        </span>
+                    </div>
+
+                    <section id="main_content">
+                    </section>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img class="video-img2" src="images/video02.jpg" />
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/bideo.js"></script>
+    <script>
+    var  videoHeight = document.body.clientHeight - document.querySelector(".video1").offsetHeight
+    document.querySelector(".video-img1").style.height = videoHeight +"px";
+    document.querySelector(".video-img1").style.height = videoHeight +"px";
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        grabCursor: true,
+        centeredSlides: true,
+        direction : 'vertical',
+        paginationType : 'progress',
+        slidesPerView: 'auto'
+    });
+    
+
+    (function () {
+      var bv = new Bideo();
+      bv.init({
+        videoEl: document.querySelector('#background_video'),
+        container: document.querySelector('body'),
+        resize: true,
+        // autoplay: false,
+        isMobile: window.matchMedia('(max-width: 640px)').matches,
+        playButton: document.querySelector('#play'),
+        pauseButton: document.querySelector('#pause'),
+        src: [
+          {
+            src: 'images/glasses.mp4',
+            type: 'video/mp4'
+          }/*,
+          {
+            src: 'glasses.webm',
+            type: 'video/webm;codecs="vp8, vorbis"'
+          }*/
+        ],
+        onLoad: function () {
+          document.querySelector('#video_cover').style.display = 'none';
+        }
+      });
+    }());
+
+    </script>
+</body>
+</html>

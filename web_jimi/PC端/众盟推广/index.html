@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+		<title>首页 - 众盟推广平台</title>
+		<link rel="stylesheet" href="css/detail.css">
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="container-fluid clearfix">
+				<a class="nav-lo" href="##"></a>
+				<ul class="navbar-left">
+					<li><a class="active" href="index.html">首页</a></li>
+					<li><a href="count.html">统计</a></li>
+				</ul>
+				<a href="##" class="logout">注销</a>
+			</div>
+		</div>
+		<div class="accountDIv">
+			<ul class="clearfix">
+				<li class="redbg">
+					<div class="accountTitle">
+						<span>账户余额</span>
+						<span class="title-en">Balance</span>
+					</div>
+					<div class="accountBody">
+						<span class="accountBig">145.09</span>
+						<span class="currency-unit">CPM</span>
+					</div>
+				</li>
+				<li>
+					<div class="accountTitle">
+						<span>今日消费</span>
+						<span class="title-en">Cost</span>
+					</div>
+					<div class="accountBody">
+						<span >145.09</span>
+						<span class="currency-unit">CPM</span>
+					</div>
+				</li>
+				<li>
+					<div class="accountTitle">
+						<span>投放进度</span>
+						<span class="title-en">Progress</span>
+					</div>
+					<div class="accountBody">
+						<span>145.09</span>
+						<span class="currency-unit">CPM</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="main clearfix">
+			<ul class="nav2 clearfix">
+				<li>
+					<p class="nav2-txt1">曝光次数</p>
+					<p class="nav2-txt2">0次</p>
+				</li>
+				<li>
+					<p class="nav2-txt1">曝光次数</p>
+					<p class="nav2-txt2">0次</p>
+				</li>
+				<li>
+					<p class="nav2-txt1">曝光次数</p>
+					<p class="nav2-txt2">0次</p>
+				</li>
+			</ul>
+			<table class="nav-date">
+				<tbody>
+					<tr>
+						<td class="stats-date">今天</td>
+						<td>昨天</td>
+					</tr>
+					<tr>
+						<td class="active">最近7天</td>
+						<td>最近30天</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="container"></div>
+	
+
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/highcharts.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#container').highcharts({
+			        chart: {
+			            type: 'line'
+			        },
+			        title: {
+			            text: '众盟推广'
+			        },
+			        xAxis: {
+			            categories: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+			        },
+			        yAxis: {
+			            title: {
+			                text: ''
+			            }
+			        },
+			        plotOptions: {
+			            line: {
+			                dataLabels: {
+			                    enabled: true
+			                },
+			                enableMouseTracking: true
+			            }
+			        },
+			        series: [{
+			            name: '曝光次数',
+			            data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+			        }, {
+			            name: '点击次数',
+			            data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+			        }, {
+			            name: '点击率',
+			            data: [3.0, 9.8, 5.9, 8.5, 1.0, 15.7, 1.9, 19.4, 4.1, 10.0, 6.0, 4.0]
+			        }]
+			    });
+
+
+
+				$(".nav-date td").not(".stats-date").click(function(event) {
+					$(".nav-date td").removeClass('active');
+					$(this).addClass('active');
+				});
+
+			})
+		</script>
+	</body>
+</html>

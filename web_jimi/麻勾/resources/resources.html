@@ -1,0 +1,140 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+		<title>麻勾工程</title>
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/resources.css">
+	</head>
+	<body>
+		<div class="warper padding-35">
+			<header class="resources-header">
+				<a class="reHeader-btn1" href="javascript:history.back();"><img src="../images/icon-arrow05.png" /></a>
+				<div class="search-content">
+					<input class="search-txt2" type="text">
+					<div class="search-warper">
+						<img src="../images/icon-search03.png" />
+						<span>搜索项目名称</span>
+					</div>
+				</div>
+				<a class="reHeader-btn2" href="resources-add.html">我要<br />发布</a>
+			</header>
+			<section class="banner swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide "><img src="../images/banner01.jpg" /></div>
+					<div class="swiper-slide"><img src="../images/banner01.jpg" /></div>
+					<div class="swiper-slide "><img src="../images/banner01.jpg" /></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</section>
+			<section class="resources-tab">
+				<ul>
+					<li class="active">全 &nbsp; &nbsp; 部</li>
+					<li>劳务分包</li>
+					<li>工程信息</li>
+					<li>机材招标</li>
+					<li>工程服务</li>
+				</ul>
+			</section>
+			<section class="resources-list">
+				<ul>
+					<li>
+						<a href="javascript:;">
+							<img class="resources-img1" src="images/list01.png" />
+							<p class="resources-txt1">中铁十二局西成高铁第三项目部 </p>
+							<p class="resources-txt2">找<span>隧道</span>队伍</p>
+							<p class="resources-txt3">陕西汉中</p>
+							<p class="resources-txt4">更新时间:2017-10-10</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img class="resources-img1" src="images/list02.png" />
+							<p class="resources-txt1">中铁十二局西成高铁第三项目部 </p>
+							<p class="resources-txt2">找<span>隧道</span>队伍</p>
+							<p class="resources-txt3">陕西汉中</p>
+							<p class="resources-txt4">更新时间:2017-10-10</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img class="resources-img1" src="images/list03.png" />
+							<p class="resources-txt1">中铁十二局西成高铁第三项目部 </p>
+							<p class="resources-txt2">找<span>隧道</span>队伍</p>
+							<p class="resources-txt3">陕西汉中</p>
+							<p class="resources-txt4">更新时间:2017-10-10</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img class="resources-img1" src="images/list04.png" />
+							<p class="resources-txt1">中铁十二局西成高铁第三项目部 </p>
+							<p class="resources-txt2">找<span>隧道</span>队伍</p>
+							<p class="resources-txt3">陕西汉中</p>
+							<p class="resources-txt4">更新时间:2017-10-10</p>
+						</a>
+					</li>
+				</ul>
+			</section>
+			<div class="mask"></div>
+			<div class="resources-dialog">
+				<p class="dialog-txt1">工程信息防骗指南</p>
+				<div class="dialog-content">
+					<p class="dialog-txt2">1.上北京签合同96%是假的。</p>
+					<p class="dialog-txt2">2.任何央企国企发包工程，要亮资要小票99%是假的。</p>
+					<p class="dialog-txt2">3.没签合同，就要钱财物送礼。百分96%是骗钱。</p>
+					<p class="dialog-txt2">4.没进场，预付款到帐前，要违约金及押金，80%工程有问题或是骗钱。</p>
+					<p class="dialog-txt2">5.议标，要送礼及钱，百分95%是骗钱物。</p>
+					<p class="dialog-txt2">6.不要本地队伍，要外地队伍，95%工程有问题或是骗钱。</p>
+					<p class="dialog-txt2">7.国防工程96%是假的。</p>
+					<p class="dialog-txt2">8.任何保密工程，98%是假的。	</p>
+					<p class="dialog-txt2">9.冒充国企央企有大项目，提出任何现金形式的保证金担保金或者预付款的都是假的！</p>
+				</div>
+				<div class="dialog-bottom">
+					<label>
+						<input class="dialog-btn1" type="checkbox"  />
+						<div class="dialog-btn2"></div>
+						<p class="dialog-txt3">下次不再提醒</p>
+					</label>
+					<input class="dialog-btn3" disabled="disabled" type="button" value="我知道了" />
+				</div>
+			</div>
+		</div>
+	</body>
+	
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/foot.js"></script>
+	<script>
+
+		//调用footer
+		setFootbtn();
+
+		var mySwiper = new Swiper('.swiper-container',{
+			loop : true,
+			pagination : '.swiper-pagination',
+			autoplay : 3000
+		})
+		
+		$(function(){
+			$(".dialog-txt3 , .dialog-btn2").click(function(event){
+				
+				if($(".dialog-btn1").is(":checked")){
+					$('.dialog-btn3').attr("disabled",true); 
+				}else{
+					$('.dialog-btn3').attr("disabled",false); 
+				}
+			})
+			$(".dialog-btn3").click(function(){
+				$(".mask").hide();
+				$(".resources-dialog").hide();
+			})
+		})
+	</script>
+</html>

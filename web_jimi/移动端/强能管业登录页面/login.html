@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title></title>
+	<link rel="stylesheet" href="css/login.css">
+	<style >
+	</style>
+</head>
+<body>
+
+	<div class="warper">
+		<header class="lgoin-header">
+			<img src="images/header01.jpg" />
+		</header>
+		<div class="lgoin-content">
+			<ul class="lgoin-tab">
+				<li class="active">商家登录</li>
+				<li>客户登录</li>
+			</ul>
+			<div class="login-cell" style="display: block;">
+				<form >
+					<input class="login-btn1" type="text" placeholder="请输入账号11" />
+					<input class="login-btn1" type="password" placeholder="请输入密码" />
+					<input class="login-btn2" type="button" value="登录" />
+				</form>
+			</div>
+			<div class="login-cell">
+				<form >
+					<input class="login-btn1" type="text" placeholder="请输入账号22" />
+					<input class="login-btn1" type="password" placeholder="请输入密码" />
+					<input class="login-btn2" type="button" value="登录" />
+				</form>
+			</div>
+			<div class="login-txt1">未注册强能的手机号，登录时讲自动注册且代表您已经同意<span>《强能注册协议》</span></div>
+
+		</div>
+		<div class="dialog">
+			<div class="dialog-content">
+
+			</div>
+			<a href="javascript:void(0);" class="dialog-btn"><img src="images/btn_close.png" /></a>
+		</div>
+		<div class="mask"></div>
+	</div>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script>
+		$(function(){
+			$(".lgoin-tab li").click(function() {
+				$(".lgoin-tab li").removeClass('active');
+				$(this).addClass('active');
+				$(".login-cell").hide();
+				$(".login-cell").eq($(this).index()).show();
+			});
+
+			//打开说明协议
+			$(".login-txt1 span").click(function() {
+				$(".mask").show();
+				$(".dialog").show();
+				$("body").css('overflow', 'hideen');
+			});
+
+			//关闭说明协议
+			$(".dialog-btn").click(function() {
+				$(".mask").hide();
+				$(".dialog").hide();
+				$("body").css('overflow', 'auto');
+			});
+
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+/* reset */
+html,body,blockquote,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul,section {margin:0;padding:0}
+ol,ul {list-style:none}
+a {text-decoration:none}
+fieldset,img {border:0}
+:focus{outline: none;}
+input[type="button"], input[type="submit"], input[type="reset"] {
+	-webkit-appearance: none;
+}
+textarea {  -webkit-appearance: none;}
+.clearfix:after{
+	content:"";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix{
+	zoom:1;
+}
+html,body{
+	width:100%;
+	height: 100%;
+}
+.warper{
+	max-width: 640px;
+	margin:0 auto;
+	width:100%;
+	height: 100%;
+	position: relative;
+	background: url(../images/bg.jpg) no-repeat center;
+	background-size: cover;
+}
+
+.warper {}
+.section2{
+	display: none;
+}
+.img1, .img2{
+	max-width: 320px;
+	width: 71%;
+	display: block;
+	margin: 0 auto;
+	position: absolute;
+	top: 44%;
+	left:17%;
+}
+.btn1{
+	display: block;
+	width: 40%;
+	margin:0 auto;
+	position: absolute;
+	top: 78%;
+	left: 30%;
+}
+.btn1 img{
+	width:100%;
+}
+.img2{
+	width: 85%;
+	left: 8%;
+}
+.img3{
+	width:30%;
+	display: block;
+	margin:0 auto;
+	position: absolute;
+	top: 68%;
+	left: 30%;
+}
+.btn2{
+	display: block;
+	font-size: 16px;
+	color:#fff;
+	text-align: center;
+	width:50%;
+	margin: 0 auto;
+	margin-top:3%;
+}
+.btn3{
+	display: none;
+	position: absolute;
+	width:100px;
+	height: 100px;
+	left:0;
+	top:0;
+	right:0;
+	bottom: 0;
+	margin:auto;
+	padding: 0 auto;
+}
+.btn3 img{
+	width:100%;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+.img4{
+	width: 30%;
+	position: absolute;
+	left: 36%;
+	top: 45%;
+	display: none;
+}

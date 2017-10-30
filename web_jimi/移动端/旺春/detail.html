@@ -1,0 +1,99 @@
+
+	<html>
+
+		<head>
+			<meta charset="utf-8" />
+			<meta name="apple-mobile-web-app-capable" content="yes" />
+			<meta name="apple-mobile-web-app-status-bar-style" content="black">
+			<meta name="apple-touch-fullscreen" content="yes" />
+			<meta name="format-detection" content="telephone=no,email=no" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+			<title></title>
+			<link rel="stylesheet" type="text/css" href="css/iosSelect.css">
+			<link rel="stylesheet" type="text/css" href="css/style.css">
+			<style>
+				body{
+					background: #f5f5f5;
+				}
+			</style>
+		</head>
+		<body>
+			<div class="warper">
+				<header class="header05 clearfix">
+					<a class="header05-btn" href="javascript:history.back();"><img src="images/icon04.png" /></a>
+					<span class="header05-txt">提交订单</span>
+				</header>
+				<div class="detail-cell">
+					<a href="address.html">
+						<p>请选择送达地址</p>
+					</a>
+				</div>
+				<div class="detail-cell" id="chooseTime">请选择送达时间</div>
+				<p class="detail-txt1">选择支付方式</p>
+				<div class="detail-cell2" id="chooseTime">微信支付</div>
+				<div class="item-warper">
+					<div class="item-content">
+						<p class="item-title">旺春生鲜配送</p>
+						<p class="item-after">本单由平台配送</p>
+					</div>
+					<ul class="item-list">
+						<li>
+							<span class="item-txt1">产品/110g</span>
+							<span class="item-txt2">X1</span>
+							<span class="item-txt3">￥2.5</span>
+						</li>
+						<li>
+							<span class="item-txt1">产品/110g</span>
+							<span class="item-txt2">X1</span>
+							<span class="item-txt3">￥2.5</span>
+						</li>
+					</ul>
+					<div class="item-gutter" style="border:0 none;">
+						<p class="item-title">包装费</p>
+						<p class="item-after">￥0.00</p>
+					</div>
+					<div class="item-gutter">
+						<p class="item-title">配送费</p>
+						<p class="item-after">￥3.00</p>
+					</div>
+					<div class="item-count">总计：<span>￥20.0</span></div>
+				</div>
+			</div>
+			<div class="container"></div>
+			<footer class="order-bar">
+				<div class="order-bar-txt">还需付<span>￥50.0</span></div>
+				<a href="##" class="order-bar-btn">确认下单</a>
+			</footer>
+		</body>
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/iosSelect.js"></script>
+		<script>
+			
+			var dataTime = [
+			    {'id': '10001' ,'value': '7:00-8:00'},
+			    {'id': '10002' ,'value': '8:00-9:00'},
+			    {'id': '10003' ,'value': '9:00-10:00'},
+			    {'id': '10004' ,'value': '10:00-11:00'},
+			    {'id': '10005' ,'value': '15:00-16:00'},
+			    {'id': '10006' ,'value': '16:00-17:00'},
+			    {'id': '10007' ,'value': '17:00-18:00'}
+			];
+			var showBankDom = document.querySelector('#chooseTime');
+
+
+		    showBankDom.addEventListener('click', function () {
+		        var bankSelect = new IosSelect(
+		        	1, 
+		            [dataTime],
+		            {
+		                container: '.container',
+		                title: '选择送达时间',
+		                itemHeight: 50,
+		                itemShowCount: 3,
+		                callback: function (selectOneObj) {
+		                    showBankDom.innerHTML = selectOneObj.value;
+		                }
+		        });
+		    });
+		</script>
+	</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>温州市盛威建设工程有限公司</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+
+	<body>
+
+		<div class="header">
+			<div class="welcome">
+				<div class="w1">欢迎您访问本站</div>
+				<div class="w2">今天是：<span></span></div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="box">
+				<div class="detail">
+					<div class="table_title">
+						<div class="title table_t">安全生产许可证</div>
+						<div class="title_img">
+							<img width="32" src="images/t3.png">
+						</div>
+					</div>
+					<div class="detail_list">
+						<table width="100%" cellpadding="0" cellspacing="0">
+							<tr>
+								<td class="d_title" width="150">企业名称：</td>
+								<td width="220">温州市盛威建设工程有限公司 </td>
+								<td class="d_title" width="150">营业执照号：</td>
+								<td width="200">91330327693615808J</td>
+								<td class="d_title" width="150">统一社会信用代码/组织机构代码：</td>
+								<td width="200">91330327693615808J</td>
+							</tr>
+							<tr>
+								<td class="d_title">法人代表：</td>
+								<td>黄益炳 </td>
+								<td class="d_title">注册资本：</td>
+								<td>2250万元（人民币） </td>
+								<td class="d_title"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="d_title">资质证书编号：</td>
+								<td>（浙）JZ安许证字[2014]C0415 </td>
+								<td class="d_title">发证机关：</td>
+								<td>浙江省安全生产监督管理局 </td>
+								<td class="d_title">企业负责人：</td>
+								<td>黄益炳 </td>
+							</tr>
+							<tr>
+								<td class="d_title">发证日期：</td>
+								<td>2014年08月17日 </td>
+								<td class="d_title">有效期至：</td>
+								<td>2017年08月16日 </td>
+								<td class="d_title">技术负责人：</td>
+								<td>黄益炳 </td>
+							</tr>
+						</table>
+
+					</div>
+				</div>
+
+				
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".welcome .w2 span").text(getNowFormatDate());
+			})
+			function getNowFormatDate() {
+			    var date = new Date();
+			    var show_day=new Array('星期一','星期二','星期三','星期四','星期五','星期六','星期日'); 
+			    var seperator1 = "-";
+			    var month = date.getMonth() + 1;
+			    var strDate = date.getDate();
+			    if (month >= 1 && month <= 9) {
+			        month = "0" + month;
+			    }
+			    if (strDate >= 0 && strDate <= 9) {
+			        strDate = "0" + strDate;
+			    }
+			    var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+			            + " " + show_day[date.getDay()-1];
+			    return currentdate;
+			}
+		</script>
+	</body>
+</html>

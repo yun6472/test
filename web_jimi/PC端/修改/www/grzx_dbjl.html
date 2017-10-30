@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>夺宝记录</title>
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="css/tal.css?v=0.02" rel="stylesheet" type="text/css"/>
+<link href="css/index.css" rel="stylesheet" type="text/css"/>
+<link href="css/foot.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="js/foot.js"></script>
+<style>
+html,body{
+width:100%;
+height:auto;
+}
+.djjb img{
+width:3.5em;
+height:3.5em;
+
+}
+.djjb{
+line-height:150%;
+}
+.Mtr{
+line-height:120%;
+}
+.td1{
+width:5em;
+}
+.biaot{
+font-size:0.8em;
+}
+.jdt0{
+background-color:#f0eeee;
+height:0.5em;
+}
+.jdtiao{
+background-color:#fbb124;
+height:0.5em;
+}
+.yzmbox{
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+z-index:1500;
+top:0em;
+left:0em;
+}
+.yzmbox .rwmb{
+width:80%;
+max-width:30em;
+height:auto;
+margin:0em auto;
+}
+.yzm1{
+background-color:#f61d4b;
+height:2.5em;
+line-height:2.5em;
+text-align:left;
+padding:0em 0.5em;
+border-radius:.6em .6em 0em 0em;
+color:#fff;
+font-size:0.9em;
+}
+.yzm2{
+padding:0.5em;
+text-align:left;
+background-color:#fff;
+font-size:0.9em;
+color:#666;
+line-height:130%;
+min-height:5em;
+}
+
+.yzm3{
+background-color:#1075cf;
+height:1em;
+text-align:center;
+border-radius:0em 0em .6em .6em;
+color:#fff;
+font-size:0.8em;
+padding:0.5em;
+}
+</style>
+</head>
+<body class="bj-w2">
+<div class="topSdiv" style="height:3.5em;">
+  <div class="topSdiv_T boxu boxu-h" style="">
+    <div class="boxbf1 boxu">
+	  <div class="boxbf1 tc mr4 ml4 sel">全部(1)</div>
+	</div>
+    <div class="boxbf1 boxu">
+	  <div class="boxbf1 tc mr4 ml4">进行中(1)</div>
+	</div>
+    <div class="boxbf1 boxu">
+	  <div class="boxbf1 tc mr4 ml4">已揭晓(0)</div>
+	</div>
+  </div>
+</div>
+<!--没有内容开始-->
+<div class="tbox boxu boxu-s pos3" style="display:">
+  <div class="m5">
+    <div class="divmargin imgw1" style="width:16em;"><img src="img/grzx/no01.png"></div>
+	<div class="tc tcol-w6 ts-1d2">咦，您暂时没有夺宝记录！</div>
+  </div>
+  <div sbjgbg="#c71439" class="divmargin notbtncs" >立即夺宝</div>
+</div>
+<!--没有内容结束-->
+<!--有内容开始-->
+<div class="divmargin boxu boxu-s p4 bj-w1 mb3 pos3">
+  <div class="boxu boxu-h djjb bx01 mb4">
+    <div class="mr4" ><img src="./img/grzx/p1.png"></div>
+	<div class="boxbf1 boxu boxu-s tzt3" style="">
+	   <div class="biaot">苹果6S Apple iPhone SE 64GB</div>
+	   <div class="ts-0d7 tcol-w6">商品期号:661</div>
+	   <!--正在进行的>
+	   <div class="divmargin jdt0 yj1">
+	     <div class="jdtiao yj1" style="width:80%;"></div>
+	   </div>
+	   <div class="ts-0d7 tcol-w6">
+	     <span>总需：4880人次</span>
+		 <span class="toright">剩余880人次</span>
+	   </div>
+	   <!--正在进行的结束-->
+	   <!--已结束-->
+	   <div class="ts-0d7 tcol-w6">
+	     <span>幸运号码 <span class="tcol-r1">10000024</span></span>
+	   </div>
+	   <!--已结束的结束-->
+	</div>
+  </div>
+  <!--正在进行的开始-->
+  <div class="divmargin boxu boxu-h ts-0d8 tzt3 tline3">
+	   <div style="width:50%;">本次参与<span class="tcol-r1">3</span>人次</div>
+	   <div onclick="openyzM(this.parentNode)" class="boxbf1 tcol-b1">查看详情</div>
+	   <div onclick="gotourl('打开中奖者的一些信息')" class="bj-r1 tcol-w1 pl4 pr4 yj1">中奖者</div>
+  </div>
+  <!--正在进行的结束-->
+  <div class="pos1 yznot "></div>
+  <!--详情-->
+  <yzB class="pos2 yzmbox boxu boxu-s" onclick="openyzM(this)" style="display:none;">
+    <div class="boxbf1"></div>
+	<div class="rwmb">
+	  <div class="yzm1 tzt3">第661期 苹果6S Apple iPhone SE 64GB</div>
+	  <div class="yzm2 imgw1">
+	    1000001  1000002  1000005
+	  </div>
+	  <div class="yzm3 tzt3">客服电话 : 4001231234</div>
+	</div>
+	<div class="boxbf1"></div>
+  </yzB>
+  <!--详情结束-->
+</div>
+
+
+<div class="divmargin boxu boxu-s p4 bj-w1 mb3 pos3">
+  <div class="boxu boxu-h djjb bx01 mb4">
+    <div class="mr4" ><img src="./img/grzx/p1.png"></div>
+	<div class="boxbf1 boxu boxu-s tzt3" style="">
+	   <div class="biaot">苹果6S Apple iPhone SE 64GB</div>
+	   <div class="ts-0d7 tcol-w6">商品期号:662</div>
+	   <!--正在进行的-->
+	   <div class="divmargin jdt0 yj1">
+	     <div class="jdtiao yj1" style="width:80%;"></div>
+	   </div>
+	   <div class="ts-0d7 tcol-w6">
+	     <span>总需：4880人次</span>
+		 <span class="toright">剩余880人次</span>
+	   </div>
+	   <!--正在进行的结束-->
+	   <!--已结束>
+	   <div class="ts-0d7 tcol-w6">
+	     <span>幸运号码 <span class="tcol-r1">10000024</span></span>
+	   </div>
+	   <!--已结束的结束-->
+	</div>
+  </div>
+  <!--正在进行的开始-->
+  <div class="divmargin boxu boxu-h ts-0d8 tzt3 tline3">
+	   <div style="width:50%;">本次参与<span class="tcol-r1">3</span>人次</div>
+	   <div onclick="openyzM(this.parentNode)" class="boxbf1 tcol-b1">查看详情</div>
+	   <div onclick="gotourl('打开此详情页再次购买')" class="bj-r1 tcol-w1 pl4 pr4 yj1">追加</div>
+  </div>
+  <!--正在进行的结束-->
+  <div class="pos1 yznot "></div>
+  <!--详情-->
+  <yzB class="pos2 yzmbox boxu boxu-s" onclick="openyzM(this)" style="display:none;">
+    <div class="boxbf1"></div>
+	<div class="rwmb">
+	  <div class="yzm1 tzt3">第662期 苹果6S Apple iPhone SE 64GB</div>
+	  <div class="yzm2 imgw1">
+	    1000001  1000002  1000005
+	  </div>
+	  <div class="yzm3 tzt3">客服电话 : 4001231234</div>
+	</div>
+	<div class="boxbf1"></div>
+  </yzB>
+  <!--详情结束-->
+</div>
+
+
+<!--有内容结束-->
+
+</body>
+</html>
+<script>
+var btnnn=5;
+getlink();//按钮鼠标经过样式
+setFootbtn();
+//window.addEventListener('load', pageLoadok, false);
+
+function openyzM(e){
+  var Td=e.parentNode;
+  var yzB=Td.getElementsByTagName("yzB")[0];
+    if(yzB.style.display=='none'){
+		yzB.style.display='';
+	}else{
+		yzB.style.display='none';
+	}
+}
+</script>

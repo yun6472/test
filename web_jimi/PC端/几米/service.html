@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html >
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>几米网络</title>
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+	<div class="warper serve">
+		<div class="logo"><img src="images/logo.png" alt="logo"></div>
+		<ul class="top clearfix">
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="case.html">CASE</a></li>
+			<li><a href="aboutUs.html">ABOUT</a></li>
+			<li><a href="service.html">SERVE</a></li>
+			<li><a href="news.html">NEWS</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
+		</ul>
+		<div class="follow">
+			<a class="follow_firstChild" href="##"></a>
+			<a href="##"></a>
+			<a href="##"></a>
+			<a href="##"></a>
+		</div>
+		<div class="code clearfix">
+			<img src="images/code.jpg" alt="二维码" />
+			<p class="code_txt">Copyright（c）2016 几米网络.浙icp备13026629</p>
+		</div>
+		<a class="more" href="##">
+			<p>DOWN</p>
+			<img src="images/arrow-dowm.png" alt="more">
+		</a>
+		<ul class="content clearfix">
+			<li class="animated rotateIn serveCell">
+				<a>
+					<img src="images/pic01.png" alt="品牌建站" />
+					<div class="content_txt1">Brand Website</div>
+					<div class="content_txt2">品牌建站</div>
+				</a>
+			</li>
+			<li class="animated rotateIn serveCell">
+				<a>
+					<img src="images/pic02.png" alt="移动app/微站" />
+					<div class="content_txt1">Mobile app/Microsite</div>
+					<div class="content_txt2">移动app/微站</div>
+				</a>
+			</li>
+			<li class="animated rotateIn serveCell">
+				<a>
+					<img src="images/pic03.png" alt="支付宝" />
+					<div class="content_txt1">Alipay</div>
+					<div class="content_txt2">支付宝</div>
+				</a>
+			</li>
+			<li class="animated rotateIn serveCell">
+				<a>
+					<img src="images/pic04.png" alt="口碑外卖" />
+					<div class="content_txt1">koubei</div>
+					<div class="content_txt2">口碑外卖</div>
+				</a>
+			</li>
+		</ul>
+		<div class="serveDetail">
+			<div class="content">
+				<input type="button" class="closeBtn" />
+				<h3 class="title1">品牌建站</h3>
+				<h3 class="title2">Brand Website</h3>
+				<p class="txt1">为客户提供更专业更定位明确的品牌化网站设计服务</p>
+				<p class="txt1">· 企业形象的定位与分析 · 网站基本元素的定位与梳理</p>
+				<p class="txt1">· 品牌网站的设计与建设 ·  HTML5技术内容重构</p>
+				<p class="txt1">· 品牌的传播和推广策划 · 基于网站元素内页设计</p>
+				<input type="button" class="btn1" value="立即咨询" />
+				<input type="button" class="btn2" value="相关案例" />
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/layer.js"></script>
+<script type="text/javascript">
+var closeBtn ;
+$(function(){
+	$(".serveCell").on('click', 'a', function() {
+		closeBtn = layer.open({
+			type: 1,
+			title:false,
+			shade: [0.8, '#393D49'],
+			shift :4,
+			area: ['480px', '480px'],
+			closeBtn: 0,
+			content: $('.serveDetail')
+		})
+	});
+	$(".closeBtn").click(function() {
+		layer.close(closeBtn);
+	});
+})
+</script>
+</html>

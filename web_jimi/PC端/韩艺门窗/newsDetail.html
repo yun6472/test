@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>韩艺门窗</title>
+		<link rel="stylesheet" href="css/detail.css">
+	</head>
+	<body>
+		<div class="header clearfix">
+			<a href="index.html"><img class="logo" src="images/logo.png" /></a>
+			<div class="header-right">
+				<div class="header-input clearfix">
+					<input type="text" />
+					<a href="##">搜索</a>
+				</div>
+				<p class="header-txt">全国服务热线：4008-888-888</p>
+			</div>
+		</div>
+
+		<div class="nav">
+			<ul class="clearfix">
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="about.html">关于我们</a>
+				</li>
+				<li class="current">
+					<a href="news.html">新闻资讯</a>
+				</li>
+				<li>
+					<a href="product.html">产品中心</a>
+				</li>
+				<li>
+					<a href="case.html">工程案例</a>
+				</li>
+				<li>
+					<a href="center.html">技术中心</a>
+				</li>
+				<li>
+					<a href="join.html">招商加盟</a>
+				</li>
+				<li>
+					<a href="contact.html">联系我们</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="slideBox">
+			<div class="bd">
+				<ul class="tempWrap">
+					<li><a href="##" ><img src="images/banner01.jpg"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="warper">
+			<div class="content clearfix">
+				<div class="nav2">
+					<div class="nav2-title">新闻资讯</div>
+					<ul class="clearfix">
+						<li class="active">公司新闻</li>
+						<li>行业动态</li>
+						<li>技术知识</li>
+					</ul>
+				</div>
+				<div class="content-r clearfix">
+					<div class="content-header">
+						<div class="content-header1">新闻资讯</div>
+						<div class="content-header2">
+							<img src="images/icon01.png" />&gt;<span>新闻中心</span>&gt;<span>公司新闻</span>
+						</div>
+					</div>
+					<p class="news-txt1">本色常温封孔剂与普通常温封孔剂的区别</p>
+					<p class="news-txt2">所属分类：行业新闻     发布时间：2016-11-18</p>
+					<div class="news-txt3">
+						在中温封孔技术兴起之前，常温封孔已经得到了大面积的推广应用，主要是其能耗较低，其工艺控制方法也很成熟。随着太阳能边框的推广应用，中温封孔开始大面积取代常温封孔，因为相对于常温封孔而言，中温封孔时间短，无氟，封孔后表面不发青，内腔也是金属本色，符合太阳能边框的高标准要求。
+					</div>
+					<div class="news-txt3">
+						在但经过多年的应用，中温封孔的优势虽然明显，暴露出的问题也较多，且长期以来都没有得到很好的解决，如冬天时失重较差、常出现粘胶问题、封孔白灰、双组份使工艺控制困难、能耗高、槽液一般需要过滤、槽液抗污染能力特别是着色槽液的带入使槽液老化较快等等。但常规常温封孔也有其缺点，如封孔后表面发青、内腔发黑等，这些均不符合太阳能边框的要求，其封孔时间较中温要长也制约了生产效率。
+					</div>
+					<div class="news-txt3">
+						本色常温封孔剂与普通常温封孔剂最大的区别是封孔后铝材表面以及内腔的颜色。本色常温是在普通常温的基础上做了如下改进：
+					</div>
+					<div class="news-txt3">
+						一、实现封孔后的本色外观：资料显示，添加钴盐具有一定的效果，但其存在的问题是成本过高；其次，通过连续实验表明，钴的消耗难以控制，容易造成封孔后外观颜色的异常变动，时而偏白时而偏青，保持稳定的本色很困难。
+					</div>
+					<div class="news-txt3">
+						二、实现内腔不发黑：含有氟的常温封孔剂封孔后内腔是会发黑的，因此必须避免这种现象的产生。加入氧化性物质可以达到效果，实验表明，常规的氧化性物质如硝酸盐等，虽然添加的量很少，但极易影响封孔效果（尤其是失重），且由于其含量很低，消耗及带出使其根本无法实现连续生产，控制起来相当困难。
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">Copyright © 2017 Www.hanyimc.com 韩艺门窗 版权所有　浙ICP12345678</div>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".pContext-nav2 li:nth-child(3n)").css("marginRihgt",0);
+
+				$(".slideBox").slide({
+					mainCell:".bd ul",
+					effect:"leftLoop",
+					autoPlay:true
+				});
+
+				$(".nav li").hover(function() {
+					if($(this).index() == 1 ||$(this).index() == 2){
+						$(".mask").show();
+					}
+					$(this).addClass('active');
+				}, function() {
+					if($(this).index() == 1 ||$(this).index() == 2){
+						$(".mask").hide();
+					}
+					$(this).removeClass('active');
+				});
+
+			})
+		</script>
+	</body>
+</html>

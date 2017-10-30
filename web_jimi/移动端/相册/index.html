@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title></title>
+	<link rel="stylesheet" href="css/swiper.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+
+	<div class="warper">
+		<div class="header">
+			<a class="header-txt1" href="##"></a>
+			<span>看车</span>
+			<a class="header-txt3">颜色</a>
+			<a class="header-txt2">车型</a>
+		</div>
+		<!-- <div class="nav-tab">
+			<ul class="clearfix">
+				<li>外观</li>
+				<li>中控</li>
+				<li>座椅</li>
+				<li>细节</li>
+				<li class="active">特点</li>
+				<li>实拍</li>
+			</ul>
+		</div> -->
+		<div class="contetn-img">
+			<ul class="clearfix"> 
+				<li>
+					<img src="images/pic01.jpg" />
+				</li>
+				<li>
+					<img src="images/pic02.jpg" />
+				</li>
+				<li>
+					<img src="images/pic03.jpg" />
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="myswiper">
+		<div class="swiperBtn">
+			<a class="swiperBtn1" href="##"></a>
+			<!-- <a class="swiperBtn2">询底价</a> -->
+		</div>
+		<!-- <div class="nav-tab2">
+			<ul class="clearfix">
+				<li>外观</li>
+				<li>中控</li>
+				<li>座椅</li>
+				<li>细节</li>
+				<li class="active">特点</li>
+			</ul>
+		</div> -->
+		<div class="swiper-container" >
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="images/pic01.jpg" /></div>
+				<div class="swiper-slide"><img src="images/pic02.jpg" /></div>
+				<div class="swiper-slide"><img src="images/pic03.jpg" /></div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<div class="myswiper-txt">评论评论评论评论评论评论评论评论评论</div>
+	</div>
+
+
+
+
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script type="text/javascript">
+		var flag=0;
+
+		var mySwiper = new Swiper('.swiper-container',{
+			pagination : '.swiper-pagination',
+			paginationType : 'fraction',
+		})
+
+		$(function(){
+			$(".contetn-img li").click(function() {
+				$(".contetn-img li").removeClass('active');
+				$(this).addClass('active');
+				var index = $(this).index();
+				mySwiper.slideTo(index, 1, false);
+				$(".myswiper").css('visibility', 'visible');
+				flag=1;
+
+			});
+
+			$(".swiperBtn").click(function() {
+				$(".myswiper").css('visibility', 'hidden');
+				 flag=0;
+			});
+
+
+
+			/*$(".nav-tab li").click(function() {
+				$(".nav-tab li").removeClass('active');
+				$(this).addClass('active');
+			});
+
+			$(".nav-tab2 li").click(function() {
+				$(".nav-tab2 li").removeClass('active');
+				$(this).addClass('active');
+			});*/
+		})
+
+
+		//遮罩层禁止滚动
+		document.addEventListener('touchmove', function (event) {
+		    if(flag==1){
+		        event.preventDefault();
+		    }
+		})
+	</script>
+</body>
+</html>

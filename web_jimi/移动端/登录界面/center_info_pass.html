@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<meta name="format-detection" content="telephone=no" />
+
+<title>个人资料</title>
+
+
+<link href="css/style3.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+	body{
+		background: #f7f7f7;
+	}
+</style>
+</head>
+<body class="warper">
+	<input class="btn1"   type="password" id="pass"  value="<{$default_data}>"   placeholder="输入独立密码" />
+	<input class="btn2" type="button"  onclick="save_info()" value="提交" />
+	
+		<link rel="stylesheet" href="iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="css/style3.css" rel="stylesheet" type="text/css" />
+<script>
+		
+		
+		
+function save_info()
+	{
+		//var pass = $("#pass").val();
+		var pass = document.getElementById("pass").value;
+		
+		if(pass == '' )
+		{
+			//alert('请输入邮箱地址');
+		}
+		else
+		{
+			window.location.href = "?action=setting_pass_oper&pass="+pass;
+		}
+	}
+
+	
+	
+		</script> 
+</body>
+</html>

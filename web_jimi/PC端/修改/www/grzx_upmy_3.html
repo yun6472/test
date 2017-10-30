@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>个人中心</title>
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="css/tal.css?v=0.02" rel="stylesheet" type="text/css"/>
+<link href="css/index.css" rel="stylesheet" type="text/css"/>
+<link href="css/foot.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="js/foot.js"></script>
+
+<link href="css/simpScroller.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/simpScroller.js"></script>
+<style>
+html,body{
+width:100%;
+height:auto;
+background-color:#f5f5f5;
+}
+</style>
+</head>
+<body>
+<div class="topSdiv" style="height:3em;">
+  <div class="topSdiv_T boxu boxu-h" style="">
+    <div sbjgbg="#f5f5f5" onclick="goback()" class="goback01"></div>
+    <div class="boxbf1 tb1 tc">帐号绑定</div>
+	<div class="goback00"></div>
+  </div>
+</div>
+<!--内容开始-->
+<form id="Tform" name="form1" method="get" action="./grzx_upmy_3yz.html" onSubmit="return formSubGo()">
+<div class="divmargin pt5 pl5  tl ts-0d8 tcol-w6">
+为了验证身份,我们将会发送短信验证码到您手机上.
+</div>
+<div class="boxu boxu-s pos3 p4 mb4">
+  <div class="boxu boxu-h bk2 yj1 mb4">
+	<div class="b2 boxbf1"><input class="tc ts-1d1 tline4 p2" id="Mtel" name="Mtel" value="" type="text" placeholder="请输入您的手机号码！"></div>
+  </div>
+</div>
+<div onclick="formSubGo()" class="divmargin yj1 pos3 m4 bj-r1 p4 tc tcol-w1">
+ 获取验证码
+</div>
+<div class="checkSel boxu boxu-h ml4">
+	  <label class="boxu boxu-h mr4">
+	   <input onclick="setSubbtncss()" id="tkok" name="tkok" type="checkbox" value="1" style="display:none;"><div></div>
+	   <div class="tcol-w7">我已阅读并同意</div>
+	  </label>
+	  <div onclick="opentiaokuan()" class="tcol-w7 tcol-b2">用户协议</div>
+  </div>
+<!--内容结束-->
+
+<!--底部开始-->
+<input type="submit" name="Submit" value="1" style="display:none;">
+<!--底部结束-->
+</form>
+</body>
+</html>
+<script>
+var btnnn=5;
+getlink();//按钮鼠标经过样式
+
+////////////////////////////////////点击我要查件执行代码
+function formSubGo(){
+  var Mtel=$$("Mtel").value;
+  var tkok=$$("tkok").checked;
+  
+  if(!Mtel||Mtel.length!=11){
+     cztsalert("请输入正确的手机号码!");
+	 return false;
+  }
+  if(!tkok){
+     cztsalert("请勾选条件同意事项!");
+	 return false;
+  }
+  
+  ////////////////////////////////////以上是用来做再次的验证。
+  $$("Tform").submit();
+  
+}
+
+
+var tiaokuan='';
+function opentiaokuan(){
+  var newdiv=document.createElement("div");
+	newdiv.innerHTML='\
+	<div class="tbox boxu boxu-s pos2 tmbj-b8" style="z-index:1200;top:0px;left:0px;">\
+	  <div class="divmargin" style="height:auto">\
+	    <div ontouchstart="delload(tiaokuan)" class="toright bj-w1 yj6 mr4 mt4 bgpp-no bgy-c bgx-r bgsw80" style="width:2.0em;height:2.0em;background-image:url(img/c01.png)"></div>\
+	  </div>\
+	  <div class="boxbf1 boxu boxu-u bj-w1 m4 yj2">\
+	    <div id="contentHtmlBox" class="boxbf1 m4 pos3" >\
+		  <div class="divmargin" style="width:100%;">\
+		    aaaa\
+		  </div>\
+		</div>\
+	  </div>\
+	</div>\
+	';
+	tiaokuan=document.body.appendChild(newdiv);
+	simpScroller($$("contentHtmlBox"));//滚动
+}
+</script>

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html >
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>几米网络</title>
+	<link href="css/animate.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+	<div class="warper contact">
+		<div class="logo"><img src="images/logo.png" alt="logo"></div>
+		<ul class="top clearfix">
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="case.html">CASE</a></li>
+			<li><a href="aboutUs.html">ABOUT</a></li>
+			<li><a href="service.html">SERVE</a></li>
+			<li><a href="news.html">NEWS</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
+		</ul>
+		<div class="content clearfix">
+			<div class="content_left animated bounceInLeft">
+				<img src="images/contact.png" />
+			</div>
+			<div class="content_right tlt animated bounceInRight">
+				<div class="texts">
+					<p class="content_txt1" data-in-effect="fadeIn">浙江省温州市苍南县灵溪镇德嘉华庭12幢2层 </p>
+				</div>
+				<p class="content_txt1">+86-<span class="content_txt2">13566258582</span></p>
+					<p class="content_txt1">（TEL）0577-26666626</p>
+					<p class="content_txt1">(Email)381166924@qq.com</p>
+				<input type="button" value="在线咨询" class="content_btn1" />
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/jquery.lettering.js"></script>
+<script src="js/jquery.textillate.js"></script>
+<script type="text/javascript">
+$(function () {
+	$('.tlt').textillate({
+		selector: '.texts',
+		loop: false,
+		minDisplayTime: 2000,
+		initialDelay: 0,
+		autoStart: true,
+		inEffects: [],
+		outEffects: [ 'hinge' ],
+		in: {
+			effect: 'fadeInRightBig',
+			delayScale: 1.5,
+			delay: 50,
+			sync: false,
+			shuffle: false,
+			reverse: false,
+			callback: function () {}
+		},
+	callback: function () {
+
+	}});
+});
+</script>
+</html>

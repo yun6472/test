@@ -1,0 +1,126 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+		<title>队伍展示</title>
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css">
+		<link rel="stylesheet" type="text/css" href="../resources/css/resources.css">
+		<link rel="stylesheet" type="text/css" href="css/show.css">
+	</head>
+	<body>
+		<div class="warper padding-35">
+			<header class="show-header">
+				<a class="reHeader-btn1" href="javascript:history.back();">
+					<img src="../images/icon-arrow05.png" />
+					<span>
+						我要<br />发布
+					</span>
+				</a>
+				<div class="search-content">
+					<input class="search-txt2" type="text">
+					<div class="search-warper">
+						<img src="../images/icon-search03.png" />
+						<span>搜索队伍</span>
+					</div>
+				</div>
+				<a class="reHeader-btn2" href="##">
+					<img src="images/icon15.png" />
+					名片
+				</a>
+			</header>
+			<section class="banner swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide "><img src="../images/banner01.jpg" /></div>
+					<div class="swiper-slide"><img src="../images/banner01.jpg" /></div>
+					<div class="swiper-slide "><img src="../images/banner01.jpg" /></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</section>
+			<section class="show-tab">
+				<ul>
+					<li class="active">
+						全部分类
+						<span class="show-arrow"></span>
+					</li>
+					<li>
+						地区选择
+						<span class="show-arrow"></span>
+					</li>
+					<li>
+						认证队伍
+						<span class="show-arrow"></span>
+					</li>
+					<li>
+						关注度
+						<span class="show-arrow"></span>
+					</li>
+				</ul>
+			</section>
+			<section class="resources-list">
+				<ul>
+					<li>
+						<a href="javascript:;">
+							<img class="resources-img1" src="images/pic01.jpg" />
+							<p class="resources-txt1">刘思诚施工队<img src="../resources/images/icon07.png" /></p>
+							<p class="resources-txt2"><span>隧道</span></p>
+							<p class="resources-txt3">陕西汉中</p>
+							<p class="resources-txt5"><img src="images/icon16.png" />3550</p>
+						</a>
+					</li>
+					
+					<li>
+						<a href="javascript:;">
+							<img class="resources-img1" src="images/pic01.jpg" />
+							<p class="resources-txt1">刘思诚施工队</p>
+							<p class="resources-txt2"><span>隧道</span></p>
+							<p class="resources-txt3">陕西汉中</p>
+							<p class="resources-txt5"><img src="images/icon16.png" />3550</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img class="resources-img1" src="images/pic01.jpg" />
+							<p class="resources-txt1">刘思诚施工队</p>
+							<p class="resources-txt2"><span>隧道</span></p>
+							<p class="resources-txt3">陕西汉中</p>
+							<p class="resources-txt5"><img src="images/icon16.png" />3550</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img class="resources-img1" src="images/pic01.jpg" />
+							<p class="resources-txt1">刘思诚施工队</p>
+							<p class="resources-txt2"><span>隧道</span></p>
+							<p class="resources-txt3">陕西汉中</p>
+							<p class="resources-txt5"><img src="images/icon16.png" />3550</p>
+						</a>
+					</li>
+
+				</ul>
+			</section>
+		</div>
+	</body>
+	
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/foot.js"></script>
+	<script>
+
+		//调用footer
+		setFootbtn();
+
+		var mySwiper = new Swiper('.swiper-container',{
+			loop : true,
+			pagination : '.swiper-pagination',
+			autoplay : 3000
+		})
+		
+		
+	</script>
+</html>

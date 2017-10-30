@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>购物车</title>
+	<link rel="stylesheet" href="css/shopping.css">
+</head>
+<body>
+	<div class="warp">
+		<div class="shopping-cell">
+			<div class="btn1">编辑</div>
+			<div class="shopping-check"  onclick="check1(this)"></div>
+			<img class="shopping-img" src="images/product02.jpg" />
+			<div class="shopping-content1">	
+				<div class="txt1">包邮 Logitech/罗技 UE3100无线蓝牙耳机+麦克风 头戴式耳麦</div>
+				<div class="txt2">套餐类型:官方标配;颜色分类:蓝色</div>
+				<div class="txt3">
+					<div class="txt4">￥119</div>
+					<div class="txt5">X1</div>
+				</div>
+			</div>
+			<div class="shopping-content2">
+				<div class="shopping-select">
+					<div class="shopping-btn">
+						<div class="shopping-btn1">-</div>
+						<div class="shopping-num">1</div>
+						<div class="shopping-btn2">+</div>
+					</div>
+					<div class="shopping-txt">套餐类型:官方标配;颜色分类:蓝色</div>
+					<div class="shopping-btn3">></div>
+				</div>
+				<div class="shopping-del">删除</div>
+			</div>
+		</div>
+		<div class="shopping-cell">
+			<div class="btn1">编辑</div>
+			<div class="shopping-check"  onclick="check1(this)"></div>
+			<img class="shopping-img" src="images/product02.jpg" />
+			<div class="shopping-content1">	
+				<div class="txt1">包邮 Logitech/罗技 UE3100无线蓝牙耳机+麦克风 头戴式耳麦</div>
+				<div class="txt2">套餐类型:官方标配;颜色分类:蓝色</div>
+				<div class="txt3">
+					<div class="txt4">￥119</div>
+					<div class="txt5">X1</div>
+				</div>
+			</div>
+			<div class="shopping-content2">
+				<div class="shopping-select">
+					<div class="shopping-btn">
+						<div class="shopping-btn1">-</div>
+						<div class="shopping-num">1</div>
+						<div class="shopping-btn2">+</div>
+					</div>
+					<div class="shopping-txt">套餐类型:官方标配;颜色分类:蓝色</div>
+					<div class="shopping-btn3">></div>
+				</div>
+				<div class="shopping-del">删除</div>
+			</div>
+		</div>
+	</div>
+	<div class="all">
+		<div class="shopping-checkAll" onclick="check2()"></div>
+		<div class="all-txt1">全选</div>
+		<div class="all-txt2">合计:<span>￥0.00</span>不含运费</div>
+		<a class="all-btn">结算</a>
+	</div>
+	<footer class="footer">
+		<a  href="index.html" class="nav1">
+			<div class="nav-icon"></div>
+			<div class="nav-txt">首页</div>
+		</a>
+		<a  href="goods.html" class="nav2">
+			<div class="nav-icon"></div>
+			<div class="nav-txt">所有商品</div>
+		</a>
+		<a  href="classify.html" class="nav3">
+			<div class="nav-icon"></div>
+			<div class="nav-txt">分类</div>
+		</a>
+		<a  href="shopping.html" class="nav4 active">
+			<div class="nav-icon"></div>
+			<div class="nav-txt">购物车</div>
+		</a>
+		<a  href="personal.html" class="nav5">
+			<div class="nav-icon"></div>
+			<div class="nav-txt">个人中心</div>
+		</a>
+	</footer>
+
+	<div class="shopping-detail">
+		<div class="detail-top">
+			<div class="detail-img">
+				<img src="images/product02.jpg" />
+			</div>
+			<div class="detail-txt1">￥119</div>
+			<div class="detail-txt2">库存60件</div>
+			<div class="detail-txt2">已选:“黑色”“官方标配”全国联保</div>
+		</div>
+		<div class="detail-title">套餐类型</div>
+		<div class="detail-list">
+			<input type="button" value="官方标配" class="detail-cell1 active" />
+		</div>
+		<div class="detail-title">颜色分类</div>
+		<div class="detail-list">
+			<input type="button" value="灰色" class="detail-cell2 disabled" disabled="disabled" />
+			<input type="button" value="黑色" class="detail-cell2 " />
+			<input type="button" value="红色" class="detail-cell2 active" />
+			<input type="button" value="蓝色" class="detail-cell2 " />
+		</div>
+		<div class="detail-btn">确定</div>
+	</div>	
+
+	<div class="mask"></div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	/*$(".warp").on('click', '.btn1', function() {
+		if($(this).text()=="编辑"){
+			$(this).text("完成");
+			$(this).parent().find('.shopping-content1').hide();
+			$(this).parent().find('.shopping-content2').show();
+		}else{
+			$(this).text("编辑");
+			$(this).parent().find('.shopping-content2').hide();
+			$(this).parent().find('.shopping-content1').show();
+		}
+	});*/
+/*	$(".warp").on('click', '.shopping-del', function(event) {
+		$(this).parent().parent().remove();
+		if($(".shopping-cell").length == 0){
+			$(".all").remove();
+		}
+		event.preventDefault();
+	});*/
+	/*$(".warp").on('click', '.shopping-btn3', function() {
+		$(".shopping-detail").show();
+		$(".mask").show();
+	});*/
+	$(".all").on('click', '.shopping-checkAll', function() {
+		
+	});
+	$(".detail-btn").click(function() {
+		$(".shopping-detail").hide();
+		$(".mask").hide();
+	});
+	$(".shopping-detail").on('click', '.detail-cell1', function() {
+		$(".detail-cell1").removeClass('active');
+		$(this).addClass('active');
+	}).on('click', '.detail-cell2', function() {
+		$(".detail-cell2").removeClass('active');
+		$(this).addClass('active');
+	});
+	$(".warp").on('click', '.shopping-btn1', function() {
+		var uNum = $(this).parent().find('.shopping-num').text();
+		if(uNum >0){
+			uNum--;
+			$(this).parent().find('.shopping-num').text(uNum);
+		}
+	});
+	$(".warp").on('click', '.shopping-btn2', function() {
+		var uNum = $(this).parent().find('.shopping-num').text();
+		uNum++;
+		$(this).parent().find('.shopping-num').text(uNum);
+	});
+})
+function check1(a){
+		$(a).toggleClass('active');
+		if($(".shopping-check.active").length < $(".shopping-check").length){
+			$(".shopping-checkAll").removeClass('active');
+		}
+		if($(".shopping-check.active").length == $(".shopping-check").length){
+			$(".shopping-checkAll").addClass('active');
+		}
+}
+function check2(){
+	$(".shopping-checkAll").toggleClass('active');
+	if($(".shopping-checkAll").hasClass('active')){
+		$(".shopping-check").addClass('active');
+	}else{
+		$(".shopping-check").removeClass('active');
+	}
+}
+</script>
+</html>

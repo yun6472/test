@@ -1,0 +1,30 @@
+.btncs1{
+  background-image:url(../img/footbtn01.png);
+  background-size:auto 200%;
+  background-repeat:no-repeat;
+  background-position-x:center;
+}
+.btncs2{
+  background-image:url(../img/footbtn02.png);
+  background-size:auto 200%;
+  background-repeat:no-repeat;
+  background-position-x:center;
+}
+.btncs3{
+  background-image:url(../img/footbtn03.png);
+  background-size:auto 200%;
+  background-repeat:no-repeat;
+  background-position-x:center;
+}
+.btncs4{
+  background-image:url(../img/footbtn04.png);
+  background-size:auto 200%;
+  background-repeat:no-repeat;
+  background-position-x:center;
+}
+.btncs5{
+  background-image:url(../img/footbtn05.png);
+  background-size:auto 200%;
+  background-repeat:no-repeat;
+  background-position-x:center;
+}

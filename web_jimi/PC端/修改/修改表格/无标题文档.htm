@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>无标题文档</title>
+
+
+
+<link href="%E6%97%A0%E6%A0%87%E9%A2%98%E6%96%87%E6%A1%A3_files/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="%E6%97%A0%E6%A0%87%E9%A2%98%E6%96%87%E6%A1%A3_files/jquery.js"></script>
+
+<link id="skin" rel="stylesheet" href="%E6%97%A0%E6%A0%87%E9%A2%98%E6%96%87%E6%A1%A3_files/jbox.css">
+<script type="text/javascript" src="%E6%97%A0%E6%A0%87%E9%A2%98%E6%96%87%E6%A1%A3_files/jquery_003.js"></script>
+<script type="text/javascript" src="%E6%97%A0%E6%A0%87%E9%A2%98%E6%96%87%E6%A1%A3_files/jquery_002.js"></script>
+
+
+
+<script language="javascript">
+
+//圆通  申通   中通   韵达  天天  EMS
+function fahuo(orderId)
+{	
+	/*
+	var html = 
+	"<div style='padding:10px;'>请选择快递类型：<select name='kd_type' id='kd_type_id'><option value='0'>--请选择--</option>"+
+	"<option value='1'>顺丰</option><option value='2'>圆通</option><option value='3'>申通</option><option value='4'>中通</option><option value='5'>韵达</option>"+
+	"<option value='6'>天天</option><option value='7'>EMS</option></select><br/><br/>请输入快递单号：<input type='text' id='kd_num' name='kd_num' /><br/></div>";
+		*/	
+		
+		var html = 
+	"<div style='padding:10px;'>请输入快递名称：<input type='text' style='border:1px solid #cfcfcf;' id='kd_name' name='kd_name' /><br/><br/>请输入快递单号：<input style='border:1px solid #cfcfcf;' type='text' id='kd_num' name='kd_num' /><br/></div>";
+	
+	
+	
+	var submit = function (v, h, f) 
+	{
+			if (f.kd_name == '') 
+			{
+				$.jBox.tip("请输入快递名称", 'error'); 
+				return false;
+			}
+			if (f.kd_num == '') 
+			{
+				$.jBox.tip("请输入快递单号", 'error'); 
+				return false;
+			}
+
+			//alert(f.kd_type);
+			//alert(f.kd_num);
+			
+			
+			$.post('ajax_tools.php',
+			{
+				id:orderId,
+				action:'fahuo',
+				kd_name:f.kd_name,
+				kd_num:f.kd_num
+			},function(data,status)
+			{
+				if('success'==status)
+				{
+					$.jBox.tip(data.info,'success');
+					location.reload();
+				}
+			});
+
+
+		return true;
+	};
+
+	$.jBox(html, { title: "设置快递信息", submit: submit });
+}
+
+
+function change_price(orderId)
+{
+		var html = 
+	"<div style='padding:10px;'>请输入新的价格：<input type='text' style='border:1px solid #cfcfcf;' id='new_price' name='new_price' /><br/><br/>请输入修改原因（可选）：<input style='border:1px solid #cfcfcf;' type='text' id='change_desc' name='change_desc' /><br/></div>";
+	
+	
+	
+	var submit = function (v, h, f) 
+	{
+			if (f.new_price == '') 
+			{
+				$.jBox.tip("请输入新的价格", 'error'); 
+				return false;
+			}
+			if (f.change_desc == '') 
+			{
+				$.jBox.tip("请输入修改原因", 'error'); 
+				return false;
+			}
+
+			
+			
+			$.post('ajax_tools.php',
+			{
+				id:orderId,
+				action:'change_price',
+				new_price:f.new_price,
+				change_desc:f.change_desc 
+			},function(data,status)
+			{
+				if('success'==status)
+				{
+					$.jBox.tip(data.info,'success');
+					location.reload();
+				}
+			});
+
+
+		return true;
+	};
+
+	$.jBox(html, { title: "设置新的价格", submit: submit });
+}
+
+</script>
+<style type="text/css">
+	.imgtable{
+		float:left;
+		margin-right: 2%;
+	}
+	.imgtable:last-of-type{
+		margin-right: 0;
+	}
+	.pagin{
+		clear: both;
+	}
+	.imgtable td{
+		height: 41px;
+	}
+</style>
+</head>
+
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">商品订单</a></li>
+    <li>
+	<a href="#">订单列表</a>
+	</li>
+    </ul>
+    </div>
+    
+    <div class="rightinfo">
+     
+	<ul class="seachform">
+    
+      <li><label>综合查询</label><input id="key" class="scinput" type="text"></li>
+ 
+    
+    <li><label>&nbsp;</label><input name="" onclick="go_search()" class="scbtn" value="查询" type="button"></li>
+    
+    </ul>
+	
+	
+    <table class="imgtable" style="width:40%;">
+    
+    <thead>
+    <tr>
+		
+		 <th>订单编号</th>
+		 <th>产品名</th>
+		 
+		
+		<th>数量/价格</th>
+		<th>收件人</th>
+		 
+		<th>收货地址</th>
+		
+    </tr>
+    </thead>
+    
+    <tbody>
+    
+	  
+	
+    <tr>
+	
+	<td><a style="color:blue;cursor:pointer" href="http://localhost/junsite_order_sys/admin/order_analyze.php?action=order_info&amp;id=392">201703021529239621</a></td>
+	
+		<td>测试商品2 颜色 黑色 鞋码 39</td>
+		<td style="max-width:100px;">0.01</td>
+		
+		<td>纪甲</td> 
+		 
+		<td style="max-width:100px;">浙江温州苍南县河滨东路775号</td> 
+    </tr>
+      
+	
+    <tr class="odd">
+	
+	<td><a style="color:blue;cursor:pointer" href="http://localhost/junsite_order_sys/admin/order_analyze.php?action=order_info&amp;id=393">201703021546185336</a></td>
+	
+		<td>测试商品2 颜色 黑色 鞋码 39</td>
+		<td style="max-width:100px;">0.01</td>
+		
+		<td>纪甲</td> 
+		 
+		<td style="max-width:100px;">浙江温州苍南县河滨东路775号</td> 
+		
+		
+    </tr>
+       
+    
+    </tbody>
+    
+    </table>
+     <table class="imgtable" style="width: 28%;">
+    
+    <thead>
+    <tr>
+		
+		<th>收件电话</th>
+		<th>付款方式</th>
+		<th>快递状态</th>
+		<th>订单状态</th>
+		<th>下单IP</th>
+    </tr>
+    </thead>
+    
+    <tbody>
+    
+	  
+	
+    <tr>
+		<td>15868048520</td>
+		<td>货到付款</td>
+		<td>未发货</td>
+		<td>等待确认</td>
+		 <td>
+			127.0.0.1
+			<p>
+				
+			</p>
+		</td>
+    </tr>
+      
+	
+    <tr class="odd">
+
+		<td>15868048520</td>
+		
+		<td>货到付款</td>
+		<td>未发货</td>
+		<td>等待确认</td>
+		 
+		 <td>
+			127.0.0.1
+			<p>
+				
+			</p>
+			
+		</td>
+    </tr>
+       
+    
+    </tbody>
+    
+    </table>
+     <table class="imgtable" style="width: 28%;">
+    
+    <thead>
+    <tr>
+		<th>下单时间</th>
+		<th>客户留言</th>
+		<th>备注</th>
+		
+		<th>操作</th>
+		
+    </tr>
+    </thead>
+    
+    <tbody>
+    
+	  
+	
+    <tr>
+		<td>2017-03-02 15:29:23</td>
+		<td style="max-width:100px;">请尽快发货！！！！</td>
+		<td style="max-width:100px;"></td>
+		<td> 
+			<!--
+			<span style="color:blue;cursor:pointer;" onclick="fahuo('392')">发货</span>
+			<span style="color:blue;cursor:pointer;" onclick="close_order('392')">关闭</span>
+			-->
+			
+			<a href="http://localhost/junsite_order_sys/admin/order_analyze.php?action=update&amp;id=" class="tablelink">更新</a>
+			&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="http://localhost/junsite_order_sys/admin/order_analyze.php?action=update&amp;id=" class="tablelink">删除</a>
+		</td>
+    </tr>
+      
+	
+    <tr class="odd">
+		
+		<td>2017-03-02 15:46:18</td>
+		
+		 <td style="max-width:100px;">测试留言</td>
+		 <td style="max-width:100px;"></td>
+		 
+		<td> 
+			<!--
+			<span style="color:blue;cursor:pointer;" onclick="fahuo('393')">发货</span>
+			<span style="color:blue;cursor:pointer;" onclick="close_order('393')">关闭</span>
+			-->
+			
+			<a href="http://localhost/junsite_order_sys/admin/order_analyze.php?action=update&amp;id=" class="tablelink">更新</a>
+			&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="http://localhost/junsite_order_sys/admin/order_analyze.php?action=update&amp;id=" class="tablelink">删除</a>
+		</td>
+    </tr>
+       
+    
+    </tbody>
+    
+    </table>
+  
+   
+    <div class="pagin">
+    	<div class="message">共<i class="blue">2</i>条记录，当前显示第&nbsp;<i class="blue">1&nbsp;</i>页，共<i class="blue">1&nbsp;</i>页</div>
+		
+		
+        <ul class="paginList">
+        <li class="paginItem">
+						<a href="javascript:void(0);"><span class="pagepre"></span></a>
+					</li>
+		
+		<!--
+        <li class="paginItem"><a href="javascript:;">1</a></li>
+		-->
+		
+        <li class="paginItem current"><a href="javascript:void(0);">1</a></li>
+		
+		<!--
+        <li class="paginItem"><a href="javascript:;">3</a></li>
+        <li class="paginItem"><a href="javascript:;">4</a></li>
+        <li class="paginItem"><a href="javascript:;">5</a></li>
+        <li class="paginItem more"><a href="javascript:;">...</a></li>
+        <li class="paginItem"><a href="javascript:;">10</a></li>
+		-->
+		
+				 <li class="paginItem"><a href="javascript:void(0);"><span class="pagenxt"></span></a></li>
+				
+		
+		<input style="background-color:white;border:1px solid black; width:24px; height:30px; padding-left:5px;padding-right:5px; line-height:30px; border-radius:5px; margin-left:20px;" id="input_page" value="1" type="text">
+		
+		
+		<input value="GO" style="cursor:pointer;background-color:#0099FF; width:30px; height:30px; line-height:30px; border-radius:5px; margin-left:8px;" onclick="go_page()" type="button">
+		
+		
+        </ul>
+    </div>
+    
+    
+    
+    </div>
+    
+    
+
+
+<script type="text/javascript">
+	$('.imgtable tbody tr:odd').addClass('odd');
+	
+	function close_order(orderId)	
+	{
+		if(confirm("确认关闭吗?关闭后前台将无法显示"))
+		{
+			window.location.href="order_list.php?action=close&id="+orderId;
+		}
+	}
+	
+	
+	
+	
+	function go_search()
+	{
+		var key = $('#key').val();
+		
+		if('' != key)
+		{
+			window.location.href='?type=&key='+key;
+		}
+	}
+	
+	
+	function go_page()
+	{
+		var pageNum =  $("#input_page").val();
+		
+		 var reg = new RegExp("^[0-9]*$");
+		
+		//pageNum
+		if(!reg.test(pageNum))
+		{
+			alert('请输入数字');return;
+		}
+		
+		window.location.href="?p="+pageNum+"&type=&key=";
+	}
+	
+	
+	</script>
+    
+
+
+
+</body></html>

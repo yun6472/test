@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>苍丰纸制品</title>
+		<link rel="stylesheet" href="css/detail.css">
+		<style>
+			.content-r{
+				background: transparent;
+			}
+			.endtime{
+				position: absolute;
+			    top: 0;
+			    left: 10px;
+			    display: inline-block;
+			    margin-top: 14px;
+			    color: #ff0000;
+			}
+			.group-content li{
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="header clearfix">
+			<div class="header-content clearfix">
+				<a href="index.html"><img class="logo" src="images/logo.png" /></a>
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="aboutUs.html">关于我们</a></li>
+					<li><a href="group.html">纸板团购</a></li>
+					<li><a href="order.html">我的订单</a></li>
+				</ul>
+				<div class="header-right">
+					<a class="header-txt1" href="javascript:void(0);">登录</a>|
+					<a href="register.html">注册</a>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="container clearfix">
+			<div class="nav2">
+				<ul class="clearfix">
+					<li class="active">纸板团购</li>
+					<li>我的订单</li>
+					<li>购物车</li>
+					<li>购买须知</li>
+					<li >地址管理</li>
+				</ul>
+			</div>
+			<div class="content-r">
+				<div class="group-banner">
+					<!-- <img src="image"> -->
+				</div>
+				<img src="images/title.png" />
+				<div class="group-nav">
+					<ul class="clearfix">
+						<li class="active">全部</li>
+						<li>单E瓦</li>
+						<li>单B瓦</li>
+						<li>BC瓦</li>
+						<li>BE瓦</li>
+					</ul>
+				</div>
+				<div class="group-content">
+					<ul class="clearfix">
+						<li>
+							<img src="images/pic05.jpg" />
+							<span class="group-txt1">￥2.39</span>
+							<b class="group-txt2">￥2.39</b>
+							<a class="group-txt3" href="##">立即抢购</a>
+							<span class="endtime">还剩02时23分43秒</span>
+						</li>
+						<li>
+							<img src="images/pic05.jpg" />
+							<span class="group-txt1">￥2.39</span>
+							<b class="group-txt2">￥2.39</b>
+							<a class="group-txt3" href="##">立即抢购</a>
+						</li>
+						<li>
+							<img src="images/pic05.jpg" />
+							<span class="group-txt1">￥2.39</span>
+							<b class="group-txt2">￥2.39</b>
+							<a class="group-txt3" href="##">立即抢购</a>
+						</li>
+						<li>
+							<img src="images/pic05.jpg" />
+							<span class="group-txt1">￥2.39</span>
+							<b class="group-txt2">￥2.39</b>
+							<a class="group-txt3" href="##">立即抢购</a>
+						</li>
+						<li>
+							<img src="images/pic05.jpg" />
+							<span class="group-txt1">￥2.39</span>
+							<b class="group-txt2">￥2.39</b>
+							<a class="group-txt3" href="##">立即抢购</a>
+						</li>
+						<li>
+							<img src="images/pic05.jpg" />
+							<span class="group-txt1">￥2.39</span>
+							<b class="group-txt2">￥2.39</b>
+							<a class="group-txt3" href="##">立即抢购</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<ul class="clearfix">
+				<li>
+					<a href="aboutUs.html">关于我们</a>
+				</li>
+				<li>
+					<a href="group.html">纸板团购</a>
+				</li>
+				<li>
+					<a href="address.html">地址管理</a>
+				</li>
+				<li>
+					<a href="contacts.html">联系我们</a>
+				</li>
+			</ul>
+			<p class="footer-txt1">Copyright © 2006-2017 温州苍丰纸制品　浙ICP备11017824号-4</p>
+		</div>
+
+		<div class="mask"></div>
+		<div class="join">
+			<img src="images/logo.png" />
+			<p class="join-txt1">使用手机号码/邮箱登录</p>
+			<div class="join-btn1">
+				<input type="text" />
+				<p>输入手机号或邮箱</p>
+			</div>
+			<div class="join-btn1">
+				<input type="text" />
+				<p>密码</p>
+			</div>
+			<input class="join-btn2" type="submit" value="登录" />
+			<a class="join-txt2" href="##">忘记密码&gt;&gt;</a>
+			<span class="join-txt3">还没有账号？</span>
+			<a class="join-txt2" href="register.html">点击注册&gt;&gt;</a>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script >
+
+			var intDiff = parseInt(36000);//倒计时总秒数量
+			$(function(){
+				//登录页面
+				$(".header-txt1").click(function(){
+					$(".mask").show();
+					$(".join").show();
+				})
+				$(".mask").click(function(){
+					$(".mask").hide();
+					$(".join").hide();
+				})
+				$(".join-btn1 p").click(function() {
+					$(this).hide();
+					$(this).siblings("input").focus();
+				});
+				$(".join-btn1 input").blur(function() {
+					if($(this).val() == ""){
+						$(this).siblings("p").show();
+					}
+				});
+
+
+
+				Timer(intDiff);
+			})
+
+
+			function Timer(intDiff){
+				window.setInterval(function(){
+					var day=0,
+						hour=0,
+						minute=0,
+						second=0;
+					if(intDiff > 0){
+						day = Math.floor(intDiff / (60 * 60 * 24));
+						hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+						minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+						second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+					}
+					if (minute <= 9) minute = '0' + minute;
+					if (second <= 9) second = '0' + second;
+					if (hour <= 9) hour = '0' + hour;
+					//$(".endtime").text("还剩"+hour+"时"+second+"分"+minute+"秒");
+					intDiff--;
+				}, 1000);
+			}
+		</script>
+	</body>
+</html>

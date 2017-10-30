@@ -1,0 +1,63 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<style type="text/css">
+		</style>
+	</head>
+	<body>
+		<div class="warper prize">
+			<div class="toolbar">您是第<span>166666</span>位浏览者</div>		
+			<img src="images/title.png" class="prize-img" />	
+			<p class="prize-txt1">剩余红包<span>66666</span>个</p>
+			<div class="prize-content">
+				<p class="prize-txt2">恭喜您获得红包</p>
+				<p class="prize-txt3"><span>1.00</span>元</p>
+				<img class="prize-img2" src="images/code.jpg"/>
+				<p class="prize-txt4">长按二维码，查看奖品</p>
+			</div>
+			<div class="prize-txt5">&gt;&gt;活动详情&lt;&lt;</div>
+		</div>
+		<div class="mask"></div>
+		<div class="close-btn"><img src="images/close.png"></div>
+		<div class="redpage">
+			<img src="images/redpage.png" />
+			<a class="red-btn" href="##"></a>
+		</div>
+		<div class="redpage-bg">
+			<img class="redpage-bg1" src="images/redpage1.png" />
+			<img class="redpage-bg2"  src="images/redpage2.png" />
+		</div>
+	</body>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script>
+		$(function(){
+			$(".close-btn").click(function(){
+				$(".mask").hide();
+				$(".close-btn").hide();
+				$(".redpage").hide();
+			});
+			$(".red-btn").click(function(){
+				$(".redpage").hide();
+				$(".redpage-bg").show();
+				$(".mask").fadeOut();
+				$(".close-btn").fadeOut();
+				$(".redpage-bg1").animate({
+					top:"-50%",
+					opacity:0
+				},1000)
+				$(".redpage-bg2").animate({
+					top:"100%",
+					opacity:0
+				},1000)
+			})
+		})
+	</script>
+</html>

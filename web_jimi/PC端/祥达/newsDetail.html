@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html >
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>祥达印业</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body >
+	<div class="header clearfix">
+		<div class="logo-img"><img src="images/logo03.jpg" alt="祥达印业logo" /></div>
+		<ul class="nav">
+			<li>
+				<a href="index.html">
+					首页<br />
+					<i>HOME	</i>		
+				</a>
+			</li>
+			<li>
+				<a href="aboutUs.html">
+					关于我们<br />
+					<i>ABOUTS</i>				
+				</a>
+			</li>
+			<li>
+				<a href="product.html">
+					产品中心<br />
+					<i>PRODUCT</i>
+				</a>
+			</li>	
+			<li>
+				<a href="news.html">
+					新闻中心<br />
+					<i>NEWS	</i>		
+				</a>
+			</li>	
+			<li>
+				<a href="customer.html">
+					客户案例<br />
+					<i>CUSTOMER</i>	
+				</a>
+			</li>	
+			<li>
+				<a href="contactUs.html">
+					联系我们<br />
+					<i>CONTACT</i>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="newsDetail clearfix">
+		<ul class="tab clearfix">
+			<li class="tab-cell active">公司新闻</li>
+			<li class="tab-cell">行业新闻</li>
+			<li class="tab-cell">其他新闻</li>
+		</ul>
+		<h3 class="newsDetail-title">CorelDraw印刷输出中应该注意的事项</h3>
+		<p class="newsDetail-txt1">时间：2016-06-18 发布者：admin</p>
+		<p class="newsDetail-txt2">公司拥有一流的生产设备，专业的印刷人才。</p>
+		<p class="newsDetail-txt2">我们的主打产品是：精装书、简装书、杂志、企业产品画册、精装楼书、精装礼品盒、儿童图书、手提袋、笔记本、海报、信封、贺卡、明信片、年历、包装盒、标签、请贴、不干胶等多项印刷服务。</p>
+		<p class="newsDetail-txt2">一、字体问题     </p>
+		<p class="newsDetail-txt2">①某些字体库描述方法不同，笔画交叠部分输出后会出透叠，要小心！ </p>
+		<p class="newsDetail-txt2">②包含中英文特殊字符的段落文本容易出问题，如“■，@，★，○”等。     </p>
+		<p class="newsDetail-txt2">③使用新标准的GBK字库来解决偏僻字丢失的问题。     </p>
+		<p class="newsDetail-txt2">④笔画太细的字体，最好不要使用多于3色的混叠，如等，同理，也不适用于深色底反白色字。避免不了的状况下，需要给反白字勾边，适用底色近似色或者某一印刷单色。</p>
+
+		<div class="newsDetail-link">
+			<a href="##" class="newsDetail-link1">上一篇：<span class="newsDetail-linkNone">没有了</span></a>
+			<a href="##" class="newsDetail-link1">下一篇：<span >加设二维码 能效标识监管再添新利器</span></a>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer-top">
+			<img class="footer-img1" src="images/logo02.png" alt="logo" />
+			<a href="##"><img class="footer-img2" src="images/icon04.png" alt="logo" /></a>
+			<a href="##"><img class="footer-img2" src="images/icon05.png" alt="logo" /></a>
+			<a href="##"><img class="footer-img2" src="images/icon06.png" alt="logo" /></a>
+			<a href="##"><img class="footer-img2" src="images/icon07.png" alt="logo" /></a>
+			<a href="##"><img class="footer-img2" src="images/icon08.png" alt="logo" /></a>
+			<a href="##"><img class="footer-img2" src="images/icon09.png" alt="logo" /></a>
+		</div>
+		<p class="footer-txt">
+			<a href="aboutUs.html">关于我们</a>|
+			<a href="news.html">新闻中心</a>|
+			<a href="contactUs.html">联系我们</a>|
+			<a href="customer.html">客户案例</a>
+		</p>
+		<p class="footer-txt2">© 2017 ALL RIGHTS RESERVED 苍南县祥达印业有限公司 浙ICP备12345678号</p>
+		<p class="footer-txt2">技术支持：温州几米网络科技有限公司</p>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+	$(function(){
+		
+		$(".tab-cell").click(function() {
+			$(".tab-cell").removeClass('active');
+			$(this).addClass('active');
+		});
+		$(".pagination li").click(function(event) {
+			$(".pagination li").removeClass('active');
+			$(this).addClass('active');
+		});
+		$(".nav li").hover(function() {
+			$(this).children('a').addClass('current');
+		}, function() {
+			$(this).children('a').removeClass('current');
+		});
+	})
+</script>
+</html>

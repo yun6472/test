@@ -1,0 +1,88 @@
+/* reset */
+html,blockquote,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul,section,body {margin:0;padding:0}
+ol,ul {list-style:none}
+a {text-decoration:none}
+fieldset,img {border:0}
+:focus{outline: none;}
+input[type="button"], input[type="submit"], input[type="reset"] {
+	-webkit-appearance: none;
+}
+html{font-family: 'Helvetica Neue',Tahoma,Arial,PingFangSC-Regular,'Hiragino Sans GB','Microsoft Yahei',sans-serif;}
+textarea {  -webkit-appearance: none;}
+.clearfix:after{
+	content:"";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix{
+	zoom:1;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body {
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+
+@media screen and (min-width: 320px) {html {font-size: 14px;}}
+@media screen and (min-width: 360px) {html {font-size: 16px;}}
+@media screen and (min-width: 400px) {html {font-size: 18px;}}
+@media screen and (min-width: 440px) {html {font-size: 20px;}}
+@media screen and (min-width: 480px) {html {font-size: 22px;}}
+@media screen and (min-width: 640px) {html {font-size: 28px;}}
+
+.banner img{
+	width: 100%;
+}
+
+.swiper-slide{
+	height: auto;
+}
+.swiper-wrapper{
+	height: auto;
+}
+.swiper-pagination-bullet{
+	background: #fff;
+}
+.swiper-pagination-bullet-active{
+	background: #fff;
+}
+
+.list{
+	width: 85%;
+	margin:0 auto;
+}
+.list ul{
+	overflow: hidden;
+	padding-top: 1.5rem;
+}
+.list li{
+	text-align: center;
+	float: left;
+	width: 50%;
+	padding: 2rem 0;
+}
+.list li a{
+	display: block;
+	position: relative;
+}
+.list li:nth-child(even) a:before{
+	content: "";
+	display: block;
+	width: 1px;
+	height: 100%;
+	position: absolute;
+	background: #909090;
+}
+.list li img{
+	width: 3rem;
+	padding-bottom: 0.9375rem;
+}
+.list li p{
+	font-size: 1rem;
+	color:#333;
+}

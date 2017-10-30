@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>苍丰纸制品</title>
+		<link rel="stylesheet" href="css/detail.css">
+	</head>
+	<body>
+
+
+
+
+	<div class="register">
+		<div class="re-header clearfix">
+			<a href="index.html"><img class="logo" src="images/logo.png" /></a>
+			<span class="re-txt1">通行证</span>
+			<div class="re-txt2">
+				已有账号，
+				<a class="header-txt1" href="javascript:void(0);">马上登录</a>|
+				<a href="index.html">返回首页</a>
+			</div>
+		</div>
+		<div class="re-content">
+			<h3 class="re-title">注册会员</h3>
+			<div class="re-btn1">
+				<p>用户名，2~8个汉字/4~16个字符</p>
+				<input type="text" />
+			</div>
+			<div class="re-btn1">
+				<p>手机号</p>
+				<input type="text" />
+			</div>
+			<div class="re-btn2">
+				<p>密码长度6-20位</p>
+				<input type="text" />
+				<span class="re-send">发送验证码</span>
+			</div>
+			<div class="re-btn1">
+				<p>密码长度6-20位</p>
+				<input type="text" />
+			</div>
+			<label class="re-btn3">
+				<input type="checkbox" />
+				我已阅读并接受<a href="##">用户协议</a>
+			</label>
+			<input class="re-btn4" type="submit"  value="注册" />
+			<p class="re-txt3">已有帐号，去<a class="header-txt1" href="javascript:void(0);">登录</a></p>
+		</div>
+		
+	</div>
+
+		<div class="mask"></div>
+
+		<div class="join">
+			<img src="images/logo.png" />
+			<p class="join-txt1">使用手机号码/邮箱登录</p>
+			<div class="join-btn1">
+				<input type="text" />
+				<p>输入手机号或邮箱</p>
+			</div>
+			<div class="join-btn1">
+				<input type="text" />
+				<p>密码</p>
+			</div>
+			<input class="join-btn2" type="submit" value="登录" />
+			<a class="join-txt2" href="##">忘记密码&gt;&gt;</a>
+			<span class="join-txt3">还没有账号？</span>
+			<a class="join-txt2" href="register.html">点击注册&gt;&gt;</a>
+		</div>
+		<div class="re-footer">
+			<p>浙ICP备11017824号-4</p>
+			<p>Copyright © 2016-2017 温州苍丰纸制品有限公司</p>
+		</div>
+
+		<script src="js/jquery.min.js"></script>
+		<script >
+			$(function(){
+				//登录页面
+				$(".header-txt1").click(function(){
+					$(".mask").show();
+					$(".join").show();
+				})
+				$(".mask").click(function(){
+					$(".mask").hide();
+					$(".join").hide();
+				})
+				$(".join-btn1 p ,.re-btn1 p").click(function() {
+					$(this).hide();
+					$(this).siblings("input").focus();
+				});
+				$(".join-btn1 input,.re-btn1 input").blur(function() {
+					if($(this).val() == ""){
+						$(this).siblings("p").show();
+					}
+				});
+
+
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>久通拼团</title>
+	<link rel="stylesheet" href="css/purchaseDetail.css">
+</head>
+<body>
+	<div class="warp">
+		<div class="header">
+			<img src="images/icon13.png" />快来入团吧
+			<div class="header-txt">就差你了</div>
+		</div>
+		<div class="content">
+			<div class="title">
+				<div class="order-img">
+					<img src="images/pic01.jpg" />
+				</div>
+				<div class="title-content">
+					<div class="order-title">越南红心火龙果(大)越南红心火龙果(大)  3个34.9元</div>
+					<div class="order-num">
+						<div class="order-num1">30g*2 口感香脆醇香 中粮研发</div>
+					</div>
+					<div class="prize">
+						<div class="prize1">2人团：<span>￥34.9</span></div>
+					</div>
+				</div>
+				<div class="group-img"><img src="images/success.png" /></div>
+			</div>
+		</div>
+		<div class="head-img">
+			<div class="head-img-cell "><img src="images/banner01.jpg" /></div>
+			<div class="head-img-cell"><img src="images/banner01.jpg" /></div>
+			<div class="head-img-cell"><img src="images/icon03.png" /></div>
+		</div>
+		<div class="txt1">还差<span class="txt2">1</span>人，盼你如南方人盼暖气~</div>
+		<div class="date">
+			<div class="line"></div>
+			<div class="date-content">
+				剩余
+				<div class="day" id="day"><span id="day_show">0</span> 天 </div>
+				<span id="hour_show">00</span>:
+				<span id="minute_show">00</span>:
+				<span id="second_show">00</span>
+				结束
+			</div>
+		</div>
+		<div class="tuan-line">
+			<em class="tuan-icon"></em>
+			<div class="tuan-img">
+				<img src="images/banner01.jpg" />
+				团长~
+			</div>
+			<div class="tuan-date">2016-10-20 15:30:05开团</div>
+		</div>
+		<div class="line2"></div>
+		<div class="tuan-img2">
+			<img src="images/banner01.jpg" />还差1人，让小伙伴都来组团吧！
+		</div>
+		<div class="tuan-tiele">你可能喜欢</div>
+		<div class="favorite">
+			<a href="detail.html" class="favorite-cell">
+				<img src="images/banner01.jpg" class="favorite-img" />
+				<div class="favorite-txt1">甘肃花牛苹果6个24.9元</div>
+				<div class="favorite-txt2"><span>￥39.90</span>/1盒</div>
+			</a>
+			<a href="detail.html" class="favorite-cell">
+				<img src="images/banner01.jpg" class="favorite-img" />
+				<div class="favorite-txt1">甘肃花牛苹果6个24.9元</div>
+				<div class="favorite-txt2"><span>￥39.90</span>/1盒</div>
+			</a>
+			<a href="detail.html" class="favorite-cell">
+				<img src="images/banner01.jpg" class="favorite-img" />
+				<div class="favorite-txt1">甘肃花牛苹果6个24.9元</div>
+				<div class="favorite-txt2"><span>￥39.90</span>/1盒</div>
+			</a>
+			<a href="detail.html" class="favorite-cell">
+				<img src="images/banner01.jpg" class="favorite-img" />
+				<div class="favorite-txt1">甘肃花牛苹果6个24.9元</div>
+				<div class="favorite-txt2"><span>￥39.90</span>/1盒</div>
+			</a>
+		</div>
+		<h3 class="product-title2">
+			拼团玩法
+			<a href="playWay.html">查看详情 &gt;</a>
+		</h3>
+		<ul class="play-way">
+			<li class="active"><span class="play-way-num">1</span> 选择<br />心仪产品</li>
+			<li><span class="play-way-num">2</span> 支付<br />参团/建团</li>
+			<li><span class="play-way-num">3</span> 邀请好友<br />参团支付</li>
+			<li><span class="play-way-num">4</span> 达到人数<br />参团支付</li>
+		</ul>
+		<div class="footer">
+			<a href="index.html" class="footer-icon1">我也开个团，点此回到商品列表。</a>
+		</div>
+		<div class="footer active">
+			<a href="index.html" class="footer-icon2" ></a>
+			<a href="##" class="footer-icon3" ></a>
+			<a href="index.html" class="footer-icon4">我也要参团</a>
+		</div>
+		<a class="tuan-icon2" href="playWay.html"><img src="images/icon12.png" /></a>
+	</div>
+	<!-- 分享 -->
+	<!-- <div class="mask"><img src="images/share.png" /></div> -->
+	<div class="mask2">
+		<img src="images/share2.png" />
+		<div class="mask-txt">
+			<p class="mask-txt1">团长大人都是厉害的大人物！</p>
+			<p class="mask-txt1">还差2人就能组团成功啦~</p>
+			<p class="mask-txt1">快去呼唤小伙伴吧！</p>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+
+var intDiff = parseInt(36000);//倒计时总秒数量
+function Timer(intDiff){
+	window.setInterval(function(){
+	var day=0,
+		hour=0,
+		minute=0,
+		second=0;
+	if(intDiff > 0){
+		day = Math.floor(intDiff / (60 * 60 * 24));
+		hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+		minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+		second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+	}
+	if (minute <= 9) minute = '0' + minute;
+	if (second <= 9) second = '0' + second;
+	if (hour <= 9) hour = '0' + hour;
+	if (day <= 0) $("#day").hide();
+	$('#day_show').text(day);
+	$('#hour_show').text(hour);
+	$('#minute_show').text(minute);
+	$('#second_show').text(second);
+	intDiff--;
+	}, 1000);
+}
+$(function(){
+	Timer(intDiff);
+	$(".footer-icon3").click(function() {
+		$(".mask2").show();
+	});
+	$(".mask2").click(function() {
+		$(".mask2").hide();
+	});
+})
+</script>
+</html>

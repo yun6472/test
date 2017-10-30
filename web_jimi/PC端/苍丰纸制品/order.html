@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>苍丰纸制品</title>
+		<link rel="stylesheet" href="css/detail.css">
+		<style type="text/css">
+			.footer{
+				position: absolute;
+				width: 100%;
+				bottom: 0;
+			}
+			.content-r{
+				padding-bottom: 50px;
+				max-height: 600px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="header clearfix">
+			<div class="header-content clearfix">
+				<a href="index.html"><img class="logo" src="images/logo.png" /></a>
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="aboutUs.html">关于我们</a></li>
+					<li><a href="group.html">纸板团购</a></li>
+					<li><a href="order.html">我的订单</a></li>
+				</ul>
+				<div class="header-right">
+					<a class="header-txt1" href="javascript:void(0);">登录</a>|
+					<a href="register.html">注册</a>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="container clearfix">
+			<div class="nav2">
+				<ul class="clearfix">
+					<li>纸板团购</li>
+					<li class="active">我的订单</li>
+					<li>购物车</li>
+					<li>购买须知</li>
+					<li >地址管理</li>
+				</ul>
+			</div>
+			<div class="content-r clearfix">
+				<div class="title2 order-title">
+					<ul class="order-nav clearfix">
+						<li class="active">全部</li>
+						<li>代付款</li>
+						<li>已下单</li>
+						<li>已发货</li>
+						<li>已签收</li>
+						<li>已取消</li>
+					</ul>
+					<div class="serach">
+						<input type="text" placeholder="搜索" />
+						<img src="images/search.png" />
+					</div>
+					<span class="title-txt">购物车</span>
+				</div>
+				<table class="shopping-table">
+					<tr>
+						<th width="140">材料</th>
+						<th width="140">产品特征</th>
+						<th width="150">规格</th>
+						<th width="160">压线方式</th>
+						<th width="70">数量</th>
+						<th width="80">金额</th>
+						<th>操作</th>
+					</tr>
+					<tr class="order-title">
+						<td colspan="2">订单编号：GRN1707101008</td>
+						<td>订单类型：正常</td>
+						<td colspan="3">订单状态：已发货</td>
+						<td>详情</td>
+					</tr>
+					<tr>
+						<td>L737C（东经特H）</td>
+						<td>普通-连做-普通压线5层 BC瓦</td>
+						<td>纸箱：33.0*16.5*17.5下料：102.5*34.4</td>
+						<td>横：3.5+33+16....纵：8.45+17.50...</td>
+						<td>701片</td>
+						<td>金额：690.47</td>
+						<td>
+							<a href="##" class="order-btn1">再次下单</a>
+							<a href="##" class="order-btn2">签收</a>
+						</td>
+					</tr>
+				</table>
+				<div class="pagination">
+					<a href="##" class="pagination-first">首页</a>
+					<a href="##" class="pagination-btn">1</a>
+					<a href="##" class="pagination-btn">2</a>
+					<a href="##" class="pagination-btn active">3</a>
+					<a href="##" class="pagination-btn">4</a>
+					<a href="##" class="pagination-btn">5</a>...
+					<a href="##" class="pagination-btn">51</a>
+					<a href="##" class="pagination-btn">52</a>
+					<a href="##" class="pagination-prev">上一页</a>
+					<a href="##" class="pagination-next">下一页</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<ul class="clearfix">
+				<li>
+					<a href="aboutUs.html">关于我们</a>
+				</li>
+				<li>
+					<a href="group.html">纸板团购</a>
+				</li>
+				<li>
+					<a href="address.html">地址管理</a>
+				</li>
+				<li>
+					<a href="contacts.html">联系我们</a>
+				</li>
+			</ul>
+			<p class="footer-txt1">Copyright © 2006-2017 温州苍丰纸制品　浙ICP备11017824号-4</p>
+		</div>
+
+		<div class="mask"></div>
+		<div class="join">
+			<img src="images/logo.png" />
+			<p class="join-txt1">使用手机号码/邮箱登录</p>
+			<div class="join-btn1">
+				<input type="text" />
+				<p>输入手机号或邮箱</p>
+			</div>
+			<div class="join-btn1">
+				<input type="text" />
+				<p>密码</p>
+			</div>
+			<input class="join-btn2" type="submit" value="登录" />
+			<a class="join-txt2" href="##">忘记密码&gt;&gt;</a>
+			<span class="join-txt3">还没有账号？</span>
+			<a class="join-txt2" href="register.html">点击注册&gt;&gt;</a>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script >
+			$(function(){
+				//登录页面
+				$(".header-txt1").click(function(){
+					$(".mask").show();
+					$(".join").show();
+				})
+				$(".mask").click(function(){
+					$(".mask").hide();
+					$(".join").hide();
+				})
+				$(".join-btn1 p").click(function() {
+					$(this).hide();
+					$(this).siblings("input").focus();
+				});
+				$(".join-btn1 input").blur(function() {
+					if($(this).val() == ""){
+						$(this).siblings("p").show();
+					}
+				});
+
+				$(".shopping-table tr:odd").css('background', '#f8f8f8');
+			})
+		</script>
+	</body>
+</html>

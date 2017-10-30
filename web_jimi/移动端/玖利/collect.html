@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>个人中心</title>
+	<link rel="stylesheet" href="css/personalDetail.css">
+</head>
+<body>
+	<div class="warp">
+		<div class="collect-cell">
+			<img class="collect-img" src="images/pic04.jpg" />
+			<div class="collect-txt1">【三只松鼠_碧根果210gx2袋】零食坚果山核桃长寿果干果奶油味</div>
+			<div class="collect-txt2">￥33.90</div>
+			<div class="collect-btn">
+				<a href="##" class="collect-btn1">加入购物车</a>
+				<a href="##" class="collect-btn2">删除</a>
+			</div>
+		</div>
+		<div class="collect-cell">
+			<img class="collect-img" src="images/pic04.jpg" />
+			<div class="collect-txt1">【三只松鼠_碧根果210gx2袋】零食坚果山核桃长寿果干果奶油味</div>
+			<div class="collect-txt2">￥33.90</div>
+			<div class="collect-btn">
+				<a href="##" class="collect-btn1">加入购物车</a>
+				<a href="##" class="collect-btn2">删除</a>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<a  href="index.html" class="nav1">
+			<div class="nav-icon"></div>
+			<div class="nav-txt">首页</div>
+		</a>
+		<a  href="goods.html" class="nav2">
+			<div class="nav-icon"></div>
+			<div class="nav-txt">所有商品</div>
+		</a>
+		<a  href="classify.html" class="nav3">
+			<div class="nav-icon"></div>
+			<div class="nav-txt">分类</div>
+		</a>
+		<a  href="shopping.html" class="nav4">
+			<div class="nav-icon"></div>
+			<div class="nav-txt">购物车</div>
+		</a>
+		<a  href="personal.html" class="nav5 active">
+			<div class="nav-icon"></div>
+			<div class="nav-txt">个人中心</div>
+		</a>
+	</footer>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".nav").on('click', '.nav-cell', function() {
+		$(".nav-cell").removeClass('active');
+		$(this).addClass('active');
+	});
+})
+</script>
+</html>

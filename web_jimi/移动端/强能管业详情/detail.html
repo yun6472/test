@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>家具</title>
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/style.css" />
+	<style type="text/css">
+		html,body{
+			height: 100%;
+		}
+		.detail ,.swiper-container-flip {
+			height: 100%;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="detail">
+		<a  class="detail-btn1" href="##"></a>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="detail-img">
+						<img  src="images/pic_06.jpg" />
+					</div>
+				</div>
+				<div class="swiper-slide">
+					
+					<div class="detail-img">
+						<img  src="images/pic_07.jpg" />
+						
+					</div>
+					<p class="detail-txt1">以简洁明快为主要特点，重视室内空间的使用效能,强调室内布置以简洁明快为主要特点，重视室内空间的使用效能,强调室内布置以简洁明快为主要特点，重视室内空间的使用效能,强调室内布置以简洁明快为主要特点，重视室内空间的使用效能,强调室内布置</p>
+					<p class="detail-txt2">以简洁明快为主要特点，重视室内空间的使用效能,强调室内布置以简洁明快为主要特点，重视室内空间的使用效能,强调室内布置以简洁明快为主要特点，重视室内空间的使用效能,强调室内布置以简洁明快为主要特点，重视室内空间的使用效能,强调室内布置</p>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<a class="detail-add" href="##"><img src="images/add.png" /></a>
+	</div>
+
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var oWidth = 0,
+			oHeight = 0;
+
+		var swiper = new Swiper('.swiper-container', {
+        	pagination: '.swiper-pagination',
+        	paginationType :'fraction',
+	        grabCursor: true,
+	        centeredSlides: true,
+	        slidesPerView: 'auto'
+	    });
+
+	    $(function(){
+
+	    	$(".detail-txt1").click(function() {
+	    		$(".detail-txt1").hide();
+	    		$(".detail-txt2").slideDown();
+	    		oWidth = $(this).parent().children('.detail-img').width()/2;
+	    		oHeight = $(this).parent().children('.detail-img').height()/2;
+	    		$(this).parent().children('.detail-img').animate({
+	    			"width": oWidth,
+	    			"height": oHeight
+	    		});
+	    	});
+
+	    	$(".detail-txt2").click(function(){
+	    		$(".detail-txt2").slideUp('400', function() {
+	    			$(".detail-txt1").show();
+	    		});
+	    		$(this).parent().children('.detail-img').animate({
+	    			"width": oWidth*2,
+	    			"height": oHeight*2
+	    		});
+	    	});
+	    })
+	</script>
+</body>
+</html>

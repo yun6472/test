@@ -1,0 +1,102 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+		<title>托递平台</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="css/LArea.css">
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<div class="warper">
+			<form>
+				<div class="index-header header-color  clearfix">
+					<a href="javascript:history.back(-1);"><img class="header-img1" src="images/icon12.png" /></a>
+					详细地址
+				</div>
+				<div class="send-content clearfix">
+					<div class="send-add1">
+						<img class="send-img1" src="images/icon21.png" />
+						<input  id="city" class="send-btn1" type="text" placeholder="请输入地址" readonly="" />
+						<input id="city_value" type="hidden" />
+					</div>
+					<div class="send-add2">
+						<input class="send-btn1" type="text" placeholder="请输入具体楼层/门牌号" />
+					</div>
+					<div class="send-add1">
+						<img class="send-img1" src="images/icon22.png" />
+						<input class="send-btn1" type="text" placeholder="请输入姓名" />
+					</div>
+					<div class="send-add1">
+						<img class="send-img1" src="images/icon23.png" />
+						<input class="send-btn1" type="text" placeholder="请输入联系方式" />
+					</div>
+					<div class="add-btn">
+						<a href="##" class="add-btn1">取消</a>
+						<a href="##" class="add-btn2">确认</a>
+					</div>
+				</div>
+				
+			</form>
+			
+				
+
+
+				
+			<footer class="footer">
+				<ul class="clearfix">
+					<li>
+						<a href="index.html">
+							<img src="images/icon03.png" / > 
+							<span>首页</span>
+						</a>
+					</li>
+					<li>
+						<a href="rob.html">
+							<img src="images/icon04.png" / > 
+							<span>抢单</span>
+						</a>
+					</li>
+					<li>
+						<a href="order.html">
+							<img src="images/icon05.png" / > 
+							<span>订单</span>
+						</a>
+					</li>
+					<li>
+						<a href="personal.html">
+							<img src="images/icon06.png" / > 
+							<span>我的</span>
+						</a>
+					</li>
+				</ul>
+			</footer>
+
+			
+		</div>
+
+
+	    <script src="js/LAreaData1.js"></script>
+	    <script src="js/LArea.js"></script>
+	    <script>
+			var area2 = new LArea();
+		    area2.init({
+		        'trigger': '#city',
+		        'valueTo': '#city_value',
+		        'keys': {
+		            id: 'id',
+		            name: 'name'
+		        },
+		        'type': 1,
+		        'data': LAreaData
+		    });	
+		</script>
+	</body>
+</html>

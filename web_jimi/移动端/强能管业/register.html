@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>家具</title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div class="register">
+		<div class="register-header clearfix">
+			<div class="register-name active">
+				登录
+			</div>
+			<div class="register-name">
+				快速注册
+			</div>
+		</div>
+		<div class="register-content">
+			<div class="register-cell active">
+				<div class="register-btn clearfix">
+					<img class="register-img" src="images/icon01.png" />
+					<input class="register-txt1" type="tel" placeholder="手机号" />
+				</div>
+				<div class="register-btn clearfix">
+					<img class="register-img" src="images/icon03.png" />
+					<input class="register-txt2" type="text" placeholder="6位数字以上密码" />
+				</div>
+				<div class="register-btn2">登录</div>
+				<div class="register-btn3">忘记密码？</div>
+			</div>
+			<div class="register-cell">
+				<div class="register-btn clearfix">
+					<img class="register-img" src="images/icon01.png" />
+					<input class="register-txt1" type="tel" placeholder="手机号" />
+				</div>
+				<div class="register-btn clearfix">
+					<img class="register-img" src="images/icon02.png" />
+
+					<input class="register-txt1" type="text" placeholder="验证码" />
+					<input class="register-code" type="button" value="获取验证码" />
+				</div>
+				<div class="register-btn clearfix">
+					<img class="register-img" src="images/icon03.png" />
+					<input class="register-txt2" type="text" placeholder="6位数字以上密码" />
+				</div>
+				<div class="register-btn2">登录</div>
+				<div class="register-btn3">忘记密码？</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script>
+		var num = 6;
+		$(function(){
+			$(".register-name").click(function() {
+				$(".register-name").removeClass("active");
+				$(this).addClass("active");
+				$(".register-cell").removeClass('active');
+				$(".register-cell").eq($(".register-name").index($(this))).addClass('active');
+			});
+			$(".register-code").click(function() {
+				$(".register-code").attr("disabled", "disabled");
+				var uCodeTime =setInterval(function(){
+					num  --;
+					$(".register-code").val(num);
+					$(".register-code").css({
+						"color": '#ccc',
+						"border-color": '#ccc'
+					});
+					
+					if(num <0){
+						clearInterval(uCodeTime);
+						$(".register-code").css({
+							"color": '#14bb8f',
+							"border-color": '#14bb8f'
+						});
+						$(".register-code").val("获取验证码");
+						$(".register-code").removeAttr("disabled");  
+					}
+				},1000);
+			});
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+/* reset */
+html,blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul {margin:0;padding:0}
+ol,ul {list-style:none}
+a {text-decoration:none}
+a:hover {text-decoration:underline}
+fieldset,img {border:0}
+:focus{outline: none;}
+
+.warp{
+	padding-bottom: 60px;
+}
+.search{
+	overflow: hidden;
+	background: #c7c7c7; 
+	width: 100%;
+	padding: 8px 0;
+	margin-bottom: 10px;
+}
+.search_txt{
+	display: block;
+	border: 0 none;
+	padding: 6px 0;
+	margin: 0 auto;
+	width:90%;
+	padding-left: 8%;
+	border-radius: 30px;
+	background: #fff url(../images/search.png) no-repeat 3% 5px;
+	background-size: 17px;
+	font-size: 14px;
+	color:#8c8c8c;
+}
+.title{
+	font-size: 12px;
+	color:#9b9b9b;
+	padding: 0 4%;
+}
+.content-img{
+	width:45px;
+}
+.content-cell{
+	display: block;
+	margin: 4% 0;
+	margin-left: 4%;
+	overflow: hidden;
+}
+.content-img{
+	width: 11%;
+	float:left;
+}
+.content-txt{
+	color:#666;
+	width: 85%;
+	float: left;
+	margin-left: 4%;
+	padding: 5% 0;
+	border-bottom: 1px solid #c8c7cc;
+}
+.content-cell:last-child{
+	margin-bottom: 59px;
+}
+
+/* 底部导航栏 */
+.footer{
+	width:100%;
+	position: fixed;
+	z-index: 999;
+	bottom: 0;
+	border-top:1px solid #b2b2b2;
+	background-color: #fff;
+}
+.footer a{
+	width:20%;
+	float:left;
+	text-align: center;
+	font-size: 12px;
+	color:#9b9b9b;
+}
+.footer .nav-icon{
+	width: 25px;
+	height: 25px;
+	background: url("../images/nav.png") no-repeat;
+	background-size: cover;
+	margin: 10px auto;
+}
+.nav1 .nav-icon{
+	background-position: -145px 0;
+}
+.nav2 .nav-icon{
+	background-position: -180px 0;
+}
+.nav3 .nav-icon{
+	background-position: -215px 0;
+}
+.nav4 .nav-icon{
+	background-position: -250px 0;
+}
+.nav5 .nav-icon{
+	background-position: -284px 0;
+}
+.nav1.active .nav-icon{
+	background-position: 0 0;
+}
+.nav2.active .nav-icon{
+	background-position: -27px 0;
+}
+.nav3.active .nav-icon{
+	background-position: -53px 0;
+}
+.nav4.active .nav-icon{
+	background-position: -82px 0;
+}
+.nav5.active .nav-icon{
+	background-position: -115px 0;
+}
+.footer .active .nav-txt{
+	color:#db3652;
+}

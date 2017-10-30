@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>动画</title>
+	<style type="text/css">
+		#rabbit{
+			width: 102px;
+			height: 80px;
+		}
+	</style>
+</head>
+<body>
+	<div id="rabbit"></div>
+
+</body>
+
+<script>
+var imgUrl ="images/rabbit-big.png";
+var postions = ['0 -854', '-174 -852' , '-349 -852','-524 -852','-698 -852','-873 -848'];
+
+var ele = document.getElementById("rabbit");
+
+animation(ele,postions , imgUrl);
+
+function animation(ele,postions,imgUrl){
+
+	ele.style.backgroundImage = 'url('+ imgUrl +')';
+	ele.style.backgroundRepeat = 'no-repeat';
+
+	var index = 0;
+
+	function run(){
+
+		var postion = postions[index].split(" ");
+		ele.style.backgroundPosition = postion[0] + "px " + postion[1] + "px";
+		index++;
+		if(index>= postions.length){
+			index = 0;
+		}
+		setTimeout(run,80);
+	}
+	run();
+}
+</script>
+</html>

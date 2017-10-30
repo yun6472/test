@@ -1,0 +1,103 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class="warper listDetail">
+			<section class="listDetail-header">
+				<div class="listDetail-bg">
+					<p class="listDetail-txt1">商务大床房</p>
+					<p class="listDetail-txt2">入住:4月26日 离店:4月29日 3晚</p>
+					<p class="listDetail-txt2">大床 全部房间Wi-Fi 无早</p>
+				</div>
+			</section>
+			<section class="listDetail-content">
+				<div class="listDetail-btn">
+					<span>房间数</span>
+					<div class="listDetail-btn4">
+						<span>1间</span>
+						<img src="images/arrow_down.png" data-arrow="0" />
+					</div>
+					<ul class="m-list clearfix">
+						<li class="active">1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+					</ul>
+				</div>
+				<div class="listDetail-btn m-content m-content1">
+					<label><span>入住人 </span><input class="listDetail-btn2" type="text" placeholder="姓名，1间房填一个人"></label>
+				</div>
+				<div class="listDetail-btn">
+					<label><span>手机号 </span><input class="listDetail-btn2" type="text" placeholder="用于接收通知"></label>
+				</div>
+				<div class="listDetail-btn">
+					<span>最晚抵店</span>
+					<select class="listDetail-btn1">
+						<option value="18:00">18:00</option>
+						<option value="19:00">19:00</option>
+					</select>
+					<img class="listDetail-img" src="images/arrow_down.png" />
+				</div>
+			</section>
+			<div class="listDetail-pay clearfix">
+				<p class="listDetail-txt3">总额：<b>¥278</b></p>
+				<a class="listDetail-btn3" href="##">提交订单</a>
+			</div>
+		</div>
+		
+	</body>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script>
+		$(function(){
+
+			//点击显示隐藏房间数
+			$(".listDetail-btn4").click(function() {
+				$(this).next(".m-list").toggle(400);
+
+				if($(this).find('img').attr('data-arrow') == 0){
+					$(this).find('img').attr('data-arrow', '1');
+					$(this).find('img').attr('src', 'images/arrow_up.png');
+
+				}else{
+					$(this).find('img').attr('data-arrow', '0');
+					$(this).find('img').attr('src', 'images/arrow_down.png');
+
+				}
+			});
+
+			//点击房间数量出现入住人数
+			$(".listDetail-content").on('click','.m-list li', function() {
+				$(".m-list li").removeClass('active');
+				$(this).addClass('active');
+				var oNum = $(this).text();
+				$(".listDetail-btn4 span").text(oNum+"间");
+				var oLen = $(".m-content").length;
+				var count = oNum - oLen;
+				if(count>0){
+					for (var i = count; i >0; i--) {
+						$(".m-content1").after('<div class="listDetail-btn m-content ">\
+							<label><span>入住人</span><input class="listDetail-btn2" type="text" placeholder="姓名，1间房填一个人"></label>\
+						</div>');
+					}
+				}
+				if(count<0){
+					count = -count;
+					for (var i = count; i >0; i--) {
+						$(".m-content:eq("+i+")").remove();
+					}
+				}
+			});
+
+		});
+	</script>
+</html>

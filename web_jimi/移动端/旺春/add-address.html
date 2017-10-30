@@ -1,0 +1,88 @@
+
+	<html>
+
+		<head>
+			<meta charset="utf-8" />
+			<meta name="apple-mobile-web-app-capable" content="yes" />
+			<meta name="apple-mobile-web-app-status-bar-style" content="black">
+			<meta name="apple-touch-fullscreen" content="yes" />
+			<meta name="format-detection" content="telephone=no,email=no" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+			<title></title>
+			<link rel="stylesheet" type="text/css" href="css/iosSelect.css">
+			<link rel="stylesheet" type="text/css" href="css/style.css">
+			<style>
+				body{
+					background: #f5f5f5;
+				}
+			</style>
+		</head>
+		<body>
+			<div class="warper">
+				<header class="header05 clearfix">
+					<a class="header05-btn" href="javascript:history.back();"><img src="images/icon04.png" /></a>
+					<span class="header05-txt">我的地址</span>
+				</header>
+		
+
+				<div class="eadd-content">
+					<div class="eadd-cell">
+						<p class="eadd-txt1">收货地址</p>
+						<p class="eadd-txt2">浙江省  温州市  苍南县</p>
+						<input class="eadd-btn1" type="text" placeholder="请输入地址" />
+						<input class="eadd-btn2" type="text" placeholder="请输入具体的门牌号或单元" />
+					</div>
+					<div class="eadd-cell">
+						<p class="eadd-txt3">联系人</p>
+						<input class="eadd-btn3" type="text" placeholder="请输入您的姓名" />
+					</div>
+					<div class="eadd-cell">
+						<p class="eadd-txt3">手机号</p>
+						<input class="eadd-btn3" type="tel" placeholder="请输入您手机号" />
+					</div>
+					<div class="eadd-cell">
+						<label>
+							<p class="eadd-txt3">默认地址</p>
+							<input class="eadd-btn4" type="checkbox" />
+							<span class="eadd-btn5"></span>
+						</label>
+					</div>
+				</div>
+
+				<footer class="add-footer">
+					<a href="##" class="add-btn1">保存</a>
+				</footer>
+			</div>
+			<div class="container"></div>
+		</body>
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/iosSelect.js"></script>
+		<script>
+			var suData = [
+			    {'id': '20001' ,'value': '灵溪镇'}
+			];
+			var weiData = [
+			    {'id': '30001', 'value': '时代都市广场'},
+			    {'id': '30002', 'value': '德嘉华庭'},
+			    {'id': '30003', 'value': '城东小区'},
+			    {'id': '30004', 'value': '其他小区'}
+			];
+
+			var showBankDom = document.querySelector('.eadd-btn1');
+
+		    showBankDom.addEventListener('click', function () {
+		        var bankSelect = new IosSelect(
+		        	2,
+		            [suData,weiData],
+		            {
+		                container: '.container',
+		                title: '选择地址',
+		                itemHeight: 50,
+		                itemShowCount: 3,
+		                callback: function (selectOneObj,selectTwoObj) {
+		                    showBankDom.value = selectOneObj.value +"  " +selectTwoObj.value;
+		                }
+		        });
+		    });
+		</script>
+	</html>

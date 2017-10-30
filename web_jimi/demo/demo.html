@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title></title>
+	<style type="text/css">
+		html,blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul {margin:0;padding:0}
+		ol,ul {list-style:none}
+		a {text-decoration:none}
+		fieldset,img {border:0}
+
+		.box {
+			height: 35px;
+			overflow: hidden;
+		}
+		.t-news {
+			height: 20px;
+			padding-left: 10px;
+			margin: 8px 0;
+			overflow: hidden;
+			position: relative;
+		}
+		.news-img {
+			width: 20px;
+		}
+		.t-news b {
+			line-height: 20px;
+			font-weight: bold;
+			display: inline-block;
+		}
+		.news-li,.swap {
+			line-height: 20px;
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			left: 34px;
+		}
+		.news-li li,.swap li {
+			line-height: 20px;
+			height: 20px;
+		}
+		.news-li a,.swap a {
+			font-size: 14px;
+			color: #000;
+		}
+		.swap {
+			top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="t-news">
+			<img class="news-img" src="images/icon01.png" />
+			<ul class="news-li">
+				<li><a href="#" >江浙沪58包邮，全场128包邮！</a></li>
+				<li><a href="#" >江浙沪58包邮，全场128包邮！！</a></li>
+				<li><a href="#" >江浙沪58包邮，全场128包邮！！！</a></li>
+				<li><a href="#" >江浙沪58包邮，全场128包邮！！！！</a></li>
+				<li><a href="#" >江浙沪58包邮，全场128包邮！！！！！</a></li>
+			</ul>
+			<ul class="swap"></ul>
+		</div>
+	</div>
+	
+</body>
+<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+var num =1,z;
+var uNews = $('.news-li');
+var uSwap = $('.swap');
+
+$(function(){
+	$('.swap').html($('.news-li').html());
+	uHeight = $('.news-li li').length * 20; //20为每个li的高度
+
+	setTimeout(Scorll,3000);//滚动间隔时间 现在是3秒
+
+	setInterval(function(){
+		$(".news-img").attr('src', 'images/icon0'+num+'.png');
+		num++;
+		if(num >3){
+			num = 1;
+		}
+	},500);
+})
+
+function Scorll(){	
+	var uTop = parseInt(uNews.css('top'));
+	uSwap.css('top','20px');	
+	uNews.animate({top: uTop - 20 + 'px'},'slow');	//20为每个li的高度
+	if(Math.abs(uTop) == uHeight-20){ //20为每个li的高度
+		uSwap.animate({top:'0px'},'slow');
+		z=uNews;
+		uNews=uSwap;
+		uSwap=z;
+	}
+	setTimeout(Scorll,3000);//滚动间隔时间 现在是3秒
+}
+</script>
+</html>

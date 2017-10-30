@@ -1,0 +1,167 @@
+/* reset */
+html,blockquote,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul {margin:0;padding:0}
+ol,ul {list-style:none}
+a {text-decoration:none}
+fieldset,img {border:0}
+:focus{outline: none;}
+.clearfix:after{
+	content:"";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix{
+	zoom:1;
+}
+
+::-webkit-scrollbar{
+	display: none;
+	width:0;
+	height: 0;
+}
+
+
+.banner{
+	width: 100%;
+}
+.banner img{
+	width:100%;
+}
+.content-cell{
+	width:calc(33.3% - 1px);
+	float:left;
+}
+.content-cell img{
+	width:100%;
+	display: block;
+	border:1px solid #ccc;
+	border-bottom: 0 none;
+}
+.floor{
+	/* margin-bottom: 0.4rem; */
+}
+.floor img{
+	border:0 none;
+	border-top: 1px solid #ccc;
+}
+
+
+.header{
+	padding: 1rem 0;
+	border-bottom: 0.1rem solid #cdcdcd;
+	position: fixed;
+	left: 0;
+	top:0;
+	z-index: 3;
+	background-color: #fff;
+	width:100%;
+}
+.header-icon1{
+	float: left;
+	color:#444a56;
+	font-size: 1rem;
+	font-weight: 800;
+	width:18%;
+	padding-left: 2%;
+}
+.header-txt{
+	width:60%;
+	float:left;
+	text-align: center;
+	font-size: 1rem;
+}
+.header-search{
+	width:18%;
+	float:left;
+	text-align: right;
+	padding-right: 2%;
+	color:#0808ee;
+}
+.slide-bar{
+	position: absolute;
+	top: 3.1rem;
+	z-index:0;
+	width:30%;
+}
+.slide-bar .slide-cell{
+	text-align: center;
+	padding: 1rem 0;
+	border-bottom: 1px solid #e4e4e4;
+}
+.slide-bar .slide-cell.active{
+	border-left:3px solid #df372e;
+	color: #df372e;
+	background-color: #e4e4e4;
+}
+.detail{
+	width:70%;
+	position: fixed;
+	background-color: #fff;
+	left:30%;
+	top:3.6rem;
+}
+.detail-img {
+	width:100%;
+}
+.detail-img img{
+	width:100%;
+	height: 4.5rem;
+}
+.detail-txt1{
+	position: fixed;
+	right: 0;
+	top:3.6rem;
+	background-color: rgba(0,0,0,0.4);
+	color:#fff;
+	height: 3.5rem;
+	padding: 0 0.4rem;
+	font-size: 0.8em;
+	padding-top: 1rem;
+}
+.detail-cell{
+	width:33.3%;
+	float:left;
+	text-align: center;
+	color:#999;
+	font-size: 0.8rem;
+}
+.detail-cell img{
+	display: block;
+	width:95%;
+	margin:0 auto;
+}
+.floor{
+	position: relative;
+}
+.floor .floor-txt1 {
+    position: absolute;
+    font-size: 12px;
+    top: 8%;
+    left: 8%;
+    color: #fff;
+    font-weight: bold;
+}
+.floor .floor-txt2 {
+    position: absolute;
+    color: #fff;
+    top: 34%;
+    left: 50%;
+    margin-left: -1.5rem;
+}
+.content {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 0.4em;
+	border-left: 1px solid #ccc;
+	clear: both;
+}
+.floor ~img{
+	border-left:0 none;
+}
+.more{
+	display: block;
+	float:right;
+	font-size: 0.8em;
+	color:#555;
+	padding: 10px 0;
+}

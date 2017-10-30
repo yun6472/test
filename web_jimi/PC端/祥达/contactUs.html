@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html >
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>祥达印业</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body >
+	<div class="header clearfix">
+		<div class="logo-img"><img src="images/logo03.jpg" alt="祥达印业logo" /></div>
+		<ul class="nav">
+			<li>
+				<a href="index.html">
+					首页<br />
+					<i>HOME	</i>		
+				</a>
+			</li>
+			<li>
+				<a href="aboutUs.html">
+					关于我们<br />
+					<i>ABOUTS</i>				
+				</a>
+			</li>
+			<li>
+				<a href="product.html">
+					产品中心<br />
+					<i>PRODUCT</i>
+				</a>
+			</li>	
+			<li>
+				<a href="news.html">
+					新闻中心<br />
+					<i>NEWS	</i>		
+				</a>
+			</li>	
+			<li>
+				<a href="customer.html">
+					客户案例<br />
+					<i>CUSTOMER</i>	
+				</a>
+			</li>	
+			<li>
+				<a href="contactUs.html">
+					联系我们<br />
+					<i>CONTACT</i>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="contactUs clearfix">
+		<img src="images/pic04.jpg" class="contactUs-img" />
+		<div class="contactUs-content">
+			<h3 class="contactUs-title">联系我们</h3>
+			<p class="contactUs-txt1">客服电话：0577-64880188</p>
+			企业微信：<img src="images/code.jpg" alt="二维码" />
+			<p class="contactUs-txt2">企业邮箱：cnxdyy@163.com</p>
+			<p class="contactUs-txt2">公司地址：浙江省温州市苍南县灵溪镇工业园区星炬公司内</p>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer-top">
+			<img class="footer-img1" src="images/logo02.png" alt="logo" />
+			<a href="##"><img class="footer-img2" src="images/icon04.png" alt="logo" /></a>
+			<a href="##"><img class="footer-img2" src="images/icon05.png" alt="logo" /></a>
+			<a href="##"><img class="footer-img2" src="images/icon06.png" alt="logo" /></a>
+			<a href="##"><img class="footer-img2" src="images/icon07.png" alt="logo" /></a>
+			<a href="##"><img class="footer-img2" src="images/icon08.png" alt="logo" /></a>
+			<a href="##"><img class="footer-img2" src="images/icon09.png" alt="logo" /></a>
+		</div>
+		<p class="footer-txt">
+			<a href="aboutUs.html">关于我们</a>|
+			<a href="news.html">新闻中心</a>|
+			<a href="contactUs.html">联系我们</a>|
+			<a href="customer.html">客户案例</a>
+		</p>
+		<p class="footer-txt2">© 2017 ALL RIGHTS RESERVED 苍南县祥达印业有限公司 浙ICP备12345678号</p>
+		<p class="footer-txt2">技术支持：温州几米网络科技有限公司</p>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".slideBox").slide({
+			mainCell:".bd ul",
+			effect:"leftLoop",
+			autoPlay:true
+		});
+		$(".slideBox2").slide({
+			mainCell:" .slideContent",
+			effect:"leftLoop",
+			vis:5,
+			autoPlay:true ,
+			nextCell:".nextBtn",
+			prevCell:".prevBtn"
+		});
+		$(".design-cell").hover(function() {
+			$(this).addClass('on');
+		}, function() {
+			$(this).removeClass('on');
+		});
+		$(".nav li").hover(function() {
+			$(this).children('a').addClass('current');
+		}, function() {
+			$(this).children('a').removeClass('current');
+		});
+	})
+</script>
+</html>

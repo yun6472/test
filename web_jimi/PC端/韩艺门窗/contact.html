@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>韩艺门窗</title>
+		<link rel="stylesheet" href="css/detail.css">
+	</head>
+	<body>
+		<div class="header clearfix">
+			<a href="index.html"><img class="logo" src="images/logo.png" /></a>
+			<div class="header-right">
+				<div class="header-input clearfix">
+					<input type="text" />
+					<a href="##">搜索</a>
+				</div>
+				<p class="header-txt">全国服务热线：4008-888-888</p>
+			</div>
+		</div>
+
+		<div class="nav">
+			<ul class="clearfix">
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="about.html">关于我们</a>
+				</li>
+				<li>
+					<a href="news.html">新闻资讯</a>
+				</li>
+				<li>
+					<a href="product.html">产品中心</a>
+				</li>
+				<li>
+					<a href="case.html">工程案例</a>
+				</li>
+				<li>
+					<a href="center.html">技术中心</a>
+				</li>
+				<li>
+					<a href="join.html">招商加盟</a>
+				</li>
+				<li class="current">
+					<a href="contact.html">联系我们</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="slideBox">
+			<div class="bd">
+				<ul class="tempWrap">
+					<li><a href="##" ><img src="images/banner01.jpg"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="warper">
+			<div class="content clearfix">
+				<p class="contact-title1">contact</p>
+				<p class="contact-title2">联系我们</p>
+				<p class="contact-txt1">韩艺门窗</p>
+				<p class="contact-txt1">地址：苍南县灵溪镇德嘉华庭12幢202室</p>
+				<p class="contact-txt1">邮编：325800</p>
+				<p class="contact-txt1">电话：+86 0577-12345678</p>
+				<p class="contact-txt1">传真：+86 0577-12345678</p>
+				<p class="contact-txt1">网站：www.hanyimc.com</p>
+				<img class="contact-code" src="images/code.jpg" />
+				<img class="contact-img" src="images/contact.jpg" />
+
+				
+
+
+
+
+
+			</div>
+		</div>
+		<div class="footer">Copyright © 2017 Www.hanyimc.com 韩艺门窗 版权所有　浙ICP12345678</div>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".slideBox").slide({
+					mainCell:".bd ul",
+					effect:"leftLoop",
+					autoPlay:true
+				});
+
+				$(".nav li").hover(function() {
+					$(this).addClass('active');
+				}, function() {
+					$(this).removeClass('active');
+				});
+			})
+		</script>
+	</body>
+</html>

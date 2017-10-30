@@ -1,0 +1,210 @@
+@charset "utf-8";
+input,button,select,textarea{outline:none}
+textarea{resize:none}
+html,body{
+width:100%;
+height:auto;
+overflow:visible;
+background-color:#eff3f6;
+font:'幼圆';
+}
+.top{
+width:100%;
+height:3em;
+line-height:3em;
+background-color:#f8f8f8;
+}
+.put1{
+width:100%;
+height:2.6em;
+border:0em;
+}
+.biaoti1{
+width:auto;
+height:2.0em;
+line-height:2.0em;
+border-left:0.3em solid #f83c34;
+padding-left:0.5em;
+}
+
+.Shubiao0,.Shubiao1,.Shubiao2{
+overflow:visible;
+}
+.Shubiao0 .Sleft{
+  position:relative;
+  margin-left:1em;width:2em;border-left:0.3em solid #d2d2d2;
+}
+.Shubiao0 .Sdian{
+  position:absolute;
+  border-radius:3em;
+  width:1.5em;height:1.5em;z-index:10;left:-1.1em; top:0em;border:0.25em solid #f7d6d6;
+  background-color:#e65a5a;
+}
+
+.Shubiao1 .Sleft{
+  position:relative;
+  margin-left:1em;width:2em;border-left:0.3em solid #d2d2d2;
+}
+.Shubiao1 .Sdian{
+  position:absolute;
+  border-radius:3em;
+  width:1.5em;height:1.5em;z-index:10;left:-0.85em; top:-0.70em;
+  background-color:#d2d2d2;
+}
+.Shubiao1 .Sright,.Shubiao0 .Sright{
+ padding:0.8em 0em;
+ border-bottom:0.1em solid #d2d2d2;
+ line-height:160%;
+ font-size:0.9em;
+}
+.Shubiao2 .Sleft{
+  position:relative;
+  margin-left:1em;width:2em;border-left:0.3em solid #fff;
+}
+.Shubiao2 .Sdian{
+  position:absolute;
+  border-radius:3em;
+  width:1.5em;height:1.5em;z-index:10;left:-0.85em; top:-0.70em;
+  background-color:#d2d2d2;
+}
+.Shubiao2 .Sright{
+ padding:0.8em 0em;
+ line-height:160%;
+ font-size:0.9em;
+}
+
+
+/*同城服务页*/
+.Divtr{
+background-color:#fff;
+border-bottom:0.1em solid #e1e1e1;
+border-top:0.1em solid #e1e1e1;
+margin-bottom:0.4em;
+}
+.Divtr .td1{
+width:5em;
+background-color:#f8f8f8;
+border-right:0.1em solid #e1e1e1;
+padding:1em;
+color:#999;
+text-align:center;
+font-size:0.9em;
+}
+.Divtr .td2{
+background-color:#fff;
+padding:0.5em;
+font-size:0.9em;
+}
+
+.inpBox select{
+width:100%;
+height:2em;
+font-size:1em;
+border:0em;
+}
+.inpBox input{
+width:100%;
+height:2em;
+font-size:1em;
+border:0em;
+padding:0em 0.3em;
+}
+.inpBox textarea{
+width:100%;
+min-height:4em;
+font-size:1.2em;
+border:0em;
+padding:0.3em;
+}
+.checkSel input +div{
+  border:0.1em solid #ccc;
+  width:1.0em;
+  height:1.0em;
+  color:#ff0000;
+  margin-right:0.5em;
+}
+.checkSel input:checked +div{
+  border:0.1em solid #db3652;
+  background-image:url(../kd_img/dg.png);
+  background-size:100%;
+  color:#ff0000;
+}
+
+/*选择地址*/
+.upbtn{
+ border-radius:.2em;
+ border:0.1em solid #d2d2d2;
+ background-color:#f8f8f8;
+ padding:0.3em 1em;
+ font-size:0.8em;
+ color:#666;
+}
+.Supbtnok{
+ border-radius:.2em;
+ border:0.1em solid #ff0000;
+ background-color:#f8f8f8;
+ padding:0.3em 1em;
+ font-size:0.8em;
+ color:#ff0000;
+}
+
+/*地址编辑*/
+.Divtr2{
+background-color:#fff;
+border-bottom:0.1em solid #e1e1e1;
+}
+.Divtr2 .td1{
+width:3em;
+background-color:#f8f8f8;
+border-right:0.1em solid #e1e1e1;
+padding:1em;
+color:#999;
+text-align:center;
+font-size:0.9em;
+}
+.Divtr2 .td2{
+background-color:#fff;
+padding:0.5em;
+font-size:0.9em;
+}
+
+.subbtnNo{
+border:0.1em solid #e1e1e1;
+border-radius:.2em;
+background-color:#f2f2f2;
+padding:0.8em;
+}
+.subbtnYes{
+border:0.1em solid #db3652;
+border-radius:.2em;
+background-color:#db3652;
+padding:0.8em;
+color:#fff;
+}
+
+/*会员*/
+.topList input +div{
+width:50%;
+text-align:center;
+border-bottom:0.1em solid #ccc;
+
+}
+.topList input:checked +div{
+	width:50%;
+	text-align:center;
+	border-bottom:0.2em solid #db3652;
+	font-weight: bold;
+}
+.biaoti2{
+width:auto;
+height:1.5em;
+line-height:1.5em;
+border-left:0.3em solid #f83c34;
+padding-left:0.5em;
+}
+
+.dian0{
+  border-radius:3em;
+  width:1.5em;height:1.5em;border:0.25em solid #f7d6d6;
+  background-color:#e65a5a;
+}

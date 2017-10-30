@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html >
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>几米网络</title>
+	<link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+	<div class="warper caseList">
+		<div class="head">
+			<ul class="caseBtn">
+				<li class="active">全部案例</li>
+				<li>品牌建站</li>
+				<li>APP/微站</li>
+			</ul>
+		</div>
+		<div class="content clearfix">
+			<div class="cell">
+				<a class="pic" href="caseDetail.html"><img src="images/pic09.jpg"  /></a>
+				<a class="pic" href="caseDetail.html"><img src="images/pic09.jpg"  /></a>
+			</div>
+			<div class="cell" style="display: none;">
+				<a class="pic" href="caseDetail.html"><img src="images/pic09.jpg"  /></a>
+				<a class="pic" href="caseDetail.html"><img src="images/pic09.jpg"  /></a>
+				<a class="pic" href="caseDetail.html"><img src="images/pic09.jpg"  /></a>
+			</div>
+			<div class="cell" style="display: none;">
+				<a class="pic" href="caseDetail.html"><img src="images/pic09.jpg"  /></a>
+				<a class="pic" href="caseDetail.html"><img src="images/pic09.jpg"  /></a>
+				<a class="pic" href="caseDetail.html"><img src="images/pic09.jpg"  /></a>
+				<a class="pic" href="caseDetail.html"><img src="images/pic09.jpg"  /></a>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".caseBtn li").click(function(){
+		$(".caseBtn li").removeClass("active");
+		$(this).addClass("active");
+		$(".cell").hide();
+		$(".cell").eq($(this).index()).show();
+	})
+});
+</script>
+</html>

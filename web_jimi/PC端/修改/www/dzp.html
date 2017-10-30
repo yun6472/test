@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>大转盘</title>
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="css/tal.css?v=0.02" rel="stylesheet" type="text/css"/>
+<link href="css/index.css" rel="stylesheet" type="text/css"/>
+<link href="css/foot.css" rel="stylesheet" type="text/css"/>
+<link href="css/simpScroller.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="js/foot.js"></script>
+<script type="text/javascript" src="js/simpScroller.js?v=1.6"></script>
+<style>
+html,body{
+width:100%;
+height:auto;
+background-color:#9e0b12;
+}
+</style>
+
+</head>
+<body>
+<div style="display:none;">
+<audio id="yy0" src="./img/dzp/0.wav" preload='auto' >不支持此类</audio>
+<audio id="yy1" src="./img/dzp/01.wav" preload='auto'>不支持此类</audio>
+<audio id="yy2" src="./img/dzp/02.wav" preload='auto'>不支持此类</audio>
+<audio id="yy00" src="./img/dzp/p1.wav" preload="auto" >不支持此类</audio>
+</div>
+
+<section id="topimgBox" class="tbox pos1" style="z-index:300;top:0em;height:auto;">
+  <div class="boxu boxu-h m3">
+    <div class="boxbf1" ></div>
+    <div onclick='disthis("guanzhuBox")' class="p2 pl4 pr4 tmbj-b5 yj2 tcol-w1 tzt2 ts-0d9" >关注我们</div>
+  </div>
+</section>
+<!--转盘内容开始-->
+<section class="divmargin pos3 imgw1 mb3" style="min-height:21em;">
+  <div id="dazhuanpanBox" class="pos1" style="z-index:100;bottom:23%;left:0em;width:100%;height:auto;">
+  </div>
+  <div  class="pos1 tc tcol-w1" style="z-index:100;bottom:16%;left:0em;width:100%;height:2em;line-height:2em;">
+    <div id="zptsbox" class="divmargin yj6" style="width:60%;height:2.5em;line-height:2.5em;background-color:#c30502;border:0.15em solid #ed403f;">
+	您有3次机会
+	</div>
+  </div>
+  <img src="./img/dzp/bg.jpg"/>
+</section>
+<!--转盘内容结束-->
+<section class="divmargin boxu boxu-h ts-0d8">
+  <div class="boxbf1" ></div>
+  <div onclick="gotourl('grzx_home.html')" class="boxbf1 tc imgw1 mr4" style="width:50%;max-width:11em;"><img src="./img/dzp/btn01.png"/></div>
+  <div onclick="disthis('fxBox')" class="boxbf1 tc imgw1 ml4" style="width:50%;max-width:11em;"><img src="./img/dzp/btn02.png"/></div>
+  <div class="boxbf1" ></div>
+</section>
+
+<section class="divmargin boxu boxu-s m4">
+  <div class="imgw1"><img src="./img/dzp/zxxyx01.png"/></div>
+  <div class="divmargin conbt boxu boxu-s bj-w1 p4" style="background-color:#e53736;border-radius:0em 0em 2em 2em;">
+	 <div id="zjbox" class="boxbf1 divmargin mb4" style="width:100%;min-height:10em;max-height:14em;">
+	    <div class="pos3 boxu boxu-h tline4 ts-0d9" style="overflow:visible;">
+		  <div class="tcol-y1" style="width:50%;">恭喜 我要赢大奖</div>
+		  <div class="boxbf1 tcol-w4">07-02</div>
+		  <div class="tcol-y1">1元红包</div>
+		</div>
+		<div class="pos3 boxu boxu-h tline4 ts-0d9" style="overflow:visible;">
+		  <div class="tcol-y1" style="width:50%;">恭喜 我要赢大奖</div>
+		  <div class="boxbf1 tcol-w4">07-02</div>
+		  <div class="tcol-y1">1元红包</div>
+		</div>
+		<div class="pos3 boxu boxu-h tline4 ts-0d9" style="overflow:visible;">
+		  <div class="tcol-y1" style="width:50%;">恭喜 我要赢大奖</div>
+		  <div class="boxbf1 tcol-w4">07-02</div>
+		  <div class="tcol-y1">1元红包</div>
+		</div>
+		<div class="pos3 boxu boxu-h tline4 ts-0d9" style="overflow:visible;">
+		  <div class="tcol-y1" style="width:50%;">恭喜 我要赢大奖</div>
+		  <div class="boxbf1 tcol-w4">07-02</div>
+		  <div class="tcol-y1">1元红包</div>
+		</div>
+		<div class="pos3 boxu boxu-h tline4 ts-0d9" style="overflow:visible;">
+		  <div class="tcol-y1" style="width:50%;">恭喜 我要赢大奖</div>
+		  <div class="boxbf1 tcol-w4">07-02</div>
+		  <div class="tcol-y1">1元红包</div>
+		</div>
+		<div class="pos3 boxu boxu-h tline4 ts-0d9" style="overflow:visible;">
+		  <div class="tcol-y1" style="width:50%;">恭喜 我要赢大奖</div>
+		  <div class="boxbf1 tcol-w4">07-02</div>
+		  <div class="tcol-y1">1元红包</div>
+		</div>
+		<div class="pos3 boxu boxu-h tline4 ts-0d9" style="overflow:visible;">
+		  <div class="tcol-y1" style="width:50%;">恭喜 我要赢大奖</div>
+		  <div class="boxbf1 tcol-w4">07-02</div>
+		  <div class="tcol-y1">1元红包</div>
+		</div>
+		<div class="pos3 boxu boxu-h tline4 ts-0d9" style="overflow:visible;">
+		  <div class="tcol-y1" style="width:50%;">恭喜 我要赢大奖</div>
+		  <div class="boxbf1 tcol-w4">07-02</div>
+		  <div class="tcol-y1">1元红包</div>
+		</div>
+		<div class="pos3 boxu boxu-h tline4 ts-0d9" style="overflow:visible;">
+		  <div class="tcol-y1" style="width:50%;">恭喜 我要赢大奖</div>
+		  <div class="boxbf1 tcol-w4">07-02</div>
+		  <div class="tcol-y1">1元红包</div>
+		</div>
+		<div class="pos3 boxu boxu-h tline4 ts-0d9" style="overflow:visible;">
+		  <div class="tcol-y1" style="width:50%;">恭喜 我要赢大奖</div>
+		  <div class="boxbf1 tcol-w4">07-02</div>
+		  <div class="tcol-y1">1元红包</div>
+		</div>
+		<div class="pos3 boxu boxu-h tline4 ts-0d9" style="overflow:visible;">
+		  <div class="tcol-y1" style="width:50%;">恭喜 我要赢大奖</div>
+		  <div class="boxbf1 tcol-w4">07-02</div>
+		  <div class="tcol-y1">1元红包</div>
+		</div>
+		
+	 </div>
+	 <div class="tc p3 tcol-y1">更多幸运星>></div>
+  </div>
+</section>
+
+<section class="divmargin m4">
+  <div class="imgw1"><img src="./img/dzp/zxxyx02.png"/></div>
+  <div class="divmargin conbt boxu boxu-s bj-w1 p4" style="background-color:#e53736;border-radius:0em 0em 2em 2em;">
+    <div id="zjbox" class="boxbf1 divmargin mb4 tcol-y1" style="width:100%;min-height:10em;max-height:14em;">
+	  fdsfdsafa
+	</div>
+  </div>
+</section>
+
+<section class="divmargin tc mb4 pb4 ts-0d8 tcol-y1">
+  温馨提示：此活动与苹果公司无关
+</section>
+<!--关注二维码-->
+<div id="guanzhuBox"  class="tbox boxu boxu-s pos2 tmbj-b7" style="z-index:600;top:0px;left:0px;display:none;">
+  <div onclick='disthis("guanzhuBox")' class="boxbf1"></div>
+  <div id="MyrwmBox" class="imgw1">
+    <div class="divmargin tc imgw1 bj-w1 p3" style="width:60%;max-width:16em;">
+	  <p><img src="./img/dzp/rwm.jpg"></p>
+	  <p class="tc ts-0d9 tline3 tcol-w7 ">长按二维码关注我们</p>
+	</div>
+  </div>
+  <div onclick='disthis("guanzhuBox")' class="boxbf1"></div>
+</div>
+
+<div id="fxBox" onclick='disthis("fxBox")' class="tbox boxu boxu-s pos2 tmbj-b8" style="z-index:700;top:0px;left:0px;display:none;">
+  <div  class="imgw1"><img src="./img/dzp/fx1.png"></div>
+</div>
+
+</body>
+</html>
+<script>
+var btnnn=1;
+getlink();//按钮鼠标经过样式
+
+var yy0=$$("yy0");
+var yy00=$$("yy00");
+var yy1=$$("yy1");
+var yy2=$$("yy2");
+
+simpScroller(document.querySelector("#zjbox"));//滚动
+
+//setFootbtn();
+       //////////////////////////////////////////转盘初始化
+var dzpbn=12;//转盘的格数
+var zpbjimg='./img/dzp/zp.png';
+var zpksimg='./img/dzp/ks.png';
+Zpbjimg=new Image();//加载封面图片;
+Zpbjimg.src=zpbjimg;
+//////初始化转动参数
+var xzbtn=1;/////////是否允许点击转动
+var Twz=8,///////////当前(或之前)所在位置
+xzjd=0,///////旋转角度
+yxzjd=0,////////已旋转角度
+qsn=6,//////////执行的圈数
+jg={
+ok:0,/////////////执行正常
+ask:'已没有可参与的次数了',//////////////////执行异常时的提示,如：活动还未开始/您已经没有转动的次数了/......
+ycjnum:1,////////////////已参加的次数
+wcjnum:2,////////////////未参加的次数
+};
+
+
+
+	   Zpbjimg.addEventListener('load', function(e){
+	   
+	   $$("dazhuanpanBox").innerHTML='\
+	   <div id="dzpTbox" class="divmargin pos3 imgw1" style="max-width:80%;overflow:visible;">\
+	     <div id="dzpbox" class="tbox pos1 bgs1" style="z-index:100;left:0em;top:0em;background-image:url('+zpbjimg+')">\
+	     </div>\
+	     <div  class="tbox pos1 imgw1 imgh1" style="z-index:120;">\
+	       <div onclick="cjgo()" class="pos1 yj5 " style="z-index:20;top:50%;left:50%;margin-top:-4em;margin-left:-4em;width:8em;height:8em;"></div>\
+		   <img src="'+zpksimg+'" >\
+	     </div>\
+		 <img src="'+zpbjimg+'" style="opacity:0;">\
+	   </div>\
+	   '
+	   
+	   var disjpmc=0;//奖品名称是否可见
+	   var disjpimg=0;//奖品图片是否可见
+	   //奖项内容放入组数(jxmc=奖项名称,jpmc=奖品名称,jximg=奖品图片路径,jxwz=此奖项的位置[格式为 ,1, 或 ,1,2,3, ])
+	   var jxD=[
+	   {jxmc:"一等奖", jpmc:"1",  jximg:"cc",  jxwz:",1," },
+	   {jxmc:"二等奖", jpmc:"3",  jximg:"cc",  jxwz:",3," },
+	   {jxmc:"三等奖", jpmc:"5",  jximg:"cc",  jxwz:",5," },
+	   {jxmc:"幸运奖", jpmc:"7",  jximg:"cc",  jxwz:",7," },
+	   {jxmc:"鼓励奖", jpmc:"9",  jximg:"cc",  jxwz:",9," },
+	   {jxmc:"谢谢参与", jpmc:"no",  jximg:"cc",  jxwz:",2,4,6,8,10,11,12,"}
+	   ];
+	   
+
+	   var bgboxW=$$("dzpTbox").offsetWidth;//18;	
+	   var bgboxH=$$("dzpTbox").offsetHeight;//18;
+	   var xzjd=360/dzpbn;
+	   var jxbox='';
+	   for(var n=1;n<=dzpbn;n++){
+		   var jxmc='';
+		   var jpmc='';
+		   var jximg='';
+		   var mwz=','+n+',';//当前位置参数;
+		   if(disjpmc==1||disjpimg==1){
+			  for(var j=0;j<jxD.length;j++){
+				var jxwz=','+jxD[j].jxwz+',';
+				if(jxwz.indexOf(mwz)>=0){
+					jxmc=jxD[j].jxmc;
+					jpmc=jxD[j].jpmc;
+					jximg=jxD[j].jximg;
+					j=1000;
+				}
+			  }
+		    }
+		   
+		   var jxmctxt='',jpmctxt='',jximgtxt='';
+		   if(disjpmc==1){
+			    jxmctxt='<div class=" divmargin mt3 pt4 tc ts-0d8 tzt2 tcol-w8">'+jxmc+'</div>';
+				jpmctxt='<div class="boxbf1 divmargin p2 tc ts-0d8 tzt2 tb1">'+jpmc+'</div>';
+		   }else{
+		        jxmctxt='<div class="boxbf1"></div>';
+				jpmctxt='<div class="boxbf2"></div>';		   
+		   }
+		   if(disjpimg==1){
+			    if(jximg) jximgtxt='<div class="divmargin p2 tc ts-0d8 tzt2 tb1 imgw1" style="width:2.6em"><img src="'+jximg+'"></div>';
+		   }
+		   
+		   var Txzjd=(n*xzjd)-xzjd;
+		   jxbox=jxbox+'\
+		   <div class="pos1 tc boxu boxu-h" style="z-index:100;left:50%;margin-left:-2.5em;width:5em;height:'+bgboxH/2+'px;-webkit-transform-origin:2.5em '+bgboxH/2+'px;-webkit-transform:rotate('+Txzjd+'deg);">\
+		     <div class="mt4 boxbf1 boxu boxu-s">'+jxmctxt+jximgtxt+jpmctxt+'</div>\
+		   </div>\
+		   '
+	   }
+	   $$("dzpbox").innerHTML=jxbox;
+	   if(Twz>0){
+	   yxzjd=360-(360/dzpbn)*Twz+(360/dzpbn);
+	   $$("dzpbox").style.webkitTransition="-webkit-transform 1s ease-in-out";
+	   $$("dzpbox").style.webkitTransform="translate(0,0) rotate("+yxzjd+"deg)";
+	   }
+	   
+	})
+	
+/////////////////////////////////////////执行抽奖
+
+//////////////////////////////////////////////////////开始转动;
+//////////////参数数组
+function cjgo(){
+	if(xzbtn==1){
+	/////////////////////////////////////执行程序得到jg的结果
+	jg={
+	ok:1,/////////////执行正常
+	ask:'已没有可参与的次数了',//////////////////执行异常时的提示,如：活动还未开始/您已经没有转动的次数了/......
+	ycjnum:1,////////////////已参加的次数
+	wcjnum:2,////////////////未参加的次数
+	iszj:1,//////////////////是否为中奖项
+	zjts:'恭喜您中了三等奖',////////////////中奖的提示
+	myzjwz:10 //////////////////////中奖的位置 1-12
+	};
+		if(jg.ok==0){
+			cztsalert(jg.ask);
+			$$("zptsbox").innerHTML=jg.ask;
+			return false;
+		}
+		//alert('应停位置'+jg.myzjwz);
+			yy0.play();
+			///////////////应转角度;
+			var deg=(360/dzpbn); ///每格的角度;
+			//alert(deg)
+			var qydeg=(yxzjd)%360 ///已转角度求余;
+			//alert(qydeg)
+			var yzdeg=360-(deg*jg.myzjwz)+deg; ///本次应转的角度(未考虑之前的)因为是反向的，所以用360度减去，再加一个角度
+			//alert(yzdeg)
+			var yzdeggo=yzdeg-qydeg //应上次的转角。本次还应转多少度;
+			yzdeggo=Number(yzdeggo)+(360*qsn) //多少圈后的应转角度;
+			yxzjd=Number(yxzjd)+Number(yzdeggo);
+			xianzhanpan();///启动旋转
+	}
+	xzbtn=0;//关闭执行按钮
+}
+//////////////////////////////////转盘旋转
+function xianzhanpan(){
+   $$("dzpbox").style.webkitTransition="-webkit-transform 4s ease-in-out";
+   $$("dzpbox").style.webkitTransform="translate(0,0) rotate("+yxzjd+"deg)";
+   setTimeout(dzpxzok,4500);
+}
+
+/////////////////////////////////转后
+function dzpxzok(){
+	if(jg.iszj==0){
+		yy1.play();
+	}else if(jg.iszj==1){
+		yy2.play();
+	}
+	alertawg(jg.zjts,1);	
+	if(jg.wcjnum>0){
+		if(jg.zjcjnum>0){
+			addntxt='(分享增加'+jg.zjcjnum+'次)';
+		}else{
+			addntxt='';
+		}
+		//alert(jg.wcjnum)
+		$$("zptsbox").innerHTML='还有'+jg.wcjnum+'次机会'+addntxt+'';
+	}else{
+		$$("zptsbox").innerHTML='机会已经用完，邀请好友也来玩一下吧';
+	}
+	xzbtn=1;
+	//setcylist();////更新参与列表	
+}
+
+
+
+/////////////////////显示关注我们二维码
+function disthis(e){
+	var tdiv=$$(e);
+	if(tdiv.style.display=='none'){
+		tdiv.style.display='';
+	}else{
+		tdiv.style.display='none';
+	}
+}
+</script>

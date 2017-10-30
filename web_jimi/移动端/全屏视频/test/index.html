@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- saved from url=(0103)http://mktm2.10101111.com/html5/2017/szvideocard/1494989365409/index.html?from=message&isappinstalled=0 -->
+<html lang="en" style="font-size: 23.3651px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>东大眼镜</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="email=no">
+  <meta name="screen-orientation" content="portrait">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/video.css">
+  
+  
+  </head>
+    
+
+<body >
+<!--首页-->
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div id="videobox1">
+              <video id="video2" controls="controls" autoplay="true" x-webkit-airplay="allow" webkit-playsinline="" playsinline="" x5-video-player-type="h5" x5-video-player-fullscreen="true" preload="auto" width="100%" height="100%" src="file/glasses.mp4" >
+              Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <img class="video-img1" src="images/video01.jpg" />
+        </div>
+        <div class="swiper-slide">
+            <div class="slide0">
+              <div id="videobox">
+                <video id="video1" controls="controls" autoplay="true" x-webkit-airplay="allow" webkit-playsinline="" playsinline="" x5-video-player-type="h5" x5-video-player-fullscreen="true" preload="auto" width="100%" height="100%" src="file/glasses.mp4" >
+                Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img class="video-img2" src="images/video02.jpg" />
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+
+
+
+
+ 
+    
+    
+
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+
+  var  videoHeight = document.body.clientHeight - document.querySelector("#video2").offsetHeight
+  document.querySelector(".video-img1").style.height = videoHeight +"px";
+  var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      grabCursor: true,
+      centeredSlides: true,
+      direction : 'vertical',
+      paginationType : 'progress',
+      slidesPerView: 'auto',onTransitionStart: function(swiper){
+        v2.play(), v1.addEventListener("timeupdate", hh2, !1);
+      }
+  });
+  v1.play(), v1.addEventListener("timeupdate", hh1, !1);
+</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>查找您附近的代理商</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta content="telephone=no" name="format-detection">
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div class="header">
+			<div class="hdleft">
+				<img src="images/logo.png" />
+			</div>
+		</div>
+		<div class="tbox">
+			<div class="center900">
+				<div class="searchtxt">查找您附近的代理商</div>
+			</div>
+		</div>
+		<div class="promianbox">
+			<div class="center900 clearfix">
+				<div class="search clearfix">
+					<span class="searchtxt2">区域搜索</span>
+					<select class="searchBtn1" name="province"></select>
+					<select class="searchBtn2" name="city"></select>
+					<select class="searchBtn3" name="area"></select>
+					<div class="searchCell">
+					<input class="searchBt4" type="text" placeholder="关键词搜索" />
+					<a class="searchBtn5" href="##"><img src="images/searchbtn.png" /></a>
+					</div>
+				</div>
+				<div class="prolist clearfix">
+					<div class="prolistL">
+						<div class="prolistL-img">
+							<img src="images/pic01.jpg" />
+						</div>
+						<div class="prolistL-txt">林丽图文数码快印</div>
+					</div>
+					<div class="prolistR">
+						<img src="images/code01.jpg" />
+						<div class="prolistR-txt">扫一扫口令码订制产品</div>
+						<img src="images/code02.jpg" />
+						<div class="prolistR-txt">扫一扫邀请码成为创客</div>
+					</div>
+					<div class="prolistB">
+						<p class="prolistB-txt area">地址：浙江省温州市平阳县鳌江镇环镇北路53号</p>
+						<p class="prolistB-txt">电话：18767730278  QQ：253805584</p>
+					</div>
+				</div>
+				<div class="prolist  clearfix">
+					<div class="prolistL">
+						<div class="prolistL-img">
+							<img src="images/pic02.jpg" />
+						</div>
+						<div class="prolistL-txt">快捷先锋数码快印</div>
+					</div>
+					<div class="prolistR">
+						<img src="images/code01.jpg" />
+						<div class="prolistR-txt">扫一扫口令码订制产品</div>
+						<img src="images/code02.jpg" />
+						<div class="prolistR-txt">扫一扫邀请码成为创客</div>
+					</div>
+					<div class="prolistB">
+						<p class="prolistB-txt area">地址：浙江省温州市平阳县鳌江镇环镇北路53号</p>
+						<p class="prolistB-txt">电话：18767730278  QQ：253805584</p>
+					</div>
+				</div>
+				<!--last 表示最后一个区块-->
+				<div class="prolist clearfix last">
+					<div class="prolistL">
+						<div class="prolistL-img">
+							<img src="images/code02.jpg" />
+						</div>
+						<div class="prolistL-txt2">手机微信扫码申请成为合作代理商</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/PCASClass.js"></script>
+		<script>
+			$(function(){
+				new PCAS("province","city","area");
+				$(".searchBtn3").change(function() {
+					var sArea = $(".searchBtn1").val()+$(".searchBtn2").val()+$(".searchBtn3").val();
+					var alength = $(".area").length;
+					$(".prolist").hide();
+					for (var i = 0; i < alength; i++) {
+						if($(".area:eq("+i+")").text().indexOf(sArea) >=0){
+							$(".prolist:eq("+i+")").show();
+						}
+
+					}
+					
+					$(".last").show();
+				});
+				$(".searchBtn1").change(function() {
+					var sArea = $(".searchBtn1").val();
+					var alength = $(".area").length;
+					$(".prolist").hide();
+					for (var i = 0; i < alength; i++) {
+						if($(".area:eq("+i+")").text().indexOf(sArea) >=0){
+							$(".prolist:eq("+i+")").show();
+						}
+					}
+					$(".last").show();
+				});
+				$(".searchBtn5").click(function(event) {
+					var searchtxt = $(".searchBt4").val();
+					var alength = $(".prolistL-txt").length;
+					$(".prolist").hide();
+					for (var i = 0; i < alength; i++) {
+						if($(".prolistL-txt:eq("+i+")").text().indexOf(searchtxt) >=0){
+							$(".prolist:eq("+i+")").show();
+						}
+					}
+					
+					$(".last").show();
+				});
+			})
+		</script>
+	</body>
+</html>

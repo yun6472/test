@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div class="warper">
+		<header class="lift-title">
+			提车风采
+			<div id="open1" class="open1">
+				<div id="open2" class="open2"></div>
+				<p class="open-txt">自动<br />更新</p>
+			</div>
+		</header>
+		
+	</div>
+<script>
+window.onload=function(){
+    var div2=document.getElementById("open2");
+    var div1=document.getElementById("open1");
+    div2.onclick=function(){
+      div1.className=(div1.className=="close1")?"open1":"close1";
+      div2.className=(div2.className=="close2")?"open2":"close2";
+    }
+}
+</script>
+</body>
+</html>

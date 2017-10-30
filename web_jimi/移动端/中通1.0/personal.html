@@ -1,0 +1,40 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+		<title>中通微商城</title>
+		<link rel="stylesheet" type="text/css" href="css_new/style.css">
+	</head>
+	<body>
+		<div class="warper">
+			<div class="p-tab clearfix">
+				<div class="p-tab-cell active">我的同城</div>
+				<div class="p-tab-cell">我的快递</div>
+			</div>
+			<section class="p-content">
+				<img class="p-img1" src="images_new/icon01.jpg" />
+				<p class="p-txt1">当前没有任务同城服务订单</p>
+				<p class="p-txt2">赶快让中通小阿哥跑起来吧</p>
+				<a href="##" class="p-btn1">呼叫同城快递</a>
+			</section>
+		</div>
+
+		<script src="js_new/jquery-1.11.3.min.js"></script>
+		<script src="js_new/jquery.fontflex.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('html').fontFlex(10, 32, 20);
+				$(".p-tab .p-tab-cell").click(function() {
+					$(".p-tab .p-tab-cell").removeClass('active');
+					$(this).addClass('active');
+				});
+			});
+		</script>
+	</body>
+
+</html>

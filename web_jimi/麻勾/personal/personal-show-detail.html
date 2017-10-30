@@ -1,0 +1,136 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+		<title>麻勾工程</title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/personal.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/resources.css" />
+		<link rel="stylesheet" type="text/css" href="css/show.css" />
+	</head>
+	<body>
+		<div class="warper padding-3">
+			<header class="header1 header-bg1 clearfix">
+				<a class="header1-btn" href="javascript:history.back();"><img src="../images/icon-arrow05.png"></a>
+				<p class="header1-txt">队伍展示详情</p>
+			</header>
+			<section class="resourcesDetail-cell">
+				<img class="resourcesDetail-img1" src="images/pic01.jpg" />
+				<p class="resourcesDetail-txt7">刘思诚施工队</p>
+				<div class="resourcesDetail-txt8">
+					<img src="../resources/images/icon07.png" />
+					<span class="resourcesDetail-color">已认证</span>
+					<img src="../resources/images/icon08.png" />
+					<span>立即关注</span>
+				</div>
+				<p class="show-detail-txt1">从事隧道开挖工作8年，干过各种围岩隧道，经验丰富，技术过硬，能吃苦，守纪律。</p>
+				<p class="show-detail-txt2"><img src=""></p>
+			</section>
+			<section class="show-detail-tab">
+				<ul>
+					<li class="active">概况</li>
+					<li>业绩</li>
+					<li>荣誉</li>
+				</ul>
+			</section>
+			<section class="show-detail-content show-detail-content1 active" >
+				<ul>
+					<li>
+						<img src="../resources/images/icon12.png" />
+						经营范围：
+						<span>劳务分包/隧道/桥梁/矿山/井巷</span>
+					</li>
+					<li>
+						<img src="../resources/images/icon13.png" />
+						行业经验：
+						<span>10年</span>
+					</li>
+					<li>
+						<img src="../resources/images/icon14.png" />
+						承接业务地区：
+						<span>全国</span>
+					</li>
+					<li>
+						<img src="../resources/images/icon11.png" />
+						人员规模：
+						<span>50-100人</span>
+					</li>
+					<li>
+						<img src="../resources/images/icon07.png" />
+						是否认证：
+						<span>已认证</span>
+					</li>
+					<li>
+						<img src="../resources/images/icon15.png" />
+						设备情况：
+						<span>拥有部分施工设备</span>
+					</li>
+					<li>
+						<img src="../resources/images/icon16.png" />
+						负 责 人 ：
+						<span>刘思诚</span>
+					</li>
+					<li>
+						<img src="../resources/images/icon17.png" />
+						职　　位：
+						<span>总经理</span>
+					</li>
+				</ul>
+			</section>
+			<section class="show-detail-content">
+				<ul class="show-detail-list1">
+					<li>
+						<p class="show-detail-txt3">西成高铁老安山隧道出口</p>
+						<p class="show-detail-txt4">2016年6月开工</p>
+						<p class="show-detail-txt4">劳务分包 隧道</p>
+						<p class="show-detail-txt4">甲方：中铁十二局三公司西成客专项目部</p>
+						<p class="show-detail-txt4">项目简介：介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍</p>
+						<ul class="resourcesDetail-list2">
+							<li><img src="images/pic01.jpg"></li>
+							<li><img src="images/pic01.jpg"></li>
+							<li><img src="images/pic01.jpg"></li>
+						</ul>
+					</li>
+					<li>
+						<p class="show-detail-txt3">西成高铁老安山隧道出口</p>
+						<p class="show-detail-txt4">2016年6月开工</p>
+						<p class="show-detail-txt4">劳务分包 隧道</p>
+						<p class="show-detail-txt4">甲方：中铁十二局三公司西成客专项目部</p>
+						<p class="show-detail-txt4">项目简介：介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍</p>
+						<ul class="resourcesDetail-list2">
+							<li><img src="images/pic01.jpg"></li>
+							<li><img src="images/pic01.jpg"></li>
+							<li><img src="images/pic01.jpg"></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="show-detail-content">
+				<ul class="show-detail-list2">
+					<li>
+						<p class="show-detail-txt3">西成高铁老安山隧道出口</p>
+						<img src="images/header-bg2.jpg" />
+						<p class="show-detail-txt4">2016年6月开工</p>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<div class="createTeam-btn1">联 系</div>
+	</body>
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script >
+		$(function(){
+			$(".show-detail-tab li").click(function(){
+				$(".show-detail-tab li").removeClass("active");
+				$(this).addClass("active");
+				$(".show-detail-content").removeClass("active");
+				$(".show-detail-content").eq($(this).index()).addClass("active");
+			})
+		})
+	</script>
+</html>

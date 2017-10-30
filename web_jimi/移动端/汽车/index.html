@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title></title>
+	<link rel="stylesheet" href="iconfont/iconfont.css" />
+	<link rel="stylesheet" href="css/swiper.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div class="warper">
+		<div class="swiper-container" >
+			<div class="swiper-wrapper banner">
+				<div class="swiper-slide "><img src="images/banner01.jpg" /></div>
+				<div class="swiper-slide"><img src="images/banner01.jpg" /></div>
+				<div class="swiper-slide "><img src="images/banner01.jpg" /></div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<div class="hotModels-title">
+			<div class="hotModels-title1">hotModels</div>
+			<div class="hotModels-title2">热门车型</div>
+			<a class="hotModels-more" href="brand.html" >更多车型&gt;</a>
+		</div>
+		<div class="models clearfix">
+			<div class="models-cell">
+				<img class="models-img" src="images/pic01.jpg" />
+				<div class="models-txt">
+					<div class="models-txt1">福克斯</div>
+					<div class="models-txt2">110人 已购买</div>
+					<a class="models-txt3" href="news.html">点击查看车主口碑</a>
+				</div>
+			</div>
+			<div class="models-cell">
+				<img class="models-img" src="images/pic01.jpg" />
+				<div class="models-txt">
+					<div class="models-txt1">福克斯</div>
+					<div class="models-txt2">110人 已购买</div>
+					<a class="models-txt3" href="news.html">点击查看车主口碑</a>
+				</div>
+			</div>
+			<div class="models-cell">
+				<img class="models-img" src="images/pic01.jpg" />
+				<div class="models-txt">
+					<div class="models-txt1">福克斯</div>
+					<div class="models-txt2">110人 已购买</div>
+					<a class="models-txt3" href="news.html">点击查看车主口碑</a>
+				</div>
+			</div>
+			<div class="models-cell">
+				<img class="models-img" src="images/pic01.jpg" />
+				<div class="models-txt">
+					<div class="models-txt1">福克斯</div>
+					<div class="models-txt2">110人 已购买</div>
+					<a class="models-txt3" href="news.html">点击查看车主口碑</a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/foot.js"></script>
+
+	<script>
+		setFootbtn(1);
+		var mySwiper = new Swiper('.swiper-container',{
+			loop : true,
+			autoplay : 3000,
+			pagination : '.swiper-pagination'
+		})
+	</script>
+</body>
+</html>

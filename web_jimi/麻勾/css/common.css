@@ -1,0 +1,202 @@
+/* reset */
+html,blockquote,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul,section,body {margin:0;padding:0}
+ol,ul {list-style:none}
+a {text-decoration:none}
+fieldset,img {border:0}
+:focus{outline: none;}
+input[type="button"], input[type="submit"], input[type="reset"] {
+	-webkit-appearance: none;
+}
+html{font-family: 'Helvetica Neue',Tahoma,Arial,PingFangSC-Regular,'Hiragino Sans GB','Microsoft Yahei',sans-serif;}
+textarea {  -webkit-appearance: none;}
+.clearfix:after{
+	content:"";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix{
+	zoom:1;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body {
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+
+@media screen and (min-width: 320px) {html {font-size: 14px;}}
+@media screen and (min-width: 360px) {html {font-size: 16px;}}
+@media screen and (min-width: 400px) {html {font-size: 18px;}}
+@media screen and (min-width: 440px) {html {font-size: 20px;}}
+@media screen and (min-width: 480px) {html {font-size: 22px;}}
+@media screen and (min-width: 640px) {html {font-size: 28px;}}
+
+
+.warper{
+	width: 100%;
+}
+.bg-1{
+	background: #f1f1f1;	
+}
+.line-10{
+	width: 100%;
+	background: #f1f1f1;
+	height: 0.625rem;
+}
+.border-none{
+	border:0 none;
+}
+
+
+
+.footer{
+	width:100%;
+	position:fixed;
+	bottom:0;
+	height: 3.5rem;
+	background: #fff;
+	border-top: 1px solid #dbdbdb;
+}
+.footer li{
+	width: 25%;
+	float:left;
+	text-align: center;
+	padding-top: 0.15rem;
+}
+.footer li a{
+	display: block;
+}
+.footer li img{
+	width: 1.8rem;
+	padding: 0.2rem 1px;
+}
+.footer li p{
+	font-size: 0.875rem;
+	color: #929292;
+}
+.footer li span{
+	display: block;
+	width: 1.8rem;
+	height: 1.8rem;
+	padding: 0.2rem 0;
+	margin: 0 auto;
+}
+.footer li.active a p{
+	color:#12b7f5;
+}
+.footer li span.footer-img1{
+	background: url(../images/icon-footer01.png) no-repeat center;
+	background-size: 100%;
+}
+.footer li span.footer-img2{
+	background: url(../images/icon-footer02.png) no-repeat center;
+	background-size: 100%;
+}
+.footer li span.footer-img3{
+	background: url(../images/icon-footer03.png) no-repeat center;
+	background-size: 100%;
+}
+.footer li span.footer-img4{
+	background: url(../images/icon-footer04.png) no-repeat center;
+	background-size: 100%;
+}
+.footer li.active span.footer-img1{
+	background: url(../images/icon-footer01-active.png) no-repeat center;
+	background-size: 100%;
+}
+.footer li.active span.footer-img2{
+	background: url(../images/icon-footer02-active.png) no-repeat center;
+	background-size: 100%;
+}
+.footer li.active span.footer-img3{
+	background: url(../images/icon-footer03-active.png) no-repeat center;
+	background-size: 100%;
+}
+.footer li.active span.footer-img4{
+	background: url(../images/icon-footer04-active.png) no-repeat center;
+	background-size: 100%;
+}
+
+.title01{
+	line-height: 2.5rem;
+	text-align: center;
+	font-weight: normal;
+	font-size: 1.0rem;
+}	
+
+.header1{
+	background: #3fa9f5;
+	height: 3rem;
+	line-height: 3rem;
+	border-bottom: 1px solid #d0d0d0;
+}
+.header1 .header1-btn{
+	float:left;
+	height: 3rem;
+	line-height: 3rem;
+	width:3rem;
+	text-align: center;
+}
+.header1 .header1-btn img{
+	width: 0.8rem;
+	color:#0e0e0e;
+	position: relative;
+	top: 0.9rem;
+}
+.header1 .header1-txt{
+	float: left;
+	font-size: 1.1rem;
+	width: calc(100% - 6rem);
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+}
+.padding-35{
+	padding-bottom: 3.5rem;
+}
+.header1 .header1-btn2{
+	float:left;
+	height: 3rem;
+	line-height: 3rem;
+	width:3rem;
+	text-align: center;
+}
+.header1 .header1-btn2 img{
+	width: 1.4rem;
+	color:#0e0e0e;
+	position: relative;
+	top: 0.7rem;
+}
+
+.mask{
+	width:100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	z-index: 4;
+	top:0;
+}
+.header-bg1{
+	background-color: #3fa9f5;
+}
+.header-bg1 .header1-txt{
+	color:#fff;
+}
+.circle-red{
+	position: relative;
+}
+.circle-red:after{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 0.5rem;
+	height: 0.5rem;
+	background: red;
+	border-radius: 50%;
+	top: -0.4rem;
+	right: 0rem;
+}

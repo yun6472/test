@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/iconfont.css">
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			.user_info img{
+				position: relative;
+				top:10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main_box nav_mtop">
+			<div class="plr">
+				<div class="query_info_box clearfix">
+					<div class="user_info spmtop">
+						<b><img src="images/pic03.png"  />
+						温州市盛威建设工程有限公司</b>
+					</div>
+					<table width="100%" class="pro_table_box datas_table">
+						<colgroup>
+							<col class="printone" width="15%">
+							<col class="printtwo" width="35%">
+							<col class="printone" width="15%">
+							<col class="printtwo" width="35%">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>资质证书编号</th>
+								<td colspan="3">A1104033030231-5/3</td>
+							</tr>
+							<tr>
+								<th>企业法定代表人</th>
+								<td>黄益炳</td>
+								<th>企业登记注册类型</th>
+								<td>有限责任公司（自然人投资或控股）</td>
+							</tr>
+							<tr>
+								<th>企业注册属地</th>
+								<td colspan="3">浙江省</td>
+							</tr>
+							<tr>
+								<th>企业经营地址</th>
+								<td colspan="3">苍南县灵溪镇河滨东路984号一层</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="plr spmtop">
+				<div class="query_info_tab clearfix">
+					<ul class="tinyTab datas_tabs clearfix" style="margin-top: 20px;">
+						<li class="activeTinyTab">
+							<a id="apt_tab" href="javascript:void(0)"><span>企业资质资格</span></a></li>
+					</ul>
+					<div class="tinyTabContent query_info_dl datas_tabs_box">
+						<div class="activeTinyTabContent" id="apt_tabcontent">
+							<div id="tableContent" width="100%" height="100%">
+								<table id="catabled" width="100%" class="pro_table_box">
+									<colgroup>
+										<col width="5%">
+										<col width="10%">
+										<col width="10%">
+										<col width="27%">
+										<col width="10%">
+										<col width="10%">
+										<col width="20%">
+										<col width="8%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th >序号</th>
+											<th >资质类别</th>
+											<th >资质证书编号</th>
+											<th >资质名称</th>
+											<th >发证日期</th>
+											<th >证书有效期</th>
+											<th >发证机关</th>
+											<th ></th>
+										</tr>
+									</thead>
+									<tbody class="cursorDefault">
+										<tr class="row">
+											<td>1</td>
+											<td>建筑业企业资质</td>
+											<td>A1104033030231-5/3</td>
+											<td style="text-align:left;">
+												地基基础工程专业承包壹级；施工劳务不分等级。
+											</td>
+											<td>2017-02-15</td>
+											<td>2022-02-14</td>
+											<td>浙江省住房和城乡建设厅</td>
+											<td class="view">
+												<a title="查看证书完整信息" href="javascript:;" class="layeropenwin" >证书信息</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/layer.js"></script>
+		<script>
+		var layerContent = '<div class="main_box" style="width:100%;">\
+				<div class="plr">\
+					<div class="cacertdetail">\
+						<dl class="width100">\
+							<dt>企业名称：</dt>\
+							<dd><b>温州市盛威建设工程有限公司</b>\
+							</dd>\
+						</dl>\
+						<dl class="width30">\
+							<dt>证书编号：</dt>\
+							<dd>A1104033030231-5/3\
+							</dd>\
+						</dl>\
+						<dl class="width30">\
+							<dt>发证日期：</dt>\
+							<dd>2017年02月15日\
+							</dd>\
+						</dl>\
+						<dl class="width30">\
+							<dt>有效期至：</dt>\
+							<dd>2022年02月14日\
+							</dd>\
+						</dl>\
+						<dl class="width100">\
+							<dt>资质范围：</dt>\
+							<dd>地基基础工程专业承包壹级；施工劳务不分等级。</dd>\
+						</dl>\
+						<div class="clearfix"></div>\
+					</div>\
+				</div>\
+			</div>';
+			$(function(){
+				$(".layeropenwin").click(function(){
+					layer.open({
+						  type: 1,
+						  title: "证书信息",
+						  scrollbar: false,
+						  shadeClose: false,
+						  shade: 0.3,
+						  fix: true,
+						  area: "800px",
+						  content:  layerContent
+					});		
+				});	
+			})
+		</script>
+	</body>
+
+</html>

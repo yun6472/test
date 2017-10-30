@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" href="css/style.css" />
+		<style type="text/css">
+			.query_seabox2 img{
+				position: relative;
+				top:7px;
+			}
+			.query_search_trigger img{
+				position: relative;
+			    top: 1px;
+			    left: 6px;
+			}  
+		</style>
+	</head>
+
+	<body>
+		<div class="main_box nav_mtop">
+			<div class="plr" >
+				<div class="filter-top-tab tip filter-top-tab-show clearfix" >
+					<div class="query_seabox2">
+						<img src="images/pic02.png"  /> 筛选条件
+					</div>
+					<div class="query_seabox">
+						<input name="complexname" type="text" placeholder="企业名称/资质证书编号" value="" class="query_search" autocomplete="off" size="60">
+						<a id="searchbtn" class="query_search_trigger"><img src="images/pic01.png"  /></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="mtop">
+				<table width="100%" class="table_box responsive personal">
+					<colgroup>
+						<col width="8%">
+						<col width="20%">
+						<col width="40%">
+						<col width="14%">
+						<col width="18%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>序号</th>
+							<th>资质证书编号</th>
+							<th>企业名称</th>
+							<th>企业法定代表人</th>
+							<th>企业注册属地</th>
+						</tr>
+					</thead>
+					<tbody class="cursorDefault">
+						<tr>
+							<td >1</td>
+							<td class="text-left complist-num">
+								A1104033030231-5/3
+							</td>
+							<td class="text-left primary" >
+								<a href="detail.html">
+									温州市盛威建设工程有限公司
+								</a>
+							</td>
+							<td >
+								黄益炳
+							</td>
+							<td >
+								浙江省
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td class="text-left complist-num">
+								91440300MA5DME1B21
+							</td>
+							<td class="text-left primary">
+								<a  href="##">
+									深圳市长泰建设有限公司
+								</a>
+							</td>
+							<td>吴燕中</td>
+							<td>广东省</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#searchbtn").click(function(event) {
+					var aTxt = $(".query_search").val()
+					var aString1 = "温州市盛威建设工程有限公司";
+					var aString2 ="A1104033030231-5/3";
+
+					if(aString1 == aTxt ||aString2 == aTxt){
+						window.location.href="detail.html";
+					}
+				});
+			})
+		</script>
+	</body>
+</html>

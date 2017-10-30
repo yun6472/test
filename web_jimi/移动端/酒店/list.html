@@ -1,0 +1,109 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+		<title></title>
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class="warper">
+			<ul class="hot-list">
+				<li>
+					<img src="images/pic01.jpg" />
+					<p class="hot-txt1">商务大床房</p>
+					<p class="hot-txt2">均¥<span>189</span></p>
+					<p class="hot-txt3">无早 大床 92评论</p>
+					<a class="hot-btn1" href="listDetail.html">预定</a>
+				</li>
+				<li>
+					<img src="images/pic01.jpg" />
+					<p class="hot-txt1">标准双人房(内宾)(前台现付)</p>
+					<p class="hot-txt2">均¥<span>189</span></p>
+					<p class="hot-txt3">无早 大床 92评论</p>
+					<a class="hot-btn1" href="">预定</a>
+				</li>
+			</ul>
+			<a class="hot-btn2" href="##">查看全部房型</a>
+			<div class="hot-dialog">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="images/pic01.jpg"/>
+							<p>商品大床房</p>
+						</div>
+						<div class="swiper-slide">
+							<img src="images/pic01.jpg"/>
+							<p>商品大床房</p>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<div class="hot-dialogContent">
+					<div class="hot-dialogTxt">
+						<p class="hot-txt4"><span>建筑面积 20㎡</span>| <span>2人入住</span>| <span>楼层 2-3层</span></p>
+						<p class="hot-txt4">早餐：<span>无早</span></p>
+						<p class="hot-txt4">床型：<span>1张双人床1.8米</span></p>
+						<p class="hot-txt4">宽带：<span>全部房间WiFi</span></p>
+						<a href="##" class="hot-more">查看更多房型设备<img src="images/more.png" data-arrow="0"></a>
+						<div class="hot-toggle">
+							<p class="hot-txt4">早餐：<span>无早</span></p>
+							<p class="hot-txt4">床型：<span>1张双人床1.8米</span></p>
+							<p class="hot-txt4">宽带：<span>全部房间WiFi</span></p>
+						</div>
+					</div>
+					<p class="hot-txt5">房价:<span>¥289</span></p>
+					<a class="hot-btn3" href="listDetail.html">预定</a>
+				</div>
+				<a href="##" class="icon-del"><img src="images/icon_del.png" /></a>
+			</div>
+			<div class="mask"></div>
+		</div>
+	</body>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var mySwiper = new Swiper('.swiper-container',{
+			pagination : '.swiper-pagination',
+			paginationType : 'fraction'
+		});
+		$(function(){
+			$(".hot-list").click(function() {
+				$(".hot-dialog").show().css('visibility', 'visible');
+				$(".mask").show().css('visibility', 'visible');
+				return false;
+			});
+			$(".hot-btn1").click(function(event) {
+				window.location.href="listDetail.html";
+				return false;
+			});
+			$(".mask").click(function() {
+				$(".hot-dialog").hide();
+				$(".mask").hide();
+			});
+			$(".icon-del").click(function() {
+				$(".hot-dialog").hide();
+				$(".mask").hide();
+			});
+
+
+			$(".hot-more").click(function() {
+				$(this).next(".hot-toggle").toggle(400);
+
+				if($(this).find('img').attr('data-arrow') == 0){
+					$(this).find('img').attr('data-arrow', '1');
+					$(this).find('img').attr('src', 'images/more2.png');
+
+				}else{
+					$(this).find('img').attr('data-arrow', '0');
+					$(this).find('img').attr('src', 'images/more.png');
+				}
+			});
+		});
+	</script>
+</html>

@@ -1,0 +1,125 @@
+body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,select,table,td,textarea,th,ul {margin: 0;padding: 0;}
+html, body {width: 100%;padding: 0;margin: 0;}
+body {font-size: 12px; font-family: 'microsoft yahei';color: #000; -webkit-text-size-adjust: none; }
+/*body {background-color: #f8f8f8;padding: 0 5px;}*/
+fieldset,img {border: 0;}
+ol,ul {list-style: none;}
+address,em {font-style: normal;}
+a {color: #444;text-decoration: none;}
+table {border-collapse: collapse;}
+html{ background-color: #fff;}
+.clearfix:after {clear: both;content: " ";display: block;font-size: 0;height: 0;visibility: hidden;}
+.clearfix {zoom: 1;}
+
+#content { position: relative; width: 20rem; margin: 0 auto; padding-bottom: 2rem;}
+
+/* 头部 */
+header { width: 100%;}
+header h1{ height: 1.8rem; line-height: 1.8rem; font-size: 1rem; background-color: #000; color: #fff; text-align: center; overflow: hidden;}
+
+
+
+.floor .hot-keys{
+	padding:1rem  0.5rem;
+}
+.floor .hot-keys a{
+	padding: 0.2rem;
+	border:1px solid #cacaca;
+	border-radius: 0.2rem;
+}
+.floor .hot-keys a.on{
+	background-color: #4dc2ed;
+	border:1px solid #4dc2ed;
+	color:#fff;
+}
+
+.floor2{
+	padding-bottom: 1.5rem;
+	border-bottom: 2px solid #cdcdcd;
+}
+.slides li img{
+	width:100%;
+}
+.pic img{
+	width:100%;
+}
+
+.floor2 .title{
+	float: left;
+	font-size: 0.8rem;
+	padding-left: 0.5rem;
+}
+.floor2 .price{
+	width:60%;
+	float: right;
+	font-size: 0.8rem;
+	padding-right: 0.5rem;
+}
+.floor2 .price b{
+	float:left;
+	color:#dd111d;
+	font-size: 0.8rem;
+}
+.floor2 .price span{
+	float:right;
+}
+.flex-control-nav{
+	display: none;
+}
+.flex-direction-nav{
+	display: none;
+}
+
+.floor3 .for-item{
+	padding: .4rem;
+    width: 19.2rem;
+}
+.for-item .item-wrap {
+    width: 9.2rem;
+    display: inline-block;
+    border-radius: 8px;
+    padding-bottom: 2px;
+    box-sizing: border-box;
+    background-color: #ddd;
+}
+.for-item .item-wrap {
+    margin-right: .2rem;
+     margin-bottom: .4rem;
+}
+.for-item .item-wrap a {
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.for-item .item-wrap .pic {
+    width: 8.3rem;
+    border-radius: 8px;
+    padding: .4rem;
+}
+.for-item .item-wrap .pic img {
+    width: 8.3rem;
+}
+.for-item .item-wrap .title {
+    text-align: center;
+    font-size: .5rem;
+    margin-bottom: .3rem;
+}
+.for-item .item-wrap .price {
+    font-size: .5rem;
+    text-align: center;
+    padding-bottom: .3rem;
+}
+.for-item .item-wrap .price b {
+    display: block;
+    color: #f00;
+    line-height: 0.3rem;
+    margin-bottom: .3rem;
+}
+.for-item .item-wrap .price span {
+    color: #666;
+}

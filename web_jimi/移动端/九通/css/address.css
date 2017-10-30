@@ -1,0 +1,152 @@
+/* reset */
+html,blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul {margin:0;padding:0}
+ol,ul {list-style:none}
+a {text-decoration:none}
+fieldset,img {border:0}
+:focus{outline: none;}
+
+.add-btn{
+	display: block;
+	width:90%;
+	margin:0 auto;
+	background-color: #f03737;
+	color:#fff;
+	border:1px solid #f05051;
+	border-radius: 3px;
+	text-align: center;
+	position: absolute;
+	left:5%;
+	bottom: 70px;
+	padding: 4% 0;
+	font-size: 18px;
+}
+.address{
+	padding: 4% 16%;
+	position: relative;
+	border-bottom: 1px solid #e7e7e7;
+}
+.address.active:before{
+	content: url(../images/iconCheck.png);
+	position: absolute;
+	left: 5%;
+	top: 39%;
+}
+.add-name{
+	width: 100%;
+	overflow: hidden;
+}
+.add-name1{
+	float: left;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 28px;
+}
+.add-name2{
+	float:right;
+	color:#f03737;
+	font-size: 14px;
+	font-weight: bold;
+	margin-right: 10%;
+	line-height: 28px;
+	display: none;
+}
+.add-name3{
+	float: right;
+	color:#f03737;
+	border: 1px solid #f03737;
+	border-radius: 20px;
+	padding: 2% 5%;
+}
+.add-tel{
+	font-size: 14px;
+	color:#676767;
+}
+.add-txt1{
+	color:#676767;
+	font-size: 14px;
+	padding: 2% 0;
+}
+.add-txt2{
+	color:#676767;
+	font-size: 14px;
+}
+.active .add-name2{
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+
+.footer{
+	width:100%;
+	background-color: #fff;
+	position: fixed;
+	z-index: 999;
+	bottom: 0;
+	padding-bottom: 2%;
+	border-top: 1px solid #e9e9e9;
+}
+.footer .nav{
+	width: 25%;
+	float:left;
+	text-align: center;
+	color: #8e8e8e;
+	font-size: 12px;
+	padding-top: 2%;
+}
+.footer .active{
+	color:#ff473f;
+}
+
+.footer .nav1 ,.footer .nav2 ,.footer .nav3 ,.footer .nav4 {
+	background: url(../images/iconNav.png) no-repeat;
+	width: 34px;
+	height: 24px;
+	margin: 0 auto;
+	background-size: cover;
+	margin-bottom: 2%;
+}
+.footer .nav1{
+	background-position: -128px 0;
+}
+.footer .nav2{
+	background-position: -159px 0;
+}
+.footer .nav3{
+	background-position: -195px 0;
+}
+.footer .nav4{
+	background-position: -226px 0;
+}.footer .active .nav1{
+	background-position: 2px 0;
+}
+.footer .active .nav2{
+	background-position: -30px 0;
+}
+.footer .active .nav3{
+	background-position: -68px 0;
+}
+.footer .active .nav4{
+	background-position: -99px 0;
+}
+.footer .nav-circle{
+	width: 18%;
+	color:#f55964;
+	font-size: 12px;
+	text-align: center;
+	position: absolute;
+	border: 5px solid #313131;
+	left: 39%;
+	border-radius: 50%;
+	background-color: #fff;
+	top: -44%;
+}
+.footer .nav2-txt{
+	text-indent: -9999px;
+}

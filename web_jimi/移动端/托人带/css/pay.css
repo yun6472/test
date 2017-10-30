@@ -1,0 +1,160 @@
+/* reset */
+html,blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul {margin:0;padding:0}
+ol,ul {list-style:none}
+a {text-decoration:none}
+fieldset,img {border:0}
+:focus{outline: none;}
+
+
+.content{
+	padding: 4%;
+	border-bottom: 2px solid #dcdcdc;
+}
+.title{
+	width:100%;
+	overflow: hidden;
+}
+.order-img{
+	float:left;
+	width:55px;
+	height: 55px;
+	overflow: hidden;
+	border: 1px solid #d4d4d4;
+	margin-right: 4%;
+}
+.order-img img{
+	width:50px;
+	height: 50px;
+}
+.title-content{
+	width: calc(96% - 57px);
+	float:left;
+}
+.order-title{
+	font-size:14px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding-bottom: 4%;
+}
+.order-num{
+	color:#636363;
+	font-size: 14px;
+	overflow: hidden;
+}
+.order-num1{
+	float: left;
+}
+.order-num2{
+	float: left;
+	color: #666;
+	font-size: 0.8rem;
+}
+.prize{
+	padding: 4%;
+	color:#636363;
+	font-size: 14px;
+	overflow: hidden;
+}
+.prize .prize2	{
+	/* float:right; */
+}
+.prize2 .prize-txt1{
+	color:#dd171d;
+}
+.prize2 .prize-txt2{
+	color:#dd171d;
+	font-size: 20px;
+}
+.address{
+	overflow: hidden;
+	padding: 4% 7%;
+	border-bottom: 1px solid #dcdcdc;
+	position: relative;
+}
+.address:after{
+	content: ">";
+	position: absolute;
+	right: 5%;
+	top: 38%;
+	font-weight: bold;
+	color: #d4d4d4;
+}
+.add-l{
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
+	margin-right: 4%;
+	margin-top: 3px;
+}
+.add-m{
+	float:left;
+	font-size: 16px;
+	color:#3e3e3e;
+	line-height: 30px;
+}
+.add-r{
+	float:right;
+	color:#ff0000;
+	border:1px solid #ff0000;
+	border-radius: 5px;
+	padding: 1%;
+	margin-top: 3%;
+	margin-right: 10%;
+}
+.pay-title{
+	color:#686868;
+	font-size: 14px;
+	border-bottom: 1px solid #dcdcdc;
+	padding: 2% 0 4% 4%;
+	margin-bottom: 3%;
+}
+.pay-way{
+	color: #6d6d6d;
+	margin: 4%;
+	font-size: 14px;
+	padding-left: 11%;
+	padding-bottom: 4%;
+	border-bottom: 1px solid #dcdcdc;
+	position: relative;
+}
+.pay-way.active:before{
+	content: "";
+	background: url(../images/iconCheck.png) no-repeat center;
+	position: absolute;
+	left: 1%;
+	top: 2%;
+	display: block;
+	width: 27px;
+	height: 27px;
+	background-size: cover;
+}
+.pay-way img{
+	width: 36px;
+	vertical-align: middle;
+}
+.pay-btn{
+	width:92%;
+	text-align: center;
+	padding: 4% 0;
+	background-color: #faa41a;
+	border: 1px solid #faa41a;
+	margin:0 auto;
+	color:#fff;
+	border-radius: 5px;
+	font-size: 18px;
+	float: none;
+}
+.product-title2{
+	padding: 4%;
+	border-bottom: 1px solid #eee;
+	font-weight: normal;
+	color:#434343;
+	font-size: 14px;
+	border-top: 2px solid #cfcfcf;
+	margin-top: 8%;
+}
+.product-title2 a{
+	float:right;
+	color:#000;
+}

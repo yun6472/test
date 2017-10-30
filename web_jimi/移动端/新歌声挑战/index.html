@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="css/style.css" />
+	<title>中国新歌声挑战</title>
+</head>
+<body>
+	<div class="warper">
+		<div class="section1">
+			<img class="img1" src="images/pic02.png" />
+			<img class="img4" src="images/3.png" />
+			<a class="btn1" href="##"><img src="images/pic04.png" /></a>
+			<div class="btn3"><img src="images/pic06.gif" /></div>
+			
+			<!--controls="controls"-->
+			<audio id="music" >
+			</audio>
+		</div>
+		<div class="section2">
+			<a href="http://cn.mikecrm.com/lP5k5wj">
+				<img class="img2" src="images/pic01.png" />
+			</a>
+			<img class="img3" src="images/pic03.png" />
+		</div>
+	</div>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script>
+		var music = document.getElementById('music'); 
+		
+		var nRound =  Math.round(Math.random()*2);//产生0-2的随机数
+		//alert(nRound);
+		
+		var audio_array = ["music/告白气球","music/一千个伤心的理由","music/勇气"];
+		var a = 3;
+		var oSrc = " ";
+		var audio = document.getElementById("music");
+		$(function()
+		{
+			/**/
+			var source1 = document.createElement("source");
+			var source1_src = audio_array[nRound]+".mp3";
+			source1.src = source1_src;
+			source1.setAttribute('type', 'audio/mpeg');
+			
+			/**/
+			var source2 = document.createElement("source");
+			var source2_src = audio_array[nRound]+".ogg";
+			source2.src = source2_src;
+			source2.setAttribute('type', 'audio/ogg');
+			
+			audio.appendChild(source1);
+			audio.appendChild(source2);
+			
+			audio.load();
+			
+			
+			/**/
+			$(".btn1").click(function() 
+			{
+				audio.play();
+				audio.pause();
+				
+				$(".img1").hide();
+				$(".img4").show();
+				var anum = setInterval(function(){
+					if(a>1){
+						a--;
+					}else{
+						clearInterval(anum);
+					}
+					
+					$(".img4").attr("src","images/"+a+".png");
+					
+					if(a==2){
+						$(".img4").width("30%");
+					}
+					if(a==1){
+						$(".img4").width("23%");
+						
+					}
+
+				},1000);
+				
+				/**/
+				setTimeout(function()
+				{
+					loadSound();
+					//audio.play();
+					//alert("11");
+				},3000);
+				 
+			});
+		});
+		function loadSound()
+		{
+			$('.btn3').show();
+			audio.play();
+			
+			/**/
+			setTimeout(function(){
+				$(".section1").hide();
+				$(".section2").show();
+				audio.pause();
+				setTimeout(function(){
+					$(".img2").attr('src', 'images/pic05.png');
+					$(".img2").css('top', '54%');
+					$(".img3").hide();
+				},1000);
+			},15000);
+		}
+
+	</script>
+</body>
+</html>

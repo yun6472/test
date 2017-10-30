@@ -1,0 +1,91 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+		<title>麻勾工程</title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/personal.css" />
+	</head>
+	<body class="bg-1">
+		<div class="warper">
+			<header class="header1 clearfix">
+				<a class="header1-btn" href="javascript:history.back();"><img src="../images/icon-arrow05.png"></a>
+				<ul class="header1-txt">
+					<li class="active">我的团队</li>
+					<li>团队申请</li>
+				</ul>
+			</header>
+			<div class="team-group">
+				<div class="team-list1">
+					<p class="team-txt1">新建</p>
+					<p class="team-txt2"><a href="javascript:;">创建新团队</a></p>
+					<p class="team-txt2"><a href="javascript:;">创建新班组</a></p>
+				</div>
+				<div class="team-list1">
+					<p class="team-txt1">已创建的团队</p>
+					<ul class="team-cell">
+						<li>
+							<a href="personal-team-myteam.html">
+								<img class="team-img1" src="images/pic01.jpg" />
+								<p class="team-txt3">麻勾钢筋团队<img src="images/vip02.png" /></p>
+								<p class="team-txt4">人数：0人  | 浏览：25次</p>
+								<p class="team-txt5">2017.10.09</p>
+							</a>
+						</li>
+						<li>
+							<a href="personal-team-myteam.html">
+								<img class="team-img1" src="images/pic01.jpg" />
+								<p class="team-txt3">麻勾钢筋团队<img src="images/vip02.png" /></p>
+								<p class="team-txt4">人数：0人  | 浏览：25次</p>
+								<p class="team-txt5">2017.10.09</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="team-group">
+				<div class="teamApply-empty">
+					<img src="../images/empty01.png" />
+					<div class="teamApply-btn1">点击刷新</div>
+				</div>
+				<div class="teamApply-content">
+					<ul class="team-cell">
+						<li>
+							<a href="personal-team-myteamApply.html">
+								<img class="team-img1" src="images/pic01.jpg" />
+								<p class="team-txt3">麻勾钢筋团队<img src="images/vip02.png" /></p>
+								<p class="team-txt4">人数：0人  | 浏览：25次</p>
+								<p class="team-txt5">2017.10.09</p>
+							</a>
+						</li>
+						<li>
+							<a href="personal-team-myteamApply.html">
+								<img class="team-img1" src="images/pic01.jpg" />
+								<p class="team-txt3">麻勾钢筋团队<img src="images/vip02.png" /></p>
+								<p class="team-txt4">人数：0人  | 浏览：25次</p>
+								<p class="team-txt5">2017.10.09</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script >
+		$(function(){
+			$(".header1-txt li").click(function(event){
+				$(".header1-txt li").removeClass("active");
+				$(this).addClass('active');
+				$('.team-group').hide();
+				$('.team-group').eq($(this).index()).show();
+			})
+
+		})
+	</script>
+</html>

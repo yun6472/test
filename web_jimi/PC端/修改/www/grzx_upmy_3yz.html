@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>个人中心</title>
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="css/tal.css?v=0.02" rel="stylesheet" type="text/css"/>
+<link href="css/index.css" rel="stylesheet" type="text/css"/>
+<link href="css/foot.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="js/foot.js"></script>
+
+<link href="css/simpScroller.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/simpScroller.js"></script>
+<style>
+html,body{
+width:100%;
+height:auto;
+background-color:#f5f5f5;
+}
+</style>
+</head>
+<body>
+<div class="topSdiv" style="height:3em;">
+  <div class="topSdiv_T boxu boxu-h" style="">
+    <div sbjgbg="#f5f5f5" onclick="goback()" class="goback01"></div>
+    <div class="boxbf1 tb1 tc">短信验证</div>
+	<div class="goback00"></div>
+  </div>
+</div>
+<!--内容开始-->
+<form id="Tform" name="form1" method="get" action="?" onSubmit="return formSubGo()">
+<div class="divmargin pt5 pl5  tl ts-0d8 tcol-w6">
+短信已发送至<span>18668761488</span>手机号.
+</div>
+<div class="boxu boxu-h pos3 p4 mb4">
+  <div class="boxbf1 boxu boxu-h bk2 yj1 bj-w1 mr4">
+	<div class="boxbf1 mr4"><input class="tl ts-1d1 tline4 p2" id="yzm" name="你定" value="" type="text" placeholder="请输入验证码！"></div>
+  </div>
+  <div id="agbtn" style="width:9em;"></div>
+</div>
+<div onclick="formSubGo()" class="divmargin yj1 pos3 m4 bj-r1 p4 tc tcol-w1">
+ 下一步
+</div>
+<!--内容结束-->
+
+<!--底部开始-->
+<input type="submit" name="Submit" value="提交" style="display:none;">
+<!--底部结束-->
+</form>
+</body>
+</html>
+<script>
+var btnnn=5;
+getlink();//按钮鼠标经过样式
+
+/////////////////////////////
+
+
+////////////////////////////////////点击我要查件执行代码
+function formSubGo(){
+  var yzm=$$("yzm").value;
+  
+  if(!yzm||yzm.length!=6){
+     cztsalert("请输入正确的验证码!");
+	 return false;
+  }
+  //验证码,,,下面可以删除
+  //*
+  if(yzm!=yzmn){
+     cztsalert("您输入的验证码不正确!");
+	 return false;
+  }
+  //*/
+  
+  ////////////////////////////////////以上是用来做再次的验证。
+  $$("Tform").submit();
+  
+}
+
+
+var tiaokuan='';
+function opentiaokuan(){
+  var newdiv=document.createElement("div");
+	newdiv.innerHTML='\
+	<div class="tbox boxu boxu-s pos2 tmbj-b8" style="z-index:1200;top:0px;left:0px;">\
+	  <div class="divmargin" style="height:auto">\
+	    <div ontouchstart="delload(tiaokuan)" class="toright bj-w1 yj6 mr4 mt4 bgpp-no bgy-c bgx-r bgsw80" style="width:2.0em;height:2.0em;background-image:url(img/c01.png)"></div>\
+	  </div>\
+	  <div class="boxbf1 boxu boxu-u bj-w1 m4 yj2">\
+	    <div id="contentHtmlBox" class="boxbf1 m4 pos3" >\
+		  <div class="divmargin" style="width:100%;">\
+		    aaaa\
+		  </div>\
+		</div>\
+	  </div>\
+	</div>\
+	';
+	tiaokuan=document.body.appendChild(newdiv);
+	simpScroller($$("contentHtmlBox"));//滚动
+}
+
+var btnagen=0;
+var ms=60;
+var sd=1000;//速度,改成1000为1秒
+var agbtn=$$("agbtn");
+function getdxN(){
+  ms=ms-1;
+  if(ms>0){
+    agbtn.innerHTML='<div class="divmargin yj1 p3 tline2 tc tcol-w6" style="border: 1px solid #ebc691;">'+ms+'秒后重新获取</div>';
+	setTimeout(getdxN,sd)
+  }else{
+    agbtn.innerHTML='<div onclick="goagen()" class="divmargin yj1 p3 tline2 tc" style="border: 1px solid #dfa95c;">重新获取</div>';
+  }
+}
+getdxN()
+////////////////////////重新获取
+function goagen(){
+  ms=60;
+  getdxN();
+}
+
+</script>

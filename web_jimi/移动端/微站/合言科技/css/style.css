@@ -1,0 +1,68 @@
+/* reset */
+html,blockquote,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul,section,body {margin:0;padding:0}
+ol,ul {list-style:none}
+a {text-decoration:none}
+fieldset,img {border:0}
+:focus{outline: none;}
+input[type="button"], input[type="submit"], input[type="reset"] {
+	-webkit-appearance: none;
+}
+textarea {  -webkit-appearance: none;}
+.clearfix:after{
+	content:"";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix{
+	zoom:1;
+}
+@media screen and (min-width: 320px) {html {font-size: 16px;}}
+@media screen and (min-width: 360px) {html {font-size: 18px;}}
+@media screen and (min-width: 400px) {html {font-size: 20px;}}
+@media screen and (min-width: 440px) {html {font-size: 22px;}}
+@media screen and (min-width: 480px) {html {font-size: 24px;}}
+@media screen and (min-width: 640px) {html {font-size: 32px;}}
+
+.warper{
+	max-width: 640px;
+	margin:0 auto;
+}
+.banner img{
+	width:100%;
+}
+
+.content{
+	background: url(../images/bg.jpg) no-repeat center;
+	background-size: cover;
+}
+
+.nav li {
+	float: left;
+	width: 33%;
+	text-align: center;
+	margin-top: 10%;
+	border-right: 1px solid #000;
+}
+.nav li:nth-child(3n){
+	border:0 none;
+}
+.nav li img{
+	width:20%;
+	margin-bottom: 0.5rem;
+}
+.nav li .nav-txt1{
+	font-size: 0.88rem;
+}
+.nav li .nav-txt2{
+	font-size:0.66rem;
+}
+.banner02{
+	width:100%;
+	text-align: center;
+	padding-top: 4rem;
+}
+.banner02 img{
+	width: 90%;
+}

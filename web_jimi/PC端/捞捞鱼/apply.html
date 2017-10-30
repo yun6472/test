@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>捞捞鱼</title>
+		<link rel="stylesheet" href="css/detail.css">
+	</head>
+	<body>
+		<div class="header clearfix">
+			<a href="index.html"><img class="logo" src="images/logo.png" /></a>
+			<img class="tel-img" src="images/tel.png" />
+		</div>
+
+		<div class="nav">
+			<ul class="clearfix">
+				<li>
+					<a href="index.html">捞捞鱼首页</a>
+				</li>
+				<li>
+					<a href="about.html">关于捞捞鱼</a>
+				</li>
+				<li>
+					<a href="show.html">童装展示</a>
+				</li>
+				<li>
+					<a href="join.html">招商加盟</a>
+				</li>
+				<li>
+					<a href="success.html">成功加盟商</a>
+				</li>
+				<li>
+					<a href="dynamic.html">捞捞鱼动态</a>
+				</li>
+				<li>
+					<a href="contact.html">联系捞捞鱼</a>
+				</li>
+				<li class="current">
+					<a href="apply.html">申请加盟</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="slideBox">
+			<div class="bd">
+				<ul class="tempWrap">
+					<li><a href="##" ><img src="images/banner01.jpg"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="warper">
+			<div class="content clearfix">
+				<p class="gossip-txt1">申请加盟</p>
+				<p class="gossip-txt2">欢迎使用捞捞鱼服装官方在线申请加盟服务，无论您有任何问题，均可以在此留言，我们将会有专业的客服团队为您答疑解惑</p>
+				
+
+				<div class="gossip">
+
+					<p class="gossip-txt3">（带<span>*</span>号为必填）</p>
+					<div class="gossip-txt clearfix">
+						<div class="gossip-txt4"><span>&nbsp;</span>类　　型：</div>
+						<select class="gossip-btn6">
+							<option>加盟</option>
+						</select>
+					</div>
+					<div class="gossip-txt clearfix">
+						<div class="gossip-txt4"><span class="gossip-red">*</span>姓　　名：</div>
+						<input type="text" class="gossip-btn2" />
+					</div>
+					<div class="gossip-txt clearfix">
+						<div class="gossip-txt4"><span class="gossip-red">*</span>所属地区：</div>
+						<select class="gossip-btn6">
+							<option>请选择</option>
+						</select>
+						<select class="gossip-btn7">
+							<option>请选择</option>
+						</select>
+					</div>
+					<div class="gossip-txt clearfix">
+						<div class="gossip-txt4"><span class="gossip-red">*</span>地　　址：</div>
+						<input type="text" class="gossip-btn2" />
+					</div>
+					<div class="gossip-txt clearfix">
+						<div class="gossip-txt4"><span class="gossip-red">*</span>电　　话：</div>
+						<input type="text" class="gossip-btn2" />
+					</div>
+					<div class="gossip-txt clearfix">
+						<div class="gossip-txt4"><span class="gossip-red">*</span>标　　题：</div>
+						<input type="text" class="gossip-btn2" />
+					</div>
+					<div class="gossip-txt clearfix">
+						<div class="gossip-txt4"><span class="gossip-red">*</span>备　　注：</div>
+						<textarea class="gossip-btn3"></textarea>
+					</div>
+				</div>
+				<input class="gossip-btn4" type="submit" value="提交" />
+				<input class="gossip-btn5" type="reset" value="重置" />
+			</div>
+		</div>
+
+		</div>
+		<div class="footer">
+			<div class="footer-content clearfix">
+				<div class="footer-left">
+					<img src="images/logo02.png" />
+				</div>
+				<div class="footer-right">
+					<div class="footer-txt1"><span>友情链接</span><a href="##">几米网络</a>|<a href="##">阿里巴巴</a>|<a href="##">淘宝网</a></div>
+					<div class="footer-txt2">
+						<a href="##">捞捞鱼首页</a>|
+						<a href="##">关于捞捞鱼</a>|
+						<a href="##">童装展厅</a>|
+						<a href="##">招商加盟</a>|
+						<a href="##">成功加盟商</a>|
+						<a href="##">捞捞鱼动态</a>|
+						<a href="##">联系捞捞鱼</a>|
+						<a href="##">申请加盟</a>
+					</div>
+					<p>CopyRight@2017 laolaoyu.com ALL Rights reseverd 版权所有：广西捞捞鱼童装有限公司</p>
+					<p>地址：柳州市鱼峰区柳石路开关厂三栋6楼 电话：0123-12345678 传真：0123-12345678</p>
+					<p>备案号：浙ICP备12345678</p>
+				</div>
+				
+			</div>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				$(".nav li").hover(function() {
+					if($(this).index() == 1 ||$(this).index() == 2){
+						$(".mask").show();
+					}
+					$(this).addClass('active');
+				}, function() {
+					if($(this).index() == 1 ||$(this).index() == 2){
+						$(".mask").hide();
+					}
+					$(this).removeClass('active');
+				});
+			})
+		</script>
+	</body>
+</html>

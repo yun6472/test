@@ -1,0 +1,195 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+		<title>托递平台</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="css/LArea.css">
+	</head>
+	<body>
+		<div class="warper">
+			<div class="index-header header-color  clearfix">
+				<a href="javascript:history.back(-1);"><img class="header-img1" src="images/icon12.png" /></a>
+				信息填写
+			</div>
+			<div class="tab">
+				<ul>
+					<li><a href="send.html">送物</a></li>
+					<li class="active"><a href="send_p.html">送我</a></li>
+				</ul>
+			</div>
+
+			<div class="send-content">	
+				<div class="send-add1">
+					<img class="send-img3" src="images/icon14.png" />
+					<span class="send-txt2">起始地址</span>
+					<input  id="city1" class="send-btn2" type="text" placeholder="请选择起始城市" value="浙江省,温州市,苍南县" readonly="" />
+					<input class="send-btn3" type="text" placeholder="请输入具体地址" />
+					<input id="city_value1" type="hidden" />
+					<div class="send-txt">
+						<ul>
+							<li>
+								<a href="##">
+									德嘉华庭
+									<span>浙江省苍南县</span>
+								</a>
+							</li>
+							<li>
+								<a href="##">
+									德嘉华庭
+									<span>浙江省苍南县</span>
+								</a>
+							</li>
+							<li>
+								<a href="##">
+									德嘉华庭
+									<span>浙江省苍南县</span>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+				<div class="send-add1">
+					<img class="send-img3" src="images/icon16.png" />
+					<span class="send-txt2">目的地址</span>
+					<input id="city2" class="send-btn2" type="text" placeholder="请选择目的城市" />
+					<input class="send-btn3" type="text" placeholder="请输入具体地址" />
+					<input id="city_value2" type="hidden" />
+					<div class="send-txt">
+						<ul>
+						
+
+
+						</ul>
+					</div>
+				</div>
+				<div class="send-add1">
+					<img class="send-img1" src="images/icon17.png" />
+					<span class="send-txt1">出行人数</span>
+					<input class="send-btn1" type="text" placeholder="请输入出行人数" />
+				</div>
+				<div class="send-add1">
+					<img class="send-img1" src="images/icon18.png" />
+					<span class="send-txt1">备注信息</span>
+					<input class="send-btn1" type="text" placeholder="请输入备注信息" />
+				</div>
+				<div class="send-add1">
+					<img class="send-img1" src="images/icon19.png" />
+					<span class="send-txt1">发货时间</span>
+					<input class="send-btn1" type="text" placeholder="请输入发货时间" />
+				</div>
+
+			</div>
+
+			
+			
+
+
+				
+			<footer class="footer">
+				<ul class="clearfix">
+					<li>
+						<a href="index.html">
+							<img src="images/icon03.png" / > 
+							<span>首页</span>
+						</a>
+					</li>
+					<li>
+						<a href="rob.html">
+							<img src="images/icon04.png" / > 
+							<span>抢单</span>
+						</a>
+					</li>
+					<li>
+						<a href="order.html">
+							<img src="images/icon05.png" / > 
+							<span>订单</span>
+						</a>
+					</li>
+					<li>
+						<a href="personal.html">
+							<img src="images/icon06.png" / > 
+							<span>我的</span>
+						</a>
+					</li>
+				</ul>
+			</footer>
+		</div>
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/LAreaData1.js"></script>
+	    <script src="js/LArea.js"></script>
+	    <script>
+	     	$(function(){
+	     		var str = $("#city1").val(),
+		        num1 = 0,
+		        num2 = 0,
+		        num3 = 0;
+	     		
+	 			$(".send-btn3").focus(function(){
+			    	$(this).parent().children('.send-txt').show();
+			    })
+			    $(".send-btn3").blur(function(){
+			    	$(this).parent().children('.send-txt').hide();
+			    })
+		   
+
+
+			    var arr1 = str.split(",");
+			    for(var i in LAreaData){
+			        if(arr1[0] == LAreaData[i].name){
+			            num1 = i;
+			        }
+
+			    }
+			   
+			    for(var j in LAreaData[num1].child){
+			        if(arr1[1] == LAreaData[num1].child[j].name){
+			            num2 = j;
+			        }
+			    } 
+
+			    for(var k in LAreaData[num1].child[num2].child){
+			        if(arr1[2] == LAreaData[num1].child[num2].child[k].name){
+			            num3 = k;
+			        }
+			    }
+
+				var area1 = new LArea();
+			    area1.init({
+			        'trigger': '#city1',
+			        'valueTo': '#city_value1',
+			        'keys': {
+			            id: 'id',
+			            name: 'name'
+			        },
+			        'type': 1,
+			        'data': LAreaData
+			    });
+			    area1.value=[num1,num2,num3];
+			    var area2 = new LArea();
+			    area2.init({
+			        'trigger': '#city2',
+			        'valueTo': '#city_value2',
+			        'keys': {
+			            id: 'id',
+			            name: 'name'
+			        },
+			        'type': 1,
+			        'data': LAreaData
+			    });	
+		    })
+		</script>
+	</body>
+</html>
+
+
+
+
+
+

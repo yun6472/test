@@ -1,0 +1,63 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+		<title>圆通二手车</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class="warper">
+			<section class="swiper-container banner" >
+				<div class="swiper-wrapper banner">
+					<div class="swiper-slide "><img src="images/banner01.jpg" /></div>
+					<div class="swiper-slide"><img src="images/banner01.jpg" /></div>
+					<div class="swiper-slide "><img src="images/banner01.jpg" /></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</section>
+			<section class="list">
+				<ul>
+					<li>
+						<a href="javascript:;">
+							<img src="images/icon01.png" />
+							<p>品牌车型</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="images/icon02.png" />
+							<p>预约试驾</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="images/icon03.png" />
+							<p>车主服务</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="images/icon04.png" />
+							<p>关于我们</p>
+						</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script>
+			var mySwiper = new Swiper('.swiper-container',{
+				loop : true,
+				autoplay : 3000,
+				pagination : '.swiper-pagination'
+			})
+		</script>
+	</body>
+</html>

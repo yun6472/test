@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html >
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>创鑫食品</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body >
+	<div class="header clearfix">
+		<div class="logo-img"><img src="images/logo03.jpg" alt="创鑫食品logo" /></div>
+		<ul class="nav">
+			<li>
+				<a href="index.html">
+					首页		
+				</a>
+			</li>
+			<li>
+				<a href="aboutUs.html">
+					关于我们				
+				</a>
+			</li>
+			<li>
+				<a href="product.html">
+					产品中心
+				</a>
+			</li>	
+			<li>
+				<a href="join.html">
+					招商加盟
+				</a>
+			</li>
+			<li>
+				<a href="news.html">
+					新闻中心	
+				</a>
+			</li>	
+			<li>
+				<a href="sale.html">
+					销售网络
+				</a>
+			</li>	
+			<li >
+				<a class="active" href="contactUs.html">
+					联系我们
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="banner">
+		<img src="images/banner02.jpg" />
+	</div>
+	<div class="stroy clearfix">
+		<img class="contact-img" src="images/pic04.jpg" />
+		<div class="contactleft">
+			<p>淮北创鑫食品有限公司</p>
+			<p>地址：安徽·淮北·凤凰山经济开发区温州工业园2号厂房</p>
+			<p>邮编：235000</p>
+			<p>电话：0561-2338858</p>
+			<p>传真：0561-2338858</p>
+			<p>网站：www.hbcxsp.com</p>
+		</div>
+		<div class="contactright">
+			<img src="images/code.jpg" />
+			<p>微信公众号</p>
+		</div>
+	</div>
+	
+	<div class="contact">
+		<div class="contact-content clearfix">
+			<div class="contact-address">
+				<h3 class="contact-title">关于我们</h3>
+				<p class="contact-txt">公司简介</p>
+				<p class="contact-txt">企业文化</p>
+			</div>
+			<div class="contact-tel">
+				<h3 class="contact-title">招商加盟</h3>
+				<p class="contact-txt">加盟优势</p>
+				<p class="contact-txt">加盟流程</p>
+				<p class="contact-txt">加盟条件</p>
+				<p class="contact-txt">加盟政策</p> 
+			</div>
+			<div class="contact-email">
+				<h3 class="contact-title">人才招聘</h3>
+				<p class="contact-txt">人才战略</p>
+				<p class="contact-txt">招聘岗位</p>
+			</div>
+			<div class="contact-code">
+				<img src="images/code.jpg" />
+				<p class="contact-codeTxt">微信公众号</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">Copyright © 2017 淮北创鑫食品有限公司 版权所有  皖ICP12345678 技术支持：几米网络</div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".design-cell").hover(function() {
+			$(this).addClass('on');
+		}, function() {
+			$(this).removeClass('on');
+		});
+		$(".nav li").hover(function() {
+			$(this).children('a').addClass('current');
+		}, function() {
+			$(this).children('a').removeClass('current');
+		});
+	})
+</script>
+</html>

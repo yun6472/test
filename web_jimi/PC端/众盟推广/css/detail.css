@@ -1,0 +1,389 @@
+/* reset */
+html,blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul {margin:0;padding:0}
+ol,ul,li{list-style:none}
+a {text-decoration:none}
+fieldset,img {border:0}
+:focus{outline: none;}
+.clearfix:after{
+	content:"";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix{
+	zoom:1;
+}
+body{
+	font-family: "microsoft yahei";
+	background-color: #f2f2f2;
+}
+
+.navbar{
+	background-color: #222;
+	min-height: 50px;
+    margin-bottom: 20px;
+}
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.nav-lo{
+	width: 340px;
+	height: 40px;
+	float: left;
+	background-repeat: no-repeat;
+	background-image: url(../images/icons.png);
+	background-position: -2px -2px;
+	margin-top: 6px;
+	margin-left: 0;
+	vertical-align: bottom;
+	cursor: pointer;
+	font-size: 18px;
+	line-height: 20px;
+	overflow: hidden;
+}
+.navbar-left {
+    margin: 0 -15px;
+    margin-left: 100px;
+    float: left;
+}
+.navbar-left  li {
+    position: relative;
+    display: block;
+    float: left;
+}
+.navbar-left  li  a {
+    color: #fff;
+    position: relative;
+    display: block;
+    padding: 14px 15px;
+}
+.navbar-left li .active {
+    border-bottom: 3px solid #84d7ff;
+    padding-bottom: 12px;
+}
+.container-fluid .logout{
+	float:right;
+	color:#fff;
+	position: relative;
+    display: block;
+    padding: 10px 15px;
+	line-height: 20px;
+}
+.accountDIv{
+	width:1200px;
+	margin: 0 auto;
+}
+.accountDIv li{
+	float: left;
+	width: 333px;
+	padding: 20px 30px;
+	color: #fff;
+	background-color: #424a57;
+}
+.accountDIv li + li{
+	margin-left:10px;
+}
+.accountDIv li.redbg{
+	background-color: #f36564;
+}
+.accountTitle{
+	font-size: 18px;
+}
+.title-en{
+    float: right;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    color: #fff;
+}
+.accountBody span{
+	color: #fff;
+	font-size: 16px;
+	margin-top: 66px;
+	float: left;
+}
+.accountBody .currency-unit{
+    float: right;
+}
+.accountBody .accountBig{
+	margin-top: 40px;
+    color: #fff;
+    font-size: 36px;
+}
+.main{
+	width: 1200px;
+	margin:0 auto;
+}
+.nav2{
+	float:left;
+	width: 903px;
+	padding: 20px 0;
+	background: #fff;
+	border: 1px solid #ddd;
+	margin-top: 20px;
+}
+.nav2 li{
+	float: left;
+	width:300px;
+	border-right: 1px solid #ddd;
+}
+.nav2-txt1{
+	font-size: 14px;
+    color: #f26565;
+    padding: 7px;
+    text-align: center;
+}
+.nav2-txt2{
+	font-size: 20px;
+    color: #999;
+    padding: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+.nav-date{
+	width: 200px;
+	float: right;
+	margin-top: 20px;
+	background-color: #fff;
+	border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+.nav-date tr td{
+	padding: 18px 8px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+.nav-date tr td.stats-date{
+	background-color: #eee;
+}
+.nav-date tr td.active{
+	background-color: #f36564;
+	color:#fff;
+}
+.nav-sidebar-list{
+	overflow: hidden;
+	position: fixed;
+	top: 70px;
+	bottom: 0;
+	left: 2%;
+	z-index: 1000;
+	display: block;
+	padding: 0;
+	width:16%;
+}
+.nav-sidebar-list ul{
+	background-color: #fff;
+}
+.nav-sidebar-list ul> li{
+	position: relative;
+    display: block;
+}
+.nav-sidebar-list ul >li >a{
+	 display: block;
+    color: #797979;
+    padding: 8px 15px;
+}
+.nav-sidebar-list ul >li.active{
+	background: #6796e8;
+	color:#fff;
+}
+.nav-sidebar-list ul >li.active a{
+	color:#fff;
+
+}
+.nav-sidebar-list ul >li.plan-all >a{
+	color: #fff;
+    padding: 15px 15px;
+    background-color: #59657d;
+}
+.nav-container{
+	margin-left:20%;
+}
+.page{
+    background-color: #fff;
+}
+.page-header{
+	margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+	margin-top: 0;
+    padding: 20px;
+    background-color: #fff;
+}
+.date{
+	width: 300px;
+	background: #eee;
+	border:1px solid #ccc;
+	border-radius: 4px;
+}
+.date-img{
+	padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border-right: 1px solid #ccc;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+.date-img img{
+	width:16px;
+}
+.date-btn{
+	background: #eee;
+	width: 250px;
+	font-size: 16px;
+	position: relative;
+	border: 0 none;
+}
+.sumStats{
+    padding-top: 30px;
+}
+
+.sumStats ul li{
+	float: left;
+	width:33.3%;
+	text-align: center;
+}
+.sumStats-txt2{
+	font-size: 22px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.center-pv-color{
+	height: 4px;
+    width: 50%;
+    margin:0 auto;
+    background-color: #ade46c;
+
+}
+.center-click-color{
+	height: 4px;
+    width: 50%;
+    margin:0 auto;
+    background-color: #85defe;
+}
+.center-ctr-color{
+	height: 4px;
+    width: 50%;
+    margin:0 auto;
+    background-color: #90a0c1;
+}
+.page-bottom{
+	padding: 20px;
+}
+.page-bottom table{
+	border-bottom: 1px solid #eee;
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+.page-bottom table  th{
+	width:25%;
+	background: url(../images/sort_both.png) no-repeat center right;
+	border-bottom: 1px solid #eee;
+	line-height: 45px;
+	text-align: center;
+}
+.page-bottom tr{
+	border-bottom: 1px solid #eee;
+}
+.page-bottom table td{
+	line-height: 45px;
+	text-align: center;
+}
+.page-bottom .record-none{
+	background-color: #f9f9f9;
+}
+#container{
+	width:1200px;
+	margin:20px auto;
+}
+@media (max-width: 640px){
+	.nav-lo{
+		width:60%;
+		background-size: contain;
+		line-height: 40px;
+		background-position: center;
+	}
+	
+	.container-fluid .logout{
+		position: absolute;
+		right: 0;
+		top: 3px;
+	}
+	.navbar-left{
+		clear:both;
+		margin: 0;
+		width: 100%;
+		text-align: center;
+		border-top: 1px solid #8a8282;
+	}
+	.navbar-left  li{
+		float: none;
+		display: inline-block;
+	}
+	.accountDIv{
+		width:100%;
+	}
+	.accountDIv li{
+		width: 86%;
+		padding: 3% 4%;
+		margin: 2% auto;
+		float: none;
+		overflow: hidden;
+	}
+	.main{
+		width: 100%;
+	}
+	.nav2 {
+		float: none;
+		width: 93%;
+		margin: 0 auto;
+	}
+	.nav2 li{
+		width: 33%;
+	}
+	.nav2 li:last-of-type{
+		border:0 none;
+	}
+	.nav-date{
+		width: 94%;
+		margin: 3% auto;
+		text-align: center;
+		float: none;
+	}
+	#container{
+		width: 93%;
+		margin:0 auto;
+	}
+	.nav-sidebar-list{
+		width: 95%;
+		position: relative;
+		top: 0;
+		margin: 0 auto;
+		left: 0;
+	}
+	.nav-container{
+		width:95%;
+		margin: 3% auto;
+		padding: 0;
+	}
+	.nav-container #container{
+		width:100%;
+	}
+	.date{
+		width: 96%;
+	}
+	.date-btn{
+		width: calc(100% - 50px);
+	}
+}

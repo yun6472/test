@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>个人中心</title>
+	<link rel="stylesheet" href="css/personalDetail.css">
+</head>
+<body>
+	<div class="warp">
+		<ul class="nav">
+			<li class="nav-cell active"><a href="#">全部</a></li>
+			<li class="nav-cell"><a href="#">待支付</a></li>
+			<li class="nav-cell"><a href="#">代发货</a></li>
+			<li class="nav-cell"><a href="#">已发货</a></li>
+			<li class="nav-cell"><a href="#">待评价</a></li>
+		</ul>
+		<!-- 没有订单 -->
+		<div class="order-empty">
+			<img src="images/icon-order.png" class="icon-success" />
+			<div class="success-txt1">您还没有相关订单</div>
+			<div class="success-txt2">可以去看看有哪些想买的</div>
+			<a href="goods.html" class="success-btn3">进入商城</a>
+		</div>
+		<!-- 有订单 -->
+		<div class="order">
+			<div class="order-cell">
+				<div class="order-title">
+					<div class="order-time">下单时间: 2015-07-24  11:12:06</div>
+					<div class="order-price">￥119.00</div>
+				</div>
+				<img src="images/product02.jpg" class="order-img" />
+				<div class="order-txt1">包邮 Logitech/罗技 UE3100无线蓝牙耳机+麦克风 头戴式耳麦</div>
+				<div class="order-price">￥119</div>
+				<div class="order-txt2">套餐类型:官方标配;颜色分类:蓝色</div>
+				<div class="order-txt3">X1</div>
+				<div class="order-txt4">共1件商品   合计:￥119.00  (含运费￥0.00)</div>
+				<div class="order-btn">
+					<a href="##" class="order-btn2">确认收货</a>
+					<a href="##" class="order-btn1">查看物流</a>
+				</div>
+			</div>
+			<div class="order-cell">
+				<div class="order-title">
+					<div class="order-time">下单时间: 2015-07-24  11:12:06</div>
+					<div class="order-price">￥119.00</div>
+				</div>
+				<img src="images/product02.jpg" class="order-img" />
+				<div class="order-txt1">包邮 Logitech/罗技 UE3100无线蓝牙耳机+麦克风 头戴式耳麦</div>
+				<div class="order-price">￥119</div>
+				<div class="order-txt2">套餐类型:官方标配;颜色分类:蓝色</div>
+				<div class="order-txt3">X1</div>
+				<div class="order-txt4">共1件商品   合计:￥119.00  (含运费￥0.00)</div>
+				<div class="order-btn">
+					<a href="##" class="order-btn2">确认收货</a>
+					<a href="##" class="order-btn1">查看物流</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<a  href="index.html" class="nav1">
+			<div class="nav-icon"></div>
+			<div class="nav-txt">首页</div>
+		</a>
+		<a  href="goods.html" class="nav2">
+			<div class="nav-icon"></div>
+			<div class="nav-txt">所有商品</div>
+		</a>
+		<a  href="classify.html" class="nav3">
+			<div class="nav-icon"></div>
+			<div class="nav-txt">分类</div>
+		</a>
+		<a  href="shopping.html" class="nav4">
+			<div class="nav-icon"></div>
+			<div class="nav-txt">购物车</div>
+		</a>
+		<a  href="personal.html" class="nav5 active">
+			<div class="nav-icon"></div>
+			<div class="nav-txt">个人中心</div>
+		</a>
+	</footer>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".nav").on('click', '.nav-cell', function() {
+		$(".nav-cell").removeClass('active');
+		$(this).addClass('active');
+	});
+})
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title></title>
+	<style type="text/css">
+		*{margin: 0;padding:0;}
+		.warper{
+			width: 100%;
+			text-align: center;
+			padding-top: 10%;
+		}
+		.lock{
+			width:30%;
+			max-width: 200px;
+			
+		}
+		.title{
+			color:#acacac;
+			font-size: 14px;
+		}
+	</style>
+</head>
+<body>
+	<div class="warper" id="warper">
+		<img id="lock" class="lock" src="images/lock.png" />
+		<div class="title">您暂时没有权限访问此网站</div>
+	</div>
+</body>
+<script>
+	var num = 5;
+	var oWarper = document.getElementById("warper");
+	var oLock  =document.getElementById("lock");
+	var oCont = document.createElement("div");
+	oCont.className = "count";
+	oCont.style.fontSize = oLock.offsetWidth/2 + "px";
+	oCont.innerText = num;
+	oWarper.appendChild(oCont);
+	var cont = setInterval(function(){
+		num--;
+		oCont.innerText = num;
+		oWarper.appendChild(oCont);
+		if(num <=0){
+			clearInterval(cont);
+			
+		}
+	},1000);
+	
+</script>
+</html>

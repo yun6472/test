@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<title><{$smarty.session.site_name}>-个人中心</title>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+
+
+<link href="css/tal.css?v=0.02" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/myjs.js"></script>
+<link href="css/foot.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/foot.js"></script>
+
+</head>
+
+<body class="center">
+
+<div class="center-div1" onclick="javascript:window.location.href='?action=user_info'">
+    <img class="center-img1" src="images/pic20.jpg" />
+	
+	
+	<{if $user_info['user_image']}>
+    <img class="center-img2" src="<{$user_info['user_image']}>" />
+	<{else}>
+	<img class="center-img2" src="images/pic1.png" />
+	<{/if}>
+    <div class="center-div2">
+        <p class="center-p1"><{if $user_info['real_name']}><{$user_info['real_name']}><{else}>请设置昵称<{/if}></p>
+		
+		<!--
+		<p class="center-p2">序列号：<{$user_info['login_sernum']}></p>	
+		-->
+		
+        <p class="center-p2">账户余额：<{$user_info['user_money']}>元</p>
+		 <p class="center-p2">用户积分：<{$user_info['user_integral']}>元</p>	
+		 
+ 
+    </div>
+    <img class="center-img3" src="images/pic28.png"/>
+</div>
+<ul class="center-ul1">
+	<li onclick="javascript:window.location.href='?action=order_list&type=1'" ><p>待支付</p><p><{$order_1_num}></p></li>
+    <li onclick="javascript:window.location.href='?action=order_list&type=2'" ><p>待发货</p><p><{$order_2_num}></p></li>
+    <li onclick="javascript:window.location.href='?action=order_list&type=3'" ><p>已发货</p><p><{$order_3_num}></p></li>
+    <li onclick="javascript:window.location.href='?action=order_list&type=4'" ><p>已完成</p><p><{$order_4_num}></p></li>
+</ul>
+
+<!--
+<div class="center-line1"></div>
+<div class="center-div3" onclick="javascript:window.location.href='?action=order_list&type=1'" >
+	<img class="center-img4" src="images/pic34.jpg"/>
+	<p class="center-p3">全部订单</p>
+	<img class="center-img5" src="images/pic3.png"/>
+</div>
+-->
+
+<div class="center-line1"></div>
+
+<ul>
+    <li class="center-div4" onclick="javascript:window.location.href='buy_list.php'">
+        <img class="center-img4" src="images/pic34.jpg"/>
+        <p class="center-p3">快速购买</p> 
+        <img class="center-img5" src="images/pic3.png"/>
+    </li>
+</ul>
+
+<div class="center-line1"></div>
+<ul>
+    <li class="center-div4" onclick="javascript:window.location.href='user_center.php?action=coll_list'">
+        <img class="center-img4" src="images/pic35.jpg"/>
+        <p class="center-p3">我的收藏</p> 
+        <img class="center-img5" src="images/pic3.png"/>
+    </li>
+</ul>
+<div class="center-line1"></div>
+<div class="center-div3" onclick="javascript:window.location.href='?action=address_list'">
+	<img class="center-img4" src="images/pic37.jpg"/>
+	<p class="center-p3">收货地址</p> 
+	<img class="center-img5" src="images/pic3.png"/>
+</div>
+
+
+<{if $smarty.session.is_open_fx}>
+<div class="center-line1"></div>
+<div class="center-div3" onclick="javascript:window.location.href='share_center.php'" >
+	<img class="center-img4" src="images/pic34.jpg"/>
+	<p class="center-p3">推广代理</p>
+	<img class="center-img5" src="images/pic3.png"/>
+</div>
+
+
+
+<div class="center-line1"></div>
+<div class="center-div3" onclick="javascript:window.location.href='share_center_index.php'" >
+	<img class="center-img4" src="images/pic34.jpg"/>
+	<p class="center-p3">代理中心</p>
+	<img class="center-img5" src="images/pic3.png"/>
+</div>
+
+
+
+
+<{/if}>
+
+
+<!--
+<div class="center-line1"></div>
+<div class="center-div3" onclick="javascript:window.location.href='exchange_goods_list.php'" >
+	<img class="center-img4" src="images/pic34.jpg"/>
+	<p class="center-p3">积分商城</p>
+	<img class="center-img5" src="images/pic3.png"/>
+</div>
+
+
+<div class="center-line1"></div>
+<div class="center-div3" onclick="javascript:window.location.href='my_exchange_list.php'" >
+	<img class="center-img4" src="images/pic34.jpg"/>
+	<p class="center-p3">我的兑换</p>
+	<img class="center-img5" src="images/pic3.png"/>
+</div>
+-->
+
+<div class="center-div3" onclick="javascript:window.location.href='my_djq_list.php'" >
+	<img class="center-img4" src="images/pic34.jpg"/>
+	<p class="center-p3">我的代金券</p>
+	<img class="center-img5" src="images/pic3.png"/>
+</div>
+
+<div class="center-line1"></div>
+
+
+
+<script>
+
+
+var btnnn=5;
+getlink();//按钮鼠标经过样式
+setFootbtn();
+disgwcts(<{$cart_num}>);//显示底部导航购物车的小点
+////////////////////////广告横幅
+WapCircleImg_01("hengbox",1000, true);
+
+
+
+</script>
+
+
+</body>
+</html>

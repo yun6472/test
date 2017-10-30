@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html >
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>几米网络</title>
+	<link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+	<ul class="nav clearfix">
+		<li class="nav1">
+			<a href="index.html" >
+				<div class="icon"></div>
+				<div class="text1">HOME </div>
+				<div class="text2">几米首页</div>
+				<div class="line"></div>
+				<div class="hoverLine line1"></div>
+				<div class="hoverLine line2"></div>
+				<div class="hoverLine2 line3"></div>
+				<div class="hoverLine2 line4"></div>
+			</a>
+		</li>
+		<li class="nav2">
+			<a href="case.html" >
+				<div class="icon"></div>
+				<div class="text1">CASE </div>
+				<div class="text2">案例展示</div>
+				<div class="line"></div>
+				<div class="hoverLine line1"></div>
+				<div class="hoverLine line2"></div>
+				<div class="hoverLine2 line3"></div>
+				<div class="hoverLine2 line4"></div>
+			</a>
+		</li>
+		<li class="nav3">
+			<a href="aboutUs.html" >
+				<div class="icon"></div>
+				<div class="text1">ABOUT </div>
+				<div class="text2">关于几米</div>
+				<div class="line"></div>
+				<div class="hoverLine line1"></div>
+				<div class="hoverLine line2"></div>
+				<div class="hoverLine2 line3"></div>
+				<div class="hoverLine2 line4"></div>
+			</a>
+		</li>
+		<li class="nav4">
+			<a href="service.html" >
+				<div class="icon"></div>
+				<div class="text1">SERVICE </div>
+				<div class="text2">服务项目</div>
+				<div class="line"></div>
+				<div class="hoverLine line1"></div>
+				<div class="hoverLine line2"></div>
+				<div class="hoverLine2 line3"></div>
+				<div class="hoverLine2 line4"></div>
+			</a>
+		</li>
+		<li class="nav5">
+			<a href="news.html" >
+				<div class="icon"></div>
+				<div class="text1">NEWS </div>
+				<div class="text2">新闻中心</div>
+				<div class="line"></div>
+				<div class="hoverLine line1"></div>
+				<div class="hoverLine line2"></div>
+				<div class="hoverLine2 line3"></div>
+				<div class="hoverLine2 line4"></div>
+			</a>
+		</li>
+		<li class="nav6">
+			<a href="contact.html" >
+				<div class="icon"></div>
+				<div class="text1">CONTACT </div>
+				<div class="text2">联系我们</div>
+				<div class="line"></div>
+				<div class="hoverLine line1"></div>
+				<div class="hoverLine line2"></div>
+				<div class="hoverLine2 line3"></div>
+				<div class="hoverLine2 line4"></div>
+			</a>
+		</li>
+	</ul>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	$(".nav a").hover(function() {
+		$(this).find('.hoverLine').stop().animate({
+			width: '210px'
+		});
+		$(this).find('.hoverLine2').stop().animate({
+			height: '150px'
+		});
+	},function(){
+		$(this).find('.hoverLine').stop().animate({
+			width: '0'
+		});
+		$(this).find('.hoverLine2').stop().animate({
+			height: '0'
+		});	
+	});
+});
+</script>
+</html>

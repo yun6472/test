@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<title>个人资料-
+			<{$site_name}>
+		</title>
+		<!-- <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<link href="css/index.css" rel="stylesheet" type="text/css" />
+		<link href="css/tal.css?v=0.02" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="js/myjs.js"></script>
+		<link href="css/foot.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="js/foot.js"></script> -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="css/style3.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<style>
+			
+			.quit-btn {
+				background: #df3d3e;
+				color: #fff;
+				width: 90%;
+				position: absolute;
+				bottom: 4%;
+				left: 5%;
+				border-radius: 6px;
+			}
+		</style>
+	</head>
+
+	<body class="warper">
+		<header class="brand-title">
+			<a class="title-btn" href="javascript:history:back;"><img src="images/arrow03.png"></a>
+			用户列表
+		</header>
+		<ul class="per-ul4">
+			<li>
+				<p>头像</p>
+				<{if $user_info[ 'user_image']}>
+					<img src="<{$user_info['user_image']}>" id="user_image" />
+				<{else}>
+					<img src="images/banner01.jpg" id="user_image" />
+				<{/if}>
+				<div><input type="file" id="user_image_file" /></div>
+			</li>
+			<li>
+				<p>昵称</p>
+				<p onclick="javascript:window.location.href='?action=setting_name'">
+					<{if $user_info[ 'real_name']}>
+						<{$user_info[ 'real_name']}>
+						<{else}>点击填写
+					<{/if}>
+				</p>
+			</li>
+
+			<li>
+		    	<p >邮箱</p>
+				<p onclick="javascript:window.location.href='?action=setting_email'" > 点击填写</p>
+		    </li>
+			<li>
+		    	<p >手机</p>
+				<p onclick="javascript:window.location.href='?action=setting_phone'" > 点击填写</p>
+		    </li>
+			
+			<!-- <li>
+				<p>登录密码</p>
+				<p onclick="javascript:window.location.href='?action=setting_pass'">
+					<{if $user_info[ 'login_pass']}>点击修改
+						<{else}>点击设置
+					<{/if}>
+				</p>
+			</li> -->
+
+		</ul>
+
+		<!--
+		<input type="button"  class="login-div4 li-hei3" value="注销登录" onclick="javascript:window.location.href='logout.php'" /> 
+		-->
+		<a href="logout.php" class="quit-btn">注销登录</a>
+
+		</script>
+
+		<script type="text/javascript">
+			var result = document.getElementById("user_image");
+			var input = document.getElementById("user_image_file");
+
+			if(typeof FileReader === 'undefined') {
+
+				input.setAttribute('disabled', 'disabled');
+
+				alert("您的手机不支持图片上传");
+
+			} else {
+				input.addEventListener('change', readFile, false);
+			}
+
+			function readFile() {
+				var file = this.files[0];
+				if(!/image\/\w+/.test(file.type)) {
+					alert("请确保文件为图像类型");
+					return false;
+				}
+				var reader = new FileReader();
+				reader.readAsDataURL(file);
+
+				//alert("OK");
+
+				reader.onload = function(e) {
+					// result.src(this.result);// = '<img src="'+this.result+'" alt=""/>';
+					result.src = this.result;
+
+					//alert(this.result);//这个是二进制数据 （base 64）  不是路径！
+
+					//上传到服务器
+					$.ajax({
+						type: 'POST',
+						data: {
+							img: this.result,
+
+							action: "user_image"
+						},
+						url: "upload.php",
+						beforeSend: function() {
+							//alert("正在上传！！");
+							// $("#status_text").html("正在上传.....");
+						},
+						success: function(data) {
+							/**/
+							//result.src = this.result;
+							//alert(data.status);
+							if(data.status == '1') {
+								// $("#status_text").html("上传成功");
+								//alert(data.data);
+								//alert('上传成功!');
+								//跳转到信息页面。
+
+							} else {
+								//$("#status_text").html("上传失败");
+								//alert(data.info);
+							}
+
+						},
+						error: function(XMLHttpRequest, textStatus, errorThrown) {
+							//alert(textStatus);
+						},
+						dataType: "JSON"
+					});
+
+				}
+			}
+		</script>
+
+	</body>
+
+</html>

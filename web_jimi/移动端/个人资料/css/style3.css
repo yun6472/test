@@ -1,0 +1,106 @@
+/* reset */
+html,blockquote,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul,section,body {margin:0;padding:0}
+ol,ul {list-style:none}
+a {text-decoration:none}
+fieldset,img {border:0}
+:focus{outline: none;}
+input[type="button"], input[type="submit"], input[type="reset"] {
+	-webkit-appearance: none;
+}
+textarea {  -webkit-appearance: none;}
+.clearfix:after{
+	content:"";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix{
+	zoom:1;
+}
+
+@media screen and (min-width: 320px) {html {font-size: 14px;}}
+@media screen and (min-width: 360px) {html {font-size: 16px;}}
+@media screen and (min-width: 400px) {html {font-size: 18px;}}
+@media screen and (min-width: 440px) {html {font-size: 20px;}}
+@media screen and (min-width: 480px) {html {font-size: 22px;}}
+@media screen and (min-width: 640px) {html {font-size: 28px;}}
+
+
+.warper{
+	max-width: 640px;
+	margin:0 auto;
+}
+
+.per-ul4{
+	
+}
+.per-ul4 li{
+	border-bottom: 1px solid #d1d1d1;
+	overflow: hidden;
+	position: relative;
+}
+.per-ul4 li p{
+	padding: 1rem 0.5rem;
+	float: left;
+}
+.per-ul4 li #user_image{
+	float: right;
+	width: 2rem;
+	height: 2rem;
+	margin: 0.5rem 0.8rem 0 0;
+}
+.per-ul4 li div{
+	position: absolute;
+	right: 0.8rem;
+	top:0.5rem;
+	overflow: hidden;
+	color: #fff;
+	width: 2rem;
+	height: 2rem;
+	z-index: 0;
+}
+.per-ul4 li #user_image_file{
+	width: 2rem;
+	height: 2rem;
+	display: block;
+	border:0 none;
+	text-indent: -999em;
+}
+.per-ul4 li p:last-of-type{
+	color:#1282fe;
+	float: right;
+}
+.per-ul4 li p:first-child{
+	float: left;
+	color:#0f0f0f;
+}
+.login-div4{
+	text-align: center;
+	border: 0 none;
+	width: 100%;
+	background: #fff;
+	font-size: 1rem;
+	padding-top: 0.5rem;
+	color: #1282fe;
+}
+.btn1{
+	background: #fff;
+	border:0 none;
+	width: 95%;
+	padding:0.5rem 0;
+	margin:0.5rem 0;
+	padding-left:5%;
+}
+.btn2{
+	display: block;
+	background: #db3752;
+	color:#fff;
+	text-align: center;
+	border:0 none;
+	width: 90%;
+	margin:1rem auto;
+	font-size: 1rem;
+	padding:0.5rem 0;
+	border-radius: 0.5rem;
+}

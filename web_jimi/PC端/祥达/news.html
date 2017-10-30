@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html >
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>祥达印业</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<style type="text/css">
+.tab-warper{
+	width:100%;
+	height: 124px;
+	background: #f6f6f6;
+}
+.tab-warper .tab {
+    width: 1200px;
+    padding: 0;
+    padding-top: 45px;
+    margin: 0 auto;
+}
+.tab .tab-cell{
+	border: 1px solid #f6f6f6;
+}
+</style>
+<body >
+	<div class="header clearfix">
+		<div class="logo-img"><img src="images/logo03.jpg" alt="祥达印业logo" /></div>
+		<ul class="nav">
+			<li>
+				<a href="index.html">
+					首页<br />
+					<i>HOME	</i>		
+				</a>
+			</li>
+			<li>
+				<a href="aboutUs.html">
+					关于我们<br />
+					<i>ABOUTS</i>				
+				</a>
+			</li>
+			<li>
+				<a href="product.html">
+					产品中心<br />
+					<i>PRODUCT</i>
+				</a>
+			</li>	
+			<li>
+				<a href="news.html">
+					新闻中心<br />
+					<i>NEWS	</i>		
+				</a>
+			</li>	
+			<li>
+				<a href="customer.html">
+					客户案例<br />
+					<i>CUSTOMER</i>	
+				</a>
+			</li>	
+			<li>
+				<a href="contactUs.html">
+					联系我们<br />
+					<i>CONTACT</i>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="tab-warper">
+		<ul class="tab clearfix">
+			<li class="tab-cell active">公司新闻</li>
+			<li class="tab-cell">行业新闻</li>
+			<li class="tab-cell">其他新闻</li>
+		</ul>	
+	</div>
+	<div class="news clearfix">
+		
+		<a href="newsDetail.html" class="news-cell clearfix">
+			<div class="news-time">
+				<div class="news-time1">02</div>
+				<div class="news-line"></div>
+				<div class="news-time2">2016-06</div>
+			</div>
+			<div class="news-title">新闻标题</div>
+			<div class="news-content">新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。新闻内容。。。</div>
+		</a>
+		
+		<ul class="pagination clearfix">
+			<li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>下一页</li>
+		</ul>
+	</div>
+	<div class="footer">
+		<div class="footer-top">
+			<img class="footer-img1" src="images/logo02.png" alt="logo" />
+			<a href="##"><img class="footer-img2" src="images/icon04.png" alt="logo" /></a>
+			<a href="##"><img class="footer-img2" src="images/icon05.png" alt="logo" /></a>
+			<a href="##"><img class="footer-img2" src="images/icon06.png" alt="logo" /></a>
+			<a href="##"><img class="footer-img2" src="images/icon07.png" alt="logo" /></a>
+			<a href="##"><img class="footer-img2" src="images/icon08.png" alt="logo" /></a>
+			<a href="##"><img class="footer-img2" src="images/icon09.png" alt="logo" /></a>
+		</div>
+		<p class="footer-txt">
+			<a href="aboutUs.html">关于我们</a>|
+			<a href="news.html">新闻中心</a>|
+			<a href="contactUs.html">联系我们</a>|
+			<a href="customer.html">客户案例</a>
+		</p>
+		<p class="footer-txt2">© 2017 ALL RIGHTS RESERVED 苍南县祥达印业有限公司 浙ICP备12345678号</p>
+		<p class="footer-txt2">技术支持：温州几米网络科技有限公司</p>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+	$(function(){
+		
+		$(".tab-cell").click(function() {
+			$(".tab-cell").removeClass('active');
+			$(this).addClass('active');
+		});
+		$(".pagination li").click(function(event) {
+			$(".pagination li").removeClass('active');
+			$(this).addClass('active');
+		});
+		$(".nav li").hover(function() {
+			$(this).children('a').addClass('current');
+		}, function() {
+			$(this).children('a').removeClass('current');
+		});
+	})
+</script>
+</html>

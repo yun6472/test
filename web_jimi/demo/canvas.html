@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		h1{
+			transition: all ;
+
+		}
+	</style>
+</head>
+<body onload="draw('canvas');">
+	<h1>canvas元素示例</h1>
+	<canvas id="canvas" width="400" height="300"></canvas>
+</body>
+</html>
+<script>
+	var context ;
+	var width,height;
+	var i;
+	function draw(id){
+		var canvas = document.getElementById(id);
+		if (canvas == null) {
+			return false;
+		}
+		context = canvas.getContext('2d');
+		width = canvas.width;
+		height = canvas.height;
+		i = 0;
+		setInterval(rotate,1000);
+	}
+	function rotate(){
+		context.clearRect(0,0,width,height);
+		context.fillStyle = "red";
+		context.fillRect(i,0,20,20);
+		i = i+20;
+	}
+</script>

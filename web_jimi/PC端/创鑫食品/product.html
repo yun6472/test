@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html >
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>创鑫食品</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body >
+	<div class="header clearfix">
+		<div class="logo-img"><img src="images/logo03.jpg" alt="创鑫食品logo" /></div>
+		<ul class="nav">
+			<li>
+				<a href="index.html">
+					首页		
+				</a>
+			</li>
+			<li>
+				<a href="aboutUs.html">
+					关于我们				
+				</a>
+			</li>
+			<li >
+				<a class="active" href="product.html">
+					产品中心
+				</a>
+			</li>	
+			<li>
+				<a href="join.html">
+					招商加盟
+				</a>
+			</li>
+			<li>
+				<a href="news.html">
+					新闻中心	
+				</a>
+			</li>	
+			<li>
+				<a href="sale.html">
+					销售网络
+				</a>
+			</li>	
+			<li>
+				<a href="contactUs.html">
+					联系我们
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="banner">
+		<img src="images/banner02.jpg" />
+	</div>
+	<div class="stroy clearfix">
+		<h3 class="serverTitle">产品中心</h3>
+		<div class="stroy-btn">
+			<a class="stroy-btn1 active" href="##">分类名称</a>
+			<a class="stroy-btn1" href="##">分类名称</a>
+		</div>
+		<div class="serverCell">
+			<img src="images/pic01.jpg" />
+			<p class="serverTxt2">产品名称产品名称</p>
+		</div>
+		<div class="serverCell">
+			<img src="images/pic01.jpg" />
+			<p class="serverTxt2">产品名称产品名称</p>
+		</div>
+		<div class="serverCell">
+			<img src="images/pic01.jpg" />
+			<p class="serverTxt2">产品名称产品名称</p>
+		</div>
+		<div class="serverCell">
+			<img src="images/pic01.jpg" />
+			<p class="serverTxt2">产品名称产品名称</p>
+		</div>
+		<div class="serverCell">
+			<img src="images/pic01.jpg" />
+			<p class="serverTxt2">产品名称产品名称</p>
+		</div>
+	</div>
+	<ul class="pagination clearfix">
+		<li class="active">1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>下一页</li>
+	</ul>
+	
+	<div class="contact">
+		<div class="contact-content clearfix">
+			<div class="contact-address">
+				<h3 class="contact-title">关于我们</h3>
+				<p class="contact-txt">公司简介</p>
+				<p class="contact-txt">企业文化</p>
+			</div>
+			<div class="contact-tel">
+				<h3 class="contact-title">招商加盟</h3>
+				<p class="contact-txt">加盟优势</p>
+				<p class="contact-txt">加盟流程</p>
+				<p class="contact-txt">加盟条件</p>
+				<p class="contact-txt">加盟政策</p> 
+			</div>
+			<div class="contact-email">
+				<h3 class="contact-title">人才招聘</h3>
+				<p class="contact-txt">人才战略</p>
+				<p class="contact-txt">招聘岗位</p>
+			</div>
+			<div class="contact-code">
+				<img src="images/code.jpg" />
+				<p class="contact-codeTxt">微信公众号</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">Copyright © 2017 淮北创鑫食品有限公司 版权所有  皖ICP12345678 技术支持：几米网络</div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".design-cell").hover(function() {
+			$(this).addClass('on');
+		}, function() {
+			$(this).removeClass('on');
+		});
+		$(".nav li").hover(function() {
+			$(this).children('a').addClass('current');
+		}, function() {
+			$(this).children('a').removeClass('current');
+		});
+		$(".stroy-btn").on('click', '.stroy-btn1', function(event) {
+			$(".stroy-btn1").removeClass('active');
+			$(this).addClass('active');
+		});
+	})
+</script>
+</html>

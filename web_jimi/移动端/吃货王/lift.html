@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title></title>
+	<link rel="stylesheet" href="css/pullToRefresh.css"/>
+	<script src="js/iscroll.js"></script>
+	<script src="js/pullToRefresh.js"></script>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div class="list">
+		<div id="wrapper">
+			<ul>
+				<li class="lift-cell clearfix">
+					<a href="##">
+						<div class="list-txt1">售17.18-20.98万 萨瓦纳自动挡售17.18-20.98万 萨瓦纳自动挡售17.18-20.98万 萨瓦纳自动挡售17.18-20.98万 萨瓦纳自动挡售17.18-20.98万 萨瓦纳自动挡售17.18-20.98万 萨瓦纳自动挡售17.18-20.98万 萨瓦纳自动挡售17.18-20.98万 萨瓦纳自动挡售17.18-20.98万 萨瓦纳自动挡</div>
+						<div class="list-img">
+							<img src="images/pic03.jpg" />
+							<div class="list-txt2">
+								<span>温州吃货王</span>
+								<img src="images/icon-02.png">2.4万
+								<img src="images/icon-01.png">326
+							</div>
+						</div>
+						<div class="list-txt3">1小时前1小时前1小时前1小时前1小时前1小时前1小时前1小时前1小时前1小时前1小时前1小时前1小时前1小时前1小时前1小时前1小时前1小时前1小时前</div>
+					</a>
+				</li>
+				<li class="lift-cell clearfix">
+					<a href="##">
+						<div class="list-txt1">售17.18-20.98万 萨瓦纳自动挡</div>
+						<div class="list-img">
+							<img src="images/pic03.jpg" />
+							<div class="list-txt2">
+								<span>温州吃货王</span>
+								<img src="images/icon-02.png">2.4万
+								<img src="images/icon-01.png">326
+							</div>
+						</div>
+						<div class="list-txt3">1小时前</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script>
+
+
+		refresher.init({
+			id:"wrapper",
+			pullDownAction:Refresh,
+			pullUpAction:Load
+		});
+				
+		function Refresh() {
+			setTimeout(function () {	
+				
+				myScroll.refresh();
+			}, 1000);
+		}
+		function Load() {
+			setTimeout(function () {
+
+				myScroll.refresh();
+			}, 1000);
+		}
+	</script>
+</body>
+</html>

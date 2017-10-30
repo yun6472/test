@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>个人中心</title>
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="css/tal.css?v=0.02" rel="stylesheet" type="text/css"/>
+<link href="css/index.css" rel="stylesheet" type="text/css"/>
+<link href="css/foot.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="js/foot.js"></script>
+<style>
+html,body{
+width:100%;
+height:auto;
+background-color:#f5f5f5;
+}
+</style>
+</head>
+<body>
+<div class="topSdiv" style="height:3em;">
+  <div class="topSdiv_T boxu boxu-h" style="">
+    <div sbjgbg="#f5f5f5" onclick="goback()" class="goback01"></div>
+    <div class="boxbf1 tb1 tc">我的地址/添加修改</div>
+	<div class="goback00"></div>
+  </div>
+</div>
+<!--内容开始-->
+<form name="form1" method="post" action="?" onSubmit="return formSubGo()">
+<div class="tbox boxu boxu-s pos3 bj-w1 mb4">
+  <div class="boxu boxu-h boxd1 bk-x1 bk-b1 bk-cw2">
+    <div class="b1">收货人</div>
+	<div class="b2 boxbf1"><input id="Mname" name="你定" value="a" type="text" placeholder="请输入姓名"></div>
+  </div>
+  <div class="boxu boxu-h boxd1">
+    <div class="b1">手机号码</div>
+	<div class="b2 boxbf1"><input id="Mtel" name="你定" type="text" value="" placeholder="请输入手机号"></div>
+  </div>
+</div>
+<div class="tbox boxu boxu-s pos3 bj-w1">
+  <div class="boxu boxu-h boxd1 bk-x1 bk-b1 bk-cw2">
+    <div class="b1">省市区</div>
+	<div class="b2 boxbf1 boxu boxu-h">
+	   <div class="boxbf1 inpBox ">
+	   <select id="Msheng" name="你定" class="tcol-w8" onChange="setSubbtncss()">
+		<option class="tcol-w6" label='省份' value=''/>
+		<option label='浙江省' value='1'/>
+		<option label='广东省' value='2'/>
+		<option label='福建省' value='3'/>
+       </select>
+	 </div>
+	 <div class="boxbf1 inpBox ">
+	   <select id="Mshi" name="你定" class="tcol-w8" onChange="setSubbtncss()">
+         <option class="tcol-w6" label='市区' value=''/>
+	   </select>
+	 </div>
+	 <div class="boxbf1 inpBox ">
+	   <select id="Mxian" name="你定" class="tcol-w8" onChange="setSubbtncss()">
+	     <option class="tcol-w6" label='县城' value=''/>
+       </select>
+	 </div>
+	</div>
+  </div>
+  <div class="boxu boxu-h boxd1 bk-x1 bk-b1 bk-cw2">
+    <div class="b1">详细地址</div>
+	<div class="b2 boxbf1"><input id="Maddress" name="你定" type="text" value="" placeholder="如：灵溪镇德嘉华庭12-202"></div>
+  </div>
+  <div class="boxu boxu-h boxd1">
+    <div class="b1">默认地址</div>
+	<div class="b2 boxbf1"></div>
+	<div class="mrdian">
+	  <label>
+	    <input id="Mr" name="你定" type="checkbox" value="1" class="bk1"  style="display:none;width:1em;height:1em;" >
+		<div></div>
+	  </label>	
+	</div>
+  </div>
+</div>
+
+<div class="divmargin p5 tc ts-0d8 tcol-w6">
+实物奖品中奖后通过实物地址发货,最多添加3个
+</div>
+<!--内容结束-->
+
+<!--底部开始-->
+<div class="fbtnbox1" style="height:3em;">
+  <div class="btnfd">
+    <div onclick="formSubGo()" class="fbtn1">确定保存</div>
+  </div>
+</div>
+
+<input type="submit" name="Submit" value="提交" style="display:none;">
+<!--底部结束-->
+</form>
+</body>
+</html>
+<script>
+var btnnn=5;
+getlink();//按钮鼠标经过样式
+
+////////////////////////////////////点击我要查件执行代码
+function formSubGo(){
+  var Mname=$$("Mname").value;
+  var Mtel=$$("Mtel").value;
+  var Msheng=$$("Msheng").value;
+  var Mshi=$$("Mshi").value;
+  var Mxian=$$("Mxian").value;
+  var Maddress=$$("Maddress").value;
+
+  if(!Mname||Mname.length<2||Mname.length>4){
+     cztsalert("请输入正确的真实姓名!");
+	 return false;
+  }
+  if(!Mtel||Mtel.length!=11){
+     cztsalert("请输入正确的手机号码!");
+	 return false;
+  }
+  if(!Msheng){
+     cztsalert("请选择所在省份!");
+	 return false;
+  }
+  if(!Mshi&&!Mxian){
+     cztsalert("请选择所在市县!");
+	 return false;
+  }
+  if(!Maddress||Maddress.length<5){
+     cztsalert("请输入正确的街道详细地址!");
+	 return false;
+  }
+  ////////////////////////////////////以上是用来做再次的验证。
+  $$("addform").submit();
+  
+}
+
+</script>

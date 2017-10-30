@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title></title>
+	<style >
+		*{
+			margin:0;
+			padding: 0;
+		}
+		:focus{outline: none;}
+		input[type="button"], input[type="submit"], input[type="reset"] {
+			-webkit-appearance: none;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		.warper{
+			max-width: 640px;
+			margin: 0 auto;
+			width: 100%;
+			height: 100%;
+			background: #6bc6fd;
+		}
+		.txt1{
+			text-align: center;
+		    font-size: 16px;
+		    color: #fff;
+		    padding: 14% 0 11% 0;
+		}
+		.txt2{
+			width: 80%;
+		    margin: 0 auto;
+		    color: #fff;
+		    line-height: 30px;
+		    margin-bottom: 10px;
+		}
+		.txt2 span{
+			display: inline-block;
+		    border-bottom: 1px solid #fff;
+		    width: calc(100% - 4em);
+		}
+		.btn{
+			display: block;
+		    border: 0 none;
+		    background: #fff;
+		    color: #6bc6fd;
+		    border-radius: 20px;
+		    padding: 10px 40px;
+		    margin: 43px auto;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="warper">
+		<div class="txt1">标题</div>
+		<p class="txt2">经度：<span>111</span></p>
+		<p class="txt2">维度：<span>111</span></p>
+		<button class="btn">刷新经纬度</button>
+	</div>
+
+</body>
+</html>

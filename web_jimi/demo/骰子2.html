@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.block{
+			border:1px solid #000;
+			padding: 100px 0;
+			perspective: 800px;
+			-webkit-perspective:800px;
+		}
+		.dice{
+			width: 300px;
+			height: 300px;
+			margin:20px auto;
+			position: relative;
+			transform-style: preserve-3d;
+			-webkit-transform-style: preserve-3d;
+			animation: random-rotate 2s linear 0s infinite;
+		}
+		.page{
+			width:200px;
+			height: 200px;
+			background: rgba(0,0,0,0.3);
+			position: absolute;
+			font-size: 200px;
+			color: #fff;
+			line-height: 200px;
+			text-align: center;
+			border:1px solid red;
+		}
+
+
+		#page2{
+			transform: rotateY(-90deg);
+			transform-origin: right;
+		}
+		#page3{
+			transform: translateZ(-200px);
+			transform-origin: right;
+		}
+		#page4{
+			transform: rotateY(-270deg);
+			transform-origin: left;
+		}
+		#page5{
+			transform: rotateX(-90deg);
+			transform-origin: top;
+		}
+		#page6{
+			transform: rotateX(90deg);
+			transform-origin: bottom;
+		}
+		@keyframes random-rotate{
+			0%{
+				transform: rotateX(0deg) rotateY(0deg);
+			}
+			100%{
+				transform: rotateX(360deg) rotateY(360deg);
+			}
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="block">
+		<div class="dice">
+			<div class="page" id="page1">1</div>
+			<div class="page" id="page2">2</div>
+			<div class="page" id="page3">3</div>
+			<div class="page" id="page4">4</div>
+			<div class="page" id="page5">5</div>
+			<div class="page" id="page6">6</div>
+		</div>
+	</div>
+</body>
+</html>

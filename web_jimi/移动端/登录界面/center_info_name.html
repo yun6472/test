@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<meta name="format-detection" content="telephone=no" />
+
+<title>个人资料-<{$site_name}></title>
+
+
+<link href="css/style3.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+	body{
+		background: #f7f7f7;
+	}
+</style>
+</head>
+<body class="warper">
+	<input class="btn1" type="text"   id="name" value="<{$default_data}>"   placeholder="请输入昵称"  />
+	<input class="btn2" type="button"  onclick="save_info()" value="提交" />
+	<link rel="stylesheet" href="iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="css/style3.css" rel="stylesheet" type="text/css" />
+<script>
+		
+		
+		
+		
+function save_info()
+	{
+		//var name = $("#name").val();
+		var name = document.getElementById("name").value;
+		
+		if(name == '' || name == '请输入昵称')
+		{
+			alert('请输入昵称');
+		}
+		else
+		{
+			window.location.href = "?action=setting_name_oper&name="+name;
+		}
+	}
+	
+		</script>
+		
+</body>
+</html>

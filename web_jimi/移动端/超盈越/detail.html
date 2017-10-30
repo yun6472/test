@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>超盈越</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div class="header clearfix">
+		<a href="##" class="header-icon1">&lt;</a>
+		<div class="header-txt">全部分类</div>
+		<a href="##" class="header-search">搜索</a>
+	</div>
+	<ul class="slide-bar">
+		<li class="slide-cell active">超盈越</li>
+		<li class="slide-cell">爆品热销</li>
+		<li class="slide-cell">时尚女装</li>
+		<li class="slide-cell">潮流男装</li>      
+		<li class="slide-cell">时尚女鞋</li>
+		<li class="slide-cell">流行男鞋</li>
+		<li class="slide-cell">潮流女包</li>
+		<li class="slide-cell">母婴用品</li>
+		<li class="slide-cell">家用电器</li>
+		<li class="slide-cell">居家生活</li>
+		<li class="slide-cell">爆品热销</li>
+		<li class="slide-cell">时尚女装</li>
+		<li class="slide-cell">潮流男装</li>      
+		<li class="slide-cell">时尚女鞋</li>
+		<li class="slide-cell">流行男鞋</li>
+		<li class="slide-cell">潮流女包</li>
+		<li class="slide-cell">母婴用品</li>
+		<li class="slide-cell">家用电器</li>
+		<li class="slide-cell">居家生活</li>
+		<li class="slide-cell">母婴用品</li>
+		<li class="slide-cell">家用电器</li>
+		<li class="slide-cell">居家生活</li>
+		<li class="slide-cell">爆品热销</li>
+		<li class="slide-cell">时尚女装</li>
+		<li class="slide-cell">潮流男装</li>      
+		<li class="slide-cell">时尚女鞋</li>
+		<li class="slide-cell">流行男鞋</li>
+		<li class="slide-cell">潮流女包</li>
+		<li class="slide-cell">母婴用品</li>
+		<li class="slide-cell">家用电器</li>
+		<li class="slide-cell">居家生活</li>
+	</ul>
+	<div class="detail">
+		<div class="detail-img">
+			<img src="images/pic06.jpg" />
+			<div class="detail-txt1">全<br />部<br />&gt;&gt;</div>
+		</div>
+		<div class="detail-cell">
+			<img src="images/pic07.jpg" />
+			<div class="detail-txt2">削皮器</div>
+		</div>
+		<div class="detail-cell">
+			<img src="images/pic07.jpg" />
+			<div class="detail-txt2">削皮器</div>
+		</div>
+		<div class="detail-cell">
+			<img src="images/pic07.jpg" />
+			<div class="detail-txt2">削皮器</div>
+		</div>
+		<div class="dtail-cell">
+			<img src="images/pic07.jpg" />
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".slide-bar").on('click', '.slide-cell', function() {
+		$(".slide-cell").removeClass('active');
+		$(this).addClass('active');
+		var oHeight = $(".slide-cell").outerHeight();
+		var cHeight = (($(this).index())* oHeight);
+		$("html,body").animate({
+			scrollTop:cHeight
+		});
+	});
+})
+</script>
+</html>

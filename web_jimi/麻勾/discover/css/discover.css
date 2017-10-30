@@ -1,0 +1,40 @@
+
+
+
+.discover-cell{
+	overflow: hidden;
+	background: #fff;
+	
+	border-bottom: 1px solid #f1f1f1;
+	position: relative;
+}
+.discover-cell img{
+	width: 1.4rem;
+	vertical-align: middle;
+}
+.discover-cell a{
+	padding:1rem 0;
+	margin:0 1.5rem;
+	display: block;
+	color:#000;
+}
+.discover-txt1{
+	font-size: 1rem;
+	padding: 0 0.6rem 0;
+}
+.discover-txt2{
+	font-size: 0.75rem;
+	color:#777;
+}
+.discover-cell::after{
+	content:"";
+	display: block;
+	background: url(../../images/icon-arrow01.png) no-repeat;
+	width: 0.7rem;
+	height: 1.3rem;
+	position: absolute;
+	right: 0;
+	top: 1.2rem;
+	background-size: 100%;
+	right: 1.5rem;
+}

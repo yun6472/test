@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<canvas id="canvas" style="display: block;margin: 50px auto" >
+		当前浏览器不支持Canvas，请更新浏览器
+	</canvas>
+</body>
+<script src="demo01.js"></script>
+<script type="text/javascript">
+	
+
+	//标准的获取canvas中鼠标点击的坐标
+	var x = event.clientX - canvas.getBoundingClientRect().left;
+	var y = event.clientY - canvas.getBoundingClientRect().top;
+
+	
+</script>
+</html>
