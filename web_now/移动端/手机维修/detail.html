@@ -1,0 +1,430 @@
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+    <title>手机维修</title>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/font/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iosSelect.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="warper top-48">
+    <ul class="progess">
+        <li class="active">
+            <div class="progess-circle">1</div>
+            <p class="progess-txt">确定故障</p>
+        </li>
+        <li>
+            <div class="progess-circle">2</div>
+            <p class="progess-txt">维修方案</p>
+        </li>
+        <li>
+            <div class="progess-circle">3</div>
+            <p class="progess-txt">提交订单</p>
+        </li>
+    </ul>   
+    <h3 class="choose-title4 clearfix">
+        <span></span>
+        <a class="choose-btn">修改</a>
+    </h3>
+    <div class="product-list2">
+       <h3 class="product-title">选择维修机型: </h3>
+       <ul class="clearfix">
+           <li><a href="javascript:;">iPhone 7 Plus</a></li>
+           <li><a href="javascript:;">iPhone 7</a></li>
+           <li><a href="javascript:;">iPhone 6s Plus</a> </li>
+           <li><a href="javascript:;">iPhone 6s</a></li>
+           <li><a href="javascript:;">iPhone 6 Plus</a></li>
+           <li><a href="javascript:;">iPhone 6</a></li>
+           <li><a href="javascript:;">iPhone 5s</a></li>
+           <li><a href="javascript:;">iPhone 5c</a></li>
+           <li><a href="javascript:;">iPhone 5</a></li>
+       </ul>
+   </div>
+    <h3 class="choose-title3 clearfix">
+        <span></span>
+        <a class="choose-btn">修改</a>
+    </h3>
+    <div class="fault-list3">
+        <h3 class="choose-title2">选择颜色</h3>
+        <ul class="clearfix">
+            <li>
+                <p>白色</p>
+            </li>
+            <li>
+                <p>黑色</p>
+            </li>
+            <li>
+                <p>土豪金</p>
+            </li>
+        </ul>
+    </div>
+    <h3 class="choose-title1 fault-title1 clearfix">
+        <span></span>
+        <a class="choose-btn">修改</a>
+    </h3>
+    <div class="fault-list1">
+        <h3 class="choose-title2">选择故障</h3>
+        <ul class="clearfix">
+            <li>
+                <img src="images/fault_01.png" />
+                <p>屏幕故障</p>
+            </li>
+            <li>
+                <img src="images/fault_02.png" />
+                <p>耗电异常</p>
+            </li>
+            <li>
+                <img src="images/fault_03.png" />
+                <p>无法开机</p>
+            </li>
+            <li>
+                <img src="images/fault_04.png" />
+                <p>进水浸液</p>
+            </li>
+            <li>
+                <img src="images/fault_05.png" />
+                <p>外部部件故障</p>
+            </li>
+            <li>
+                <img src="images/fault_06.png" />
+                <p>Wi-Fi及信号故障</p>
+            </li>
+            <li>
+                <img src="images/fault_07.png" />
+                <p>其他故障</p>
+            </li>
+        </ul>
+    </div>
+    <div class="fault-list2">
+        <ul>
+            <li>
+                <p class="fault-txt1">无法开机</p>
+                <div class="fault-txt2">进水后黑屏无反应，注意不要狂按开机键以及尝试联机！</div>
+                <span class="circle"></span>
+            </li>
+            <li>
+                <p class="fault-txt1">无法开机</p>
+                <div class="fault-txt2">进水后黑屏无反应，注意不要狂按开机键以及尝试联机！</div>
+                <span class="circle"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="fault-btn1" >确认</div>
+    <div class="mobileActive-warper">
+        <div class="mobileActive">
+            <div class="mobileActive-txt1">相关维修方案</div>
+            <div class="mobileActive-txt2 clearfix">
+                <span>正极线路维修</span>
+                <span class="mobileActive-right">500.000</span>
+            </div>
+        </div>
+    </div>
+    <div class="fault-btn2">提交</div>
+    <div class="sOrder">
+        <div class="sOrder-txt1">请选择维修方式</div>
+       <div class="sOrder-txt2">
+            <span class="sOrer-txt2-txt2" id="choose-btn1">点击选择维修方式</span>
+            <input id="choose-txt1" type="hidden" />
+        </div>
+        <form class="sOrder1">
+            <div class="sOrder-txt1">请填写上门地址</div>
+            <!-- <div class="sOrder-txt2">
+                <span class="sOrer-txt2-txt1">上门城市</span>
+                <input class="sOrder-btn1" type="text" placeholder="输入城市" />
+            </div>
+            <div class="sOrder-txt2">
+                <span class="sOrer-txt2-txt1">上门地址</span>
+                <input class="sOrder-btn1" type="text" placeholder="请输入小区或地标" />
+            </div> -->
+            <div class="sOrder-txt2">
+                <span class="sOrer-txt2-txt1">详细地址</span>
+                <input class="sOrder-btn1" type="text" placeholder="请输入详细地址、单元、门牌号" />
+            </div>
+            <div class="sOrder-txt1">请选择预约上门维修时间</div>
+            <div class="sOrder-txt2">
+                <span class="sOrer-txt2-txt2" id="calendar">点击选择上门维修时间</span>
+            </div>
+            <div class="sOrder-txt1">请填写您的联系方式</div>
+            <div class="sOrder-txt2">
+                <span class="sOrer-txt2-txt1">姓名</span>
+                <input class="sOrder-btn1" type="text" placeholder="请输入姓名" />
+            </div>
+            <div class="sOrder-txt2">
+                <span class="sOrer-txt2-txt1">手机号</span>
+                <input class="sOrder-btn1" type="text" placeholder="请输入手机号" />
+            </div>
+            <div class="line"></div>
+            <div class="sOrder-txt2">
+                <span class="sOrer-txt2-txt1">订单原价</span>
+                <span class="sOrer-txt2-txt3">￥175.0</span>
+            </div>
+            <div class="sOrder-txt2">
+                <span class="sOrer-txt2-txt4">待付款</span>
+                <span class="sOrer-txt2-txt5">￥175.0</span>
+            </div>
+            <input class="sOrder-btn2" type="submit"  value="提交" />
+        </form>
+        <form class="sOrder2">
+            <div class="sOrder-txt1">请填写寄件地址</div>
+            <div class="sOrder-txt2">
+                <span class="sOrer-txt2-txt1">详细地址</span>
+                <input class="sOrder-btn1" type="text" placeholder="请输入详细地址、单元、门牌号" />
+            </div>
+            <div class="sOrder-txt1">请填写您的联系方式</div>
+            
+            <div class="sOrder-txt2">
+                <span class="sOrer-txt2-txt1">手机号</span>
+                <input class="sOrder-btn1" type="text" placeholder="请输入手机号" />
+            </div>
+            <input class="sOrder-btn2" type="submit"  value="提交" />
+        </form>
+    </div>
+    <ul class="mag-list">
+        <li>
+            <div class="mag-title">
+                维修流程
+                <span>+</span>
+            </div>
+            <div class="mag-detail">
+                <a href="service.html">上门维修</a>
+                <a href="service.html">寄送维修</a>
+                <a href="service.html">到店维修</a>
+            </div>
+        </li>
+        <li>
+            <div class="mag-title">
+                服务保障
+                <span>+</span>
+            </div>
+            <div class="mag-detail">
+                <a href="service.html">服务条款</a>
+                <a href="service.html">售后条款</a>
+                <a href="service.html">售后流程</a>
+            </div>
+        </li>
+        <li>
+            <div class="mag-title">
+                常见问题
+                <span>+</span>
+            </div>
+            <div class="mag-detail">
+                <a href="service.html">上门维修</a>
+                <a href="service.html">寄送维修</a>
+                <a href="service.html">到店维修</a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/iosSelect.js"></script>
+<script src="js/timedata.js"></script>
+<script src="js/foot.js"></script>
+<script>
+    var oFault = "",
+        oFault_detail = "",
+        flag1 = false,
+        flag2 = false,
+        flag3 = false,
+        flag4 = false;
+
+    var chooseData =[
+        {'id': '101' ,'value': '上门维修'},
+        {'id': '102' ,'value': '寄件维修'}
+    ]
+
+    
+
+    //设置底部导航栏
+    setFootbtn(1);
+
+    $(function(){
+
+
+        //选择机型
+        $(".product-list2 li").click(function(){
+            $(".product-list2 li").removeClass("active");
+            $(this).addClass("active");
+            var oMobile = $(this).find('a').text();
+            $(".product-list2").hide();
+            $(".choose-title4 span").text(oMobile);
+            $(".choose-title4").show();
+            flag4 = true;
+            if(flag1 && flag2 && flag3 && flag4){
+                $(".fault-btn1").show();
+            }
+        })
+
+
+        //选择故障
+        $(".fault-list1 li").click(function(){
+            $(".fault-list1 li").removeClass("active");
+            $(this).addClass('active');
+            oFault = $(this).find('p').text();
+            $(".fault-list1").hide();
+            $('.choose-title1 span').text(oFault);
+            $('.choose-title1').show();
+            $(".fault-list2").show();
+            flag1 = true;
+            if(flag1 && flag2 && flag3 && flag4){
+                $(".fault-btn1").show();
+            }
+        });
+
+        //选择颜色
+        $(".fault-list3 li").click(function(event) {
+            $(".fault-list3 li").removeClass("active");
+            $(this).addClass('active');
+            var oColor = $(this).find('p').text();
+            $(".fault-list3").hide();
+            $('.choose-title3 span').text(oColor);
+            $('.choose-title3').show();
+            flag2 = true;
+            if(flag1 && flag2 && flag3 && flag4){
+                    $(".fault-btn2").show();
+            }
+        });
+
+        $(".fault-list2 li").click(function(){
+            $(".fault-list2 li").removeClass("active");
+            $(this).addClass("active");
+            flag3 = true;
+            if(flag1 && flag2 && flag3 && flag4){
+                $(".fault-btn1").show();
+            }
+
+        })
+
+        //修改
+        $(".choose-title3 .choose-btn ,.choose-title4 .choose-btn").click(function(){
+            $(this).parent().hide();
+            flag1 =false;
+            $(this).parent().next().show();
+        });
+        $(".choose-title1 .choose-btn").click(function(){
+            $(".mobileActive-warper").hide();
+            $(".fault-btn2").hide();
+            flag1 =true;
+            $(this).parent().hide();
+            $(this).parent().next().show();
+        });
+
+        //点击确定
+        $(".fault-btn1").click(function(){
+            $(".progess li").eq(1).addClass("active");
+            oFault_detail = $('.fault-list2 .active .fault-txt1').text();
+            var txt = oFault +"(" + oFault_detail +")";
+            $('.choose-title1 span').text(txt);
+            $(".fault-list2").hide();
+            $(this).hide();
+            $(".mobileActive-warper").show();
+            $(".fault-btn2").show();
+        })
+
+
+        //提交
+        $(".fault-btn2").click(function(){
+            $(".product-title2").hide();
+            $(".choose-title3").hide();
+            $(".choose-title1").hide();
+            $(".choose-title4").hide();
+            $(".mobileActive-warper").hide();
+            $(".fault-btn2").hide();
+            $(".progess li").eq(2).addClass("active")
+            $(".sOrder").show();
+        })
+
+         //维修流程
+        $(".mag-title").click(function(){
+            if($(this).hasClass('close')){
+                $(this).removeClass("close");
+                $(this).parent().children('.mag-detail').slideUp();
+                $(this).children('span').text("+");
+            }else{
+                $(this).addClass("close");
+                $(this).children('span').text("一");
+                $(this).parent().children('.mag-detail').slideDown();
+            }
+        })
+
+
+        //选择维修方式
+        $("#choose-btn1").click(function(){
+            var chooseId = $("#choose-txt1").val();
+            var chooseSelect = new IosSelect(
+                1,
+                [chooseData],
+                {
+                    container: '.container',
+                    title: '选择维修方式',
+                    itemHeight: 50,
+                    itemShowCount: 3,
+                    oneLevelId: chooseId,
+                    callback: function (data) {
+                        $('#choose-txt1').val(data.id);
+                        if(data.id == "101"){
+                            $(".sOrder2").hide();
+                            $(".sOrder1").show();
+
+                        }else{
+                            $(".sOrder1").hide();
+                            $(".sOrder2").show();
+                        }
+
+                        $("#choose-btn1").text(data.value);
+                    }
+                }
+            );
+        })
+
+
+
+        //选择时间
+        var slotData =[
+            {'id': '10001' ,'value': '9：00~12：00'},
+            {'id': '10002' ,'value': '13：00~15：00'},
+            {'id': '10003' ,'value': '15：00~20：00'}
+        ]
+        var slotDate = "9：00~12：00";
+        var showDateDom = $("#calendar");
+        showDateDom.attr('data-month', nowMonth);
+        showDateDom.attr('data-date', nowDate);
+        showDateDom.attr('data-slot', slotDate);
+
+        showDateDom.bind('click', function () {
+            var oneLevelId = showDateDom.attr('data-month');
+            var twoLevelId = showDateDom.attr('data-date');
+            var threeLevelId = showDateDom.attr('data-slot');
+            var iosSelect = new IosSelect(3, 
+                [formatMonth(),arrday,slotData],
+                {
+                    title: '地址选择',
+                    itemHeight: 35,
+                    relation: [1, 0, 0, 0],
+                    itemShowCount: 5,
+                    oneLevelId: oneLevelId,
+                    twoLevelId: twoLevelId,
+                    threeLevelId: threeLevelId,
+                    callback: function (selectOneObj, selectTwoObj,selectThreeObj) {
+
+                        showDateDom.attr('data-month', selectOneObj.id);
+                        showDateDom.attr('data-date', selectTwoObj.id);
+                        showDateDom.attr('data-slot', selectThreeObj.id);
+                        showDateDom.html(selectOneObj.value + ' ' + selectTwoObj.value + ' ' + selectThreeObj.value);
+                    }
+            });
+        });
+
+    })
+
+    
+</script>
+</html>

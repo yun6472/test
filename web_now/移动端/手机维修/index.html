@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+    <title>手机维修</title>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/font/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="warper">
+    <div class="home-header">
+        <img src="images/home-title.png"/>
+    </div>
+    <div class="swiper-container banner">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img class="gray" src="images/banner01.png"></div>
+            <div class="swiper-slide"><img class="gray" src="images/banner02.png"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+   <!--  <div class="product-list2">
+       <h3 class="product-title">选择维修机型: </h3>
+       <ul class="clearfix">
+           <li><a href="detail.html">iPhone 7 Plus</a></li>
+           <li><a href="detail.html">iPhone 7</a></li>
+           <li><a href="detail.html">iPhone 6s Plus</a> </li>
+           <li><a href="detail.html">iPhone 6s</a></li>
+           <li><a href="detail.html">iPhone 6 Plus</a></li>
+           <li><a href="detail.html">iPhone 6</a></li>
+           <li><a href="detail.html">iPhone 5s</a></li>
+           <li><a href="detail.html">iPhone 5c</a></li>
+           <li><a href="detail.html">iPhone 5</a></li>
+       </ul>
+   </div> -->
+   <div class="product-list">
+        <ul class="clearfix">
+            <li>
+                <a href="detail.html">
+                    <div class="product-img"><img src="images/logo01.png"/></div>
+                    <p class="product-txt">iphone</p>
+                </a>
+            </li>
+            <li>
+                <a href="detail.html">
+                    <div class="product-img"><img src="images/logo02.png"/></div>
+                    <p class="product-txt">华为</p>
+                </a>
+            </li>
+            <li>
+                <a href="detail.html">
+                    <div class="product-img"><img src="images/product01.png"/></div>
+                    <p class="product-txt">敬请期待</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <ul class="mag-list">
+        <li>
+            <div class="mag-title">
+                维修流程
+                <span>+</span>
+            </div>
+            <div class="mag-detail">
+                <a href="service.html">上门维修</a>
+                <a href="service.html">寄送维修</a>
+                <a href="service.html">到店维修</a>
+            </div>
+        </li>
+        <li>
+            <div class="mag-title">
+                服务保障
+                <span>+</span>
+            </div>
+            <div class="mag-detail">
+                <a href="service.html">服务条款</a>
+                <a href="service.html">售后条款</a>
+                <a href="service.html">售后流程</a>
+            </div>
+        </li>
+        <li>
+            <div class="mag-title">
+                常见问题
+                <span>+</span>
+            </div>
+            <div class="mag-detail">
+                <a href="service.html">上门维修</a>
+                <a href="service.html">寄送维修</a>
+                <a href="service.html">到店维修</a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/foot.js"></script>
+<script>
+    //设置底部导航栏
+    setFootbtn(1);
+
+    //图片轮播
+    var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: '.swiper-pagination'
+    });
+
+    $(function (){
+        //维修流程
+        $(".mag-title").click(function(){
+            if($(this).hasClass('close')){
+                $(this).removeClass("close");
+                $(this).parent().children('.mag-detail').slideUp();
+                $(this).children('span').text("+");
+            }else{
+                $(this).addClass("close");
+                $(this).children('span').text("一");
+                $(this).parent().children('.mag-detail').slideDown();
+            }
+        })
+    })
+    
+</script>
+</body>
+</html> 

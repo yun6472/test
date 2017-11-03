@@ -1,0 +1,115 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/iosSelect.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<style>
+			body{
+				background: #f7f7f7;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="warper">
+			<div class="discover-cell btn1">
+				<img src="images/icon01.png">
+				<span class="discover-txt1">产品分类</span>
+				<span class="discover-txt2">请选择产品分类</span>
+			</div>
+			<div class="line-10"></div>
+			<div class="discover-cell btn2">
+				<img src="images/icon02.png">
+				<span class="discover-txt1">选择产品</span>
+				<span class="discover-txt2">请选择产品</span>
+			</div>
+			<div class="discover-cell2">
+				<img src="images/icon03.png">
+				<span class="discover-txt1">产品件数</span>
+				<input class="discover-btn" type="text" placeholder="请输入您要购买的件数" />
+			</div>
+			<div class="offer-btn1">查询保价</div>
+		</div>
+		<div class="dialog">
+	        <p class="dialog-txt">请选选择产品分类</p>
+	    </div>
+	    <div class="dialog2">
+	    	<p class="dialog2-txt">产品分类 编织袋</p>
+	    	<p class="dialog2-txt">产品材质 尼龙200</p>
+	    	<p class="dialog2-txt">产品件数：200件</p>
+	    	<p class="dialog2-txt">参考报价：20000元</p>
+	    	<a class="dialog2-btn" href="javascript:;"></a>
+	    </div>
+	</body>
+	<script src="js/iosSelect.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script>
+		var goodsData1 =[
+	        {'id': '1001' ,'value': '分类1'},
+	        {'id': '1002' ,'value': '分类2'}
+	    ]
+	    var goodsData2 =[]
+
+	    var data1 =[
+	        {'id': '2001' ,'value': '分类1-1'},
+	        {'id': '2002' ,'value': '分类1-2'}
+	    ]
+	    var data2 =[
+	        {'id': '2001' ,'value': '分类2-1'},
+	        {'id': '2002' ,'value': '分类2-2'},
+	        {'id': '2003' ,'value': '分类2-3'}
+	    ]
+
+	    $(".btn1").click(function(){
+	    	var _this = $(this);
+            var chooseSelect = new IosSelect(
+                1,
+                [goodsData1],
+                {
+                    container: '.container',
+                    title: '请选择产品分类',
+                    itemHeight: 50,
+                    itemShowCount: 3,
+                    callback: function (data) {
+                        _this.find(".discover-txt2").text(data.value);
+                        if(data.id == '1001'){
+                        	goodsData2 = data1;
+                        }else{
+                        	goodsData2 = data2;
+                        }
+
+                    }
+                }
+            );
+        })
+
+        $(".btn2").click(function(){
+	    	var _this = $(this);
+	    	if(goodsData2.length == 0){
+	    		$(".dialog").fadeIn();
+                setTimeout(function(){$(".dialog").fadeOut();} ,2000);
+	    	}else{
+	    		var chooseSelect = new IosSelect(
+	                1,
+	                [goodsData2],
+	                {
+	                    container: '.container',
+	                    title: '请选择产品',
+	                    itemHeight: 50,
+	                    itemShowCount: 3,
+	                    callback: function (data) {
+	                        _this.find(".discover-txt2").text(data.value);
+	                    }
+	                }
+	            );
+	    	}
+            
+        })
+	</script>
+</html>

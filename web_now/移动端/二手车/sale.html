@@ -1,0 +1,119 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+		<title>我要卖车</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<style>
+			body{
+				background: #f7f7f7;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="warper">
+			
+			<div class="discover-cell">
+				<img src="images/icon01.png">
+				<span class="discover-txt1">品牌型号</span>
+				<input class="discover-btn1" type="text" placeholder="请输入汽车品牌型号" />
+			</div>
+			<div class="discover-cell">
+				<img src="images/icon02.png">
+				<span class="discover-txt1">上牌年份</span>
+				<input class="discover-btn1" type="text" placeholder="请输入本车首次上牌年份" />
+			</div>
+			<div class="discover-cell">
+				<img src="images/icon04.png">
+				<span class="discover-txt1">联系方式</span>
+				<input class="discover-btn1" type="text" placeholder="请输入您的联系方式" />
+			</div>
+			<div class="discover-cell2">
+				<img src="images/icon07.png">
+				<span class="discover-txt1">本车照片</span>
+				<textarea class="discover-btn2" placeholder="上传本车照片并说说本车的具体情况..." ></textarea>
+
+				<div id="img_content" class="add-img">
+					<div class="image_file" id="image_files">
+						<img style="width:100%;visibility: hidden;" src="images/add.jpg">
+						<input name="comment_pics[]" multiple="" class="add-btn2" type="file">
+					</div>
+				</div>
+
+
+
+			</div>
+
+			<input class="buy-btn1" type="submit" value="提交信息">
+			<div class="footer-txt">客服热线：<a href="##">18006777708</a></div>
+		</div>
+
+	</body>
+
+	<script type="text/javascript">
+
+		var result = document.getElementById("img_content");
+		var input = document.getElementsByName("comment_pics[]");//comment_pics
+		var image_files_div = document.getElementById("image_files");
+		var index = 1;
+			if(typeof FileReader === 'undefined')
+			{
+			   
+				input[0].setAttribute('disabled','disabled');
+				alert("您的手机不支持图片上传");
+			}
+			else
+			{
+				input[0].addEventListener('change',readFile,false);
+			}
+		 
+		function readFile()
+		{
+			for(var i=0;i<this.files.length;i++)
+			{
+				var file = this.files[i];
+				if(!/image\/\w+/.test(file.type))
+				{
+					alert("请确保文件为图像类型");
+					return false;
+				}
+				var reader = new FileReader();
+				reader.readAsDataURL(file);	
+				
+				reader.onload = function(e)
+				{	index++;
+					var oImg = document.querySelectorAll(".add-img1").length;
+				   var img = document.createElement("img");
+				   img.src =  this.result;
+				   img.className =  "add-img1";
+				   
+				   var file = document.createElement("input");
+				   file.name= "comment_pics[]";
+				   file.className = "add-btn2";
+				   file.type = "file";
+				   file.style.zIndex = index;
+				   file.multiple ="multiple";
+				   image_files_div.appendChild(file);
+				   file.addEventListener('change',readFile,false);
+				   if(oImg ==5)
+					{
+						document.querySelector(".image_file").style.display = "none";
+					}
+					
+					result.insertBefore(img,document.querySelector(".image_file"));
+					input = document.getElementsByName("comment_pics[]");
+				}	
+			
+
+
+			}
+			
+		}
+</script>
+
+</html>
