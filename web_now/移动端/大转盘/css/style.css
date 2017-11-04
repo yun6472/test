@@ -1,0 +1,154 @@
+﻿/* reset */
+html,blockquote,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul,section,body {margin:0;padding:0}
+ol,ul {list-style:none}
+a {text-decoration:none}
+fieldset,img {border:0}
+:focus{outline: none;}
+input[type="button"], input[type="submit"], input[type="reset"] {
+	-webkit-appearance: none;
+}
+html{font-family: 'Helvetica Neue',Tahoma,Arial,PingFangSC-Regular,'Hiragino Sans GB','Microsoft Yahei',sans-serif;}
+textarea {  -webkit-appearance: none;}
+.clearfix:after{
+	content:"";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix{
+	zoom:1;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body {
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    background: #fe1942;
+}
+
+
+/* 大转盘样式 */
+.banner{
+	display:block;
+	width:90%;
+	margin:20px auto;
+}
+.banner .turnplate{
+	display:block;
+	width:100%;
+	position:relative;
+}
+.banner .turnplate canvas.item{
+	width:100%;
+}
+.banner .turnplate img.pointer{
+	position:absolute;
+	width:31.5%;
+	height:42.5%;
+	left:34.6%;
+	top:23%;
+}
+.turnplate{
+	background-image:url(../images/turnplate-bg.png);
+	background-size:100% 100%;
+}
+.rules{
+	padding: 0 10px;
+}
+.rules-title{
+	color:#fdff00;
+	font-size: 16px;
+	padding: 30px 0 10px 0;
+	font-weight: normal;
+}
+.rules-txt1{
+	color:#fff;
+	font-size: 14px;
+	line-height: 20px;
+}
+.prize-list{
+	overflow: hidden;
+}
+.prize-list li{
+	float: left;
+	background: rgba(0,0,0,0.2);
+	box-sizing: border-box;
+	padding: 4px;
+	width: 32%;
+	margin-right: 2%;
+	border-radius: 3px;
+	margin-bottom: 10px;
+}
+.prize-list li:nth-child(3n){
+	margin-right: 0;
+}
+.prize-list li img{
+	width: 100%;
+	height: 28vw;
+	border-radius: 3px;
+}
+.prize-list li .prize-txt1{
+	color:#fff700;
+	font-size: 16px;
+	text-align: center;
+	padding: 5px 0;
+}
+.prize-list li .prize-txt2{
+	color:#fff;
+	font-size: 16px;
+	text-align: center;
+	padding-bottom: 5px;
+}
+.myPrize-list{
+	background: rgba(0,0,0,0.2);
+	border-radius: 5px;
+}
+.myPrize-list li{
+	font-size: 0;
+	height: 10vw;
+	line-height: 10vw;
+	padding: 0 5px;
+}
+.myPrize-list li .myPrize-txt1{
+	font-size: 4vw;
+	margin-right: 4%;
+	color:#fff;
+}
+.myPrize-list li .myPrize-txt2{
+	font-size: 4vw;
+	color:#8f0129;
+	float: right;
+	padding:0 8px;
+	background: #ffd700;
+	height: 6vw;
+	line-height: 6vw;
+	margin-top: 2vw;
+	border-radius: 5px;
+}
+.prize-container{
+	background: rgba(0,0,0,0.2);
+	border-radius: 5px;
+}
+.prize-list2{
+	width: 100%;
+}
+.prize-list2 li{
+	padding:0 10px !important;
+	line-height: 30px;
+	color:#fff;
+	font-size: 14px;
+	display: flex;
+	display: -webkit-flex;
+    display: -ms-flexbox;
+}
+.prize-list2 li span{
+	flex: 1;
+	-webkit-box-flex: 1;
+    -ms-flex: 1;
+}
+.prize-list2 li .prize-txt5{
+	text-align: right;
+}
