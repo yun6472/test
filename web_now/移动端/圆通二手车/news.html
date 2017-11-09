@@ -1,0 +1,71 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+		<title>详情</title>
+		<link rel="stylesheet" type="text/css" href="css/font/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="css/pullToRefresh.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<style>
+			#wrapper{
+				height: calc(100% - 3rem);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper" class=" news-list2">
+		  <ul>
+		    <li>
+		    	<a href="##">
+		    		<p class="news-txt4">通知通知通知通知通知通知通知通知通知通知通知通知通知通知通知通知通知通知通知通知通知通知通知通知通知通知通知通知通知通知</p>
+		    		<img class="news-img2" src="images/pic01.jpg" />
+		    	</a>
+		    </li>
+		    <li>
+		    	<a href="##">
+		    		<p class="news-txt4">通知通知通知通知通知通知</p>
+		    		<img class="news-img2" src="images/pic01.jpg" />
+		    	</a>
+		    </li>
+		    <li>
+		    	<a href="##">
+		    		<p class="news-txt4">通知通知通知通知通知通知</p>
+		    		<img class="news-img2" src="images/pic01.jpg" />
+		    	</a>
+		    </li>
+		  </ul>
+		</div>
+		<script src="js/foot.js"></script>
+		<script src="js/iscroll.js"></script>
+		<script src="js/pullToRefresh.js"></script>
+		<script>
+		//设置底部导航栏
+    	setFootbtn(2);
+
+    	refresher.init({
+			id:"wrapper",
+			pullDownAction:Refresh,
+			pullUpAction:Load
+		});
+
+		function Refresh() {
+			setTimeout(function () {	
+				
+				myScroll.refresh();
+			}, 1000);
+		}
+
+		function Load() {
+			setTimeout(function () {        
+				
+				myScroll.refresh();
+			}, 1000);
+		}
+    	</script>
+	</body>
+</html>

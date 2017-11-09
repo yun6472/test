@@ -26,11 +26,15 @@ html,body{
 body {
     -webkit-overflow-scrolling: touch;
     overflow-scrolling: touch;
-    background: #fe1942;
+    background: url(../images/bg.jpg) repeat-y;
+    background-size: 100% auto;
 }
 
 
 /* 大转盘样式 */
+.header img{
+	width: 100%;
+}
 .banner{
 	display:block;
 	width:90%;
@@ -151,4 +155,13 @@ body {
 }
 .prize-list2 li .prize-txt5{
 	text-align: right;
+}
+
+
+.rules-title2{
+	text-align: center;
+	color:#fff;
+	font-size: 1.125rem;
+	padding-top: 0.5rem;
+	font-weight: normal;
 }

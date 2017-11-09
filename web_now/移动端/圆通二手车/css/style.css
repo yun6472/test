@@ -111,6 +111,7 @@ body {
 }
 .footer li a{
 	display: block;
+	position: relative;
 }
 .footer li img{
 	width: 1.8rem;
@@ -135,6 +136,20 @@ body {
 .footer li.active .icon-shouye:before{
 	content: "\e6ca";
 }
+.footer li .icon-num{
+	display: block;
+	position: absolute;
+	background: red;
+	color:#fff;
+	font-size:0.75rem;
+	width: 1.2rem;
+	height: 1.2rem;
+	line-height: 1.2rem;
+	border-radius: 50%;
+	right: 32%;
+	top:0;
+}
+
 
 
 
@@ -339,4 +354,21 @@ body {
 	line-height: 2.5rem;
 	border-radius: 0.2rem;
 	font-size: 1rem;
+}
+
+
+.news-list2 li{
+	padding:2rem 1rem;
+	border-bottom: 1px solid #ccc;
+}
+.news-txt4{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	color:#333;
+}
+.news-img2{
+	padding-top: 0.5rem;
+	width: 100%;
 }

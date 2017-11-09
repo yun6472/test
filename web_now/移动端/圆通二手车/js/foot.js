@@ -11,9 +11,10 @@ function setFootbtn(x){
 				            </a>\
 				        </li>\
 				        <li name="foobtn">\
-				            <a href="javascript:;"  onclick="gotoCustomerServiece()" >\
+				            <a href="javascript:;"  onclick="gotoNews()" >\
 				                <i class="iconfont icon-kefu"></i>\
-				                <p>客服</p>\
+				                <p>通知</p>\
+				                <span class="icon-num">0</span>\
 				            </a>\
 				        </li>\
 				        <li name="foobtn">\
@@ -42,8 +43,8 @@ function gotoIndex(){
 }
 
 ////////////////////////////////////////链接至全部商品
-function gotoCustomerServiece(){
-	/*window.location.href='lift.html';*/
+function gotoNews(){
+	window.location.href='news.html';
 }
 
 
