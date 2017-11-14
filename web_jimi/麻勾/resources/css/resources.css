@@ -374,3 +374,78 @@
 .resourcesDetail-list2 li img{
 	width: 96%;
 }
+
+
+/* 2017-11-06 */
+.job-tab{
+	width: 75%;
+	font-size: 0;
+	margin:0.625rem auto;
+}
+.job-tab span{
+	width: calc(50% - 1px);
+	text-align: center;
+	display: inline-block;
+	font-size: 0.875rem;
+	border-top: 1px solid #dbdbdb;
+	border-bottom: 1px solid #dbdbdb;
+	border-left: 1px solid #dbdbdb;
+	line-height: 2.5rem;
+	border-radius: 5px 0 0 5px;
+}
+.job-tab span:last-of-type{
+	border-right: 1px solid #dbdbdb;
+	border-left: 0;
+	border-radius: 0 5px 5px 0;
+}
+.job-tab span.active{
+	background: #3fa9f5;
+	color:#fff;
+	border-color: #3fa9f5;
+}
+.job-content:last-of-type{
+	display: none;
+}
+.job-detail{
+	position: absolute;
+	right: 0.3125rem;
+	top:0.3125rem;	
+	font-size: 0.75rem;
+	color:#a2a2a2;
+}
+.job-detail img{
+	width: 1.0625rem;
+	vertical-align: top;
+}
+.job-detail span{
+	color:#3fa9f5;
+}
+
+
+/* 2017-11-07 */
+.swiper-wrapper{
+	height: auto;
+}
+.shopping-list-nav{
+	border-top: 1px solid #dcdddd;
+	height: auto;
+}
+.shopping-list-nav ul li {
+    color: #666;
+    width:auto;
+    height: auto;
+    border-bottom: 1px solid #e8e8e8;
+	
+}
+.shopping-list-nav ul li a{
+	padding: 0.6rem 1rem;
+	font-size: 1rem;
+	color: #000;
+	text-decoration: none;
+	outline: none;
+	text-align: center;
+	display: block;
+}
+.shopping-list-nav ul li.active a{
+	color:#3fa9f5;
+}
