@@ -1,0 +1,80 @@
+.header1-btn3{
+	font-size: 0.875rem;
+	color:#fff;
+	position: absolute;
+	display: block;
+	width: 4.5rem;
+	right: 0;
+}
+.publish-list{
+
+}
+.publish-list ul{
+	overflow: hidden;
+}
+.publish-list li{
+	float: left;
+	width: 33.3%;
+	text-align: center;
+	padding: 1.25rem 0;
+}
+.publish-list li img{
+	width: 2.8125rem;
+}
+.publish-list li .publish-txt1{
+	color:#575757;
+	font-size:0.875rem;
+	padding-top:0.3125rem;
+}
+
+.myPublish-list li{
+	border-bottom: 0.625rem solid #f8f9fa;
+	padding-top:1rem;
+
+}
+.myPublish-list li .myPublish-txt1{
+	font-size: 1.0rem;
+	color:#404040;
+	line-height: 1.5;
+	padding: 0 1rem;
+}
+.myPublish-list li .myPublish-txt2{
+	color:#a6a6a6;
+	font-size: 0.875rem;
+	line-height: 1.5;
+	padding: 0 1rem;
+}
+.myPublish-list li .myPublish-txt2 span{
+	color:#ff6a22;
+	padding-right: 0.25rem;
+}
+.myPublish-list li .myPublish-btn{
+	overflow: hidden;
+	border-top:1px solid #edeff0;
+	border-bottom:1px solid #edeff0;
+	padding: 0.5rem 1rem;
+	margin-top: 0.5rem;
+}
+.myPublish-list li .myPublish-btn1{
+	float: right;
+	width: 3.75rem;
+	height: 1.5625rem;
+	line-height: 1.5625rem;
+	border:1px solid #3fa9f5;
+	text-align: center;
+	font-size: 0.875rem;
+	color:#3fa9f5;
+	border-radius: 0.3rem;
+	margin-right: 0.5rem;
+}
+.myPublish-list li .myPublish-btn2{
+	float: right;
+	width: 3.75rem;
+	height: 1.5625rem;
+	line-height: 1.5625rem;
+	border:1px solid #a6a6a6;
+	text-align: center;
+	font-size: 0.875rem;
+	color:#a6a6a6;
+	border-radius: 0.3rem;
+}
