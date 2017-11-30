@@ -11,6 +11,52 @@
 		<link rel="stylesheet" type="text/css" href="../css/common.css" />
 		<link rel="stylesheet" type="text/css" href="../personal/css/personal.css" />
 		<link rel="stylesheet" type="text/css" href="css/resources.css" />
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+		<style type="text/css">
+			.myswiper{
+				position: fixed;
+				width:100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background: rgba(0,0,0,0.8);
+				overflow: hidden;
+				visibility: hidden;
+				z-index: 20;
+			}
+			.myswiper img{
+				width:100%;
+			}
+			.myswiper .swiper-pagination{
+				bottom: auto;
+				top: -40%;
+				color:#fff;
+			}
+			.swiperBtn{
+				overflow: hidden;
+				padding: 1rem;
+				z-index: 99;
+				position: relative;
+			}
+			.swiperBtn1{
+				float: left;
+				background: url(images/close.png) no-repeat center;
+				display: block;
+				width: 1.5rem;
+				height: 1.5rem;
+				background-size: cover;
+			}
+			.swiper-container{
+				overflow: visible;
+				position: absolute;
+				top:20%;
+				width:100%;
+			}
+			.swiperBtn2{
+				float:right;
+				color: #03A9F4;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="warper padding-3">
@@ -84,6 +130,58 @@
 			<div class="line-10"></div>
 		</div>
 		<div class="createTeam-btn1">联 系</div>
+
+
+
+
+
+		<div class="myswiper">
+			<div class="swiperBtn">
+				<a class="swiperBtn1" href="##"></a>			
+			</div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="images/pic02.jpg" /></div>
+					<div class="swiper-slide"><img src="images/pic02.jpg" /></div>
+					<div class="swiper-slide"><img src="images/pic02.jpg" /></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<div class="myswiper-txt">评论评论评论评论评论评论评论评论评论</div>
+		</div>
+
+
 	</body>
 	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script >
+		var mySwiper = new Swiper('.swiper-container',{
+			pagination : '.swiper-pagination',
+			paginationType : 'fraction',
+		})
+		var flag =0;
+		$(function(){
+			$(".resourcesDetail-cell li").click(function() {
+				$(this).addClass('active');
+				var index = $(this).index();
+				mySwiper.slideTo(index, 1, false);
+				$(".myswiper").css('visibility', 'visible');
+				flag=1;
+
+			});
+
+			$(".swiperBtn").click(function() {
+				$(".myswiper").css('visibility', 'hidden');
+				 flag=0;
+			});
+		})
+
+
+		//遮罩层禁止滚动
+		document.addEventListener('touchmove', function (event) {
+		    if(flag==1){
+		        event.preventDefault();
+		    }
+		})
+	</script>
 </html>

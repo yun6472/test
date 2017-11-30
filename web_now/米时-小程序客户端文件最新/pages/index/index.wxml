@@ -1,0 +1,107 @@
+<scroll-view scroll-y="true" bindscroll="scroll" scroll-top="{{scrollTop}}" style="position:absolute; top:0; left:0; right:0; bottom:0;">
+  <view class="container">
+    <!--首页banner-->
+    <view class="index-banner">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="banner-box swiper-box ">
+        <block wx:for="{{banner}}" wx:key="banner">
+          <navigator url="{{item.link}}" hover-class="navigator-hover">
+            <swiper-item>
+              <image src="{{item.pic}}" class="slide-image" />
+            </swiper-item>
+          </navigator>
+        </block>
+      </swiper>
+      <!--header-bg-->
+      <!--搜索框-->
+      <view class="index-search-box col-f">
+        <view class="dis-box">
+          <view class="left-title" bindtap="chooseLocation">
+            <text class="iconfont icon-dingwei1 f-30 p-a"></text>
+            <block wx:if="{{address != undefined}}">
+              <text class="cont f-28">{{address}}</text>
+            </block>
+            <block wx:else>
+              <text class="cont">定位</text>
+            </block>
+            <text class="iconfont icon-xiajiantous f-22"></text>
+          </view>
+          <view class="index-search box-flex">
+            <view class="cont t-c" bindtap="bindSearchTap">
+              <text class="iconfont icon-sousuo f-26"></text><text class="f-28">搜索商品</text>
+            </view>
+          </view>
+          <view class="right-title" bindtap="bindCateTap">
+            <text class="iconfont icon-fenlei f-34"></text>
+          </view>
+        </view>
+      </view>
+      <view class="linear"></view>
+    </view>
+    <!--活动-->
+    <!-- <view class="index-activity-list dis-box m-top18">
+    <view class="left flex-box">
+      <navigator url="../goods/index?id=903" hover-class="navigator-hover">
+        <image mode="aspectFit" src="{{activityLeft.pic}}" />
+      </navigator>
+    </view>
+    <view class="right flex-box">
+      <block wx:for="{{activityRight}}" wx:key="activityRight">
+        <view class="right-bottom">
+          <navigator url="{{item.link}}" hover-class="navigator-hover">
+            <image mode="aspectFit" src="{{item.pic}}" />
+          </navigator>
+        </view>
+      </block>
+    </view>
+  </view> -->
+    <!--精品推荐-->
+
+    <view class="index_sale m-top20">
+      <navigator url="../category/product_list?id=349">
+        <view class="index-title b-f b-b col-3 f-30 dis-box p-r">
+          <view class="box-flex">
+            <text class="iconfont icon-shugang"></text><text class="title">精品推荐</text>
+          </view>
+          <view>
+            <text class="f-28 col-7 more-title">更多</text> <text class="iconfont icon-xiangyoujiantou xiangyoujiantou-more  f-22  col-9"></text>
+          </view>
+        </view>
+        </navigator>
+        <scroll-view scroll-x="true">
+          <block wx:for-items="{{boutiqueList}}" wx:key="boutique_list">
+            <view style="display: inline-block;" bindtap="siteDetail" data-index="{{index}}">
+              <view class="page-column b-r">
+                <image class="sale_img" src="{{item.goods_thumb}}" mode="aspectFill" />
+                <view class="content onelist-hidden ">
+                  <text>{{item.goods_name}}</text>
+                </view>
+                <text class="price col-m f-30 t-c">{{item.shop_price_formated}}</text>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+    </view>
+    <!--推荐商品列表-->
+    <view class="title-hrbg" style="margin-top:10rpx">
+      <text class="cont"> <text class="iconfont icon-huo col-m f-28"></text>猜您喜欢</text>
+      <view class="hr"></view>
+    </view>
+    <view class="index-list">
+      <view class="index-goods-list dis-flex b-f">
+        <block wx:for="{{indexGoods}}" wx:key="indexGoods">
+          <view class="flex-five list-box" bindtap="siteDetail" data-index="{{index}}">
+            <image src="{{item.goods_thumb}}" mode="aspectFit" class="goodsImg" />
+            <text class="title f-30 col-3 twolist-hidden">{{item.goods_name}}</text>
+            <text class="price f-32 col-m f-w">{{item.shop_price_formated}}<text class="del col-9 f-n">{{item.market_price_formated}}</text></text>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <view class="cont-box">
+      <text class="f-24 col-9  t-c">没有更多了</text>
+    </view>
+  </view>
+</scroll-view>
+
+<loading hidden="{{hidden}}">加载中…</loading>

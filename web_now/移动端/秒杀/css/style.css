@@ -56,7 +56,7 @@ body {
 	top: 0.9rem;
 }
 .header1 .header1-txt{
-	float: left;
+	display: block;
 	font-size: 1.1rem;
 	width: calc(100% - 6rem);
 	margin: 0 auto;
@@ -67,6 +67,7 @@ body {
 	width: 40%;
 	text-align: center;
 	padding-top: 0.5rem;
+	max-height: 2.8rem;
 }
 
 .newslist li{
@@ -101,17 +102,21 @@ body {
 .news-txt3{
 	font-size: 0.875rem;
 	line-height: 1.5rem;
-	width: calc(100% - 6rem);
+	width: calc(100% - 0rem);
 	color: #d35383;
 	padding-top: 0.5rem;
+	position: relative;
 }
 .news-txt3 span{
+	color: #d35383;
+}
+.news-txt3 span:last-of-type{
 	color:#999;
 	text-decoration: line-through;
 }
-.news-btn1{
+.newslist a.news-btn1{
 	display: block;
-	background-color:#d35383; 
+	background-color:#d35383;
 	width: auto;
 	padding:0.2rem 0;
 	width: 6rem;
@@ -119,6 +124,7 @@ body {
 	text-align: center;
 	border-radius: 0.3rem;
 	position: absolute;
-	right: 0.5rem;
-	bottom: 1rem;
+	right: 0;
+	bottom: 0rem;
+	font-size: 0.9rem;
 }

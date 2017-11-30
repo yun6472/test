@@ -1,0 +1,83 @@
+<view class="container">
+  <!--商品描述-->
+  <view class="top-nav ">
+    <view class="top-nav-bar">
+      <view bindtap="allOrder" id="top-nav-bar-{{!hiddenallOrder ? true : 0}}">
+        <span>未使用</span>
+      </view>
+      <view bindtap="toOrder" id="top-nav-bar-{{!hiddenOrder ? true : 0}}">
+        <span> 已使用</span>
+      </view>
+      <view bindtap="toAddress" id="top-nav-bar-{{!hiddenAddress ? true : 0}}">
+        <span>已过期</span>
+      </view>
+    </view>
+  </view>
+
+  <view hidden="{{hiddenallOrder}}" class="order">
+      <block wx:for="{{goodsCouponsCont.goodsCoupons}}" wx:key="goodsCoupons">
+        <view class="coupons-ul dis-box">
+          <view class="coupons-li left box-flex">
+            <view class="coupons-box dis-box">
+              <view class=" left">
+                <text class="sup">¥</text><text class="price">{{item.price}}</text>
+              </view>
+              <view class="box-flex right f-24">
+                <text class="s_name f-24">{{item.couponsName}}</text>
+                <text class="s_cont f-24 col-3">{{item.cont}}</text>
+              </view>
+            </view>
+            <view class="f-24 col-7 m-top4">{{item.time}}</view>
+            <view class="print-img">
+              <image src="{{item.printImg}}"></image>
+            </view>
+          </view>
+        </view>
+      </block>
+  </view>
+
+  <!--商品描述-->
+  <view hidden="{{hiddenOrder}}" class="order">
+    <block wx:for="{{goodsCouponsCont.goodsCoupons}}" wx:key="goodsCoupons">
+        <view class="coupons-ul dis-box">
+          <view class="coupons-li left box-flex">
+            <view class="coupons-box dis-box">
+              <view class=" left">
+                <text class="sup">¥</text><text class="price">{{item.price}}</text>
+              </view>
+              <view class="box-flex right f-24">
+                <text class="s_name f-24">{{item.couponsName}}</text>
+                <text class="s_cont f-24 col-3">{{item.cont}}</text>
+              </view>
+            </view>
+            <view class="f-24 col-7 m-top4">{{item.time}}</view>
+            <view class="print-img">
+              <image src="{{item.printImg}}"></image>
+            </view>
+          </view>
+        </view>
+      </block>
+  </view>
+  <!-- 规格参数-->
+  <view hidden="{{hiddenAddress}}" class="address">
+   <block wx:for="{{goodsCouponsCont.goodsCoupons}}" wx:key="goodsCoupons">
+        <view class="coupons-ul dis-box">
+          <view class="coupons-li left box-flex">
+            <view class="coupons-box dis-box">
+              <view class=" left">
+                <text class="sup">¥</text><text class="price">{{item.price}}</text>
+              </view>
+              <view class="box-flex right f-24">
+                <text class="s_name f-24">{{item.couponsName}}</text>
+                <text class="s_cont f-24 col-3">{{item.cont}}</text>
+              </view>
+            </view>
+            <view class="f-24 col-7 m-top4">{{item.time}}</view>
+            <view class="print-img">
+              <image src="{{item.printImg}}"></image>
+            </view>
+          </view>
+        </view>
+      </block>
+  </view>
+</view>

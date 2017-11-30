@@ -1,0 +1,92 @@
+.user-left {
+  flex: 2;
+  padding-left: 15px;
+}
+
+.user-left image {
+  width: 180rpx;
+  height: 180rpx;
+  border: 1px solid #efeff4;
+}
+
+.user-right {
+  flex: 5;
+  padding: 0 15px 0 10px;
+}
+
+.user-right .price {
+  padding-top: 20rpx;
+  display: block;
+}
+
+.index-goods-list {
+  border-bottom: 1px solid #efeff4;
+  padding: 10px 0;
+  position: relative
+}
+
+.index-list {
+  padding: 5px 0 0 0;
+}
+
+.index-goods-list {
+  border-bottom: 1px solid #efeff4;
+  padding: 10px 0;
+}
+
+.index-list {
+  padding: 5px 0 0 0;
+
+}
+.index-list .user-right .icon-lajixiang{font-size:36rpx;color:#999;position: absolute;right:15px;bottom:15px}
+.comment-btn text{border:1px solid #ff495e;padding:10rpx 20rpx;color:#ff495e;position:absolute;right:15px;bottom:15px;font-size:24rpx;border-radius:5px}
+
+
+.comment-cont button[type="primary"]{background:#ff495e;color: #fff;}
+.comment-cont textarea{font-size:30rpx;width:100%}
+
+
+.section_input {
+  border-bottom: 1px solid #f6f6f9;
+  padding:0 0 24rpx  0 ;
+  margin-bottom:24rpx;
+  align-items:center;
+justify-content:space-between;
+}
+.section_input .right input {
+  font-size: 28rpx;
+}
+.section_input .left{
+ width:65px;
+}
+.section_input .left text{
+ font-size:30rpx;
+}
+.section_input .right {
+  flex: 4;
+  font-size:30rpx;
+  position:relative;
+}
+
+.section_input .right .icon-wujiaoxing{color:#777; margin-right:15rpx;}
+.add-img{border:1px solid #DFDFDF;width:160rpx; height:160rpx;margin:15px 0 0 15px}
+.add-img text{text-align: center;display: block;line-height:160rpx;font-size:80rpx;color:#ddd}
+
+.add-img-section .add-img{width:170rpx;}
+.add-img-section .right image{width:160rpx; height:160rpx;margin:15px 0 0 15px}
+
+
+
+.star-image{
+  position: absolute;
+  top: -22rpx;
+  width: 42rpx;
+  height: 42rpx;
+  src: "../../images/normal.png";
+}
+.item{
+  position: absolute;
+  top: 0rpx;
+  width: 42rpx;
+  height: 42rpx;
+}

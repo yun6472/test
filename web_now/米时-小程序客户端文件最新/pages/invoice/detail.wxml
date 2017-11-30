@@ -1,0 +1,79 @@
+<!--index.wxml-->
+<view class="container">
+  <!--list-->
+  <view wx:if="{{invoices != false}}">
+    <view class="invoice_list dis-flex">
+      <view class="left">
+        <block wx:if="{{invoices.audit_status ==0}}">
+          状态：<text class="z_tai">未审核</text>
+        </block>
+        <block wx:if="{{invoices.audit_status ==1}}">
+          状态：<text class="z_tai">已审核</text>
+        </block>
+        <block wx:if="{{invoices.audit_status ==2}}">
+          状态：<text class="z_tai">审核未通过</text>
+        </block>
+      </view>
+      <view class="right">
+        <view class="cont">
+          <text class="list" bindtap="update"><text class="iconfont icon-buoumaotubiao30"></text>编辑</text>
+          <text class="list" bindtap="del"><text class="iconfont icon-lajixiang"></text>删除</text>
+        </view>
+      </view>
+    </view>
+    <view class="section_recharge">
+      <view class="header"><text>增票资质信息</text></view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>单位名称</text></view>
+        <view class="right">{{invoices.company_name}}</view>
+      </view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>识别码</text></view>
+        <view class="right">{{invoices.tax_id}}</view>
+      </view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>注册地址</text></view>
+        <view class="right">{{invoices.company_address}}</view>
+      </view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>注册电话</text></view>
+        <view class="right">{{invoices.company_telephone}}</view>
+      </view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>开户银行</text></view>
+        <view class="right">{{invoices.bank_of_deposit}}</view>
+      </view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>银行账户</text></view>
+        <view class="right">{{invoices.bank_account}}</view>
+      </view>
+    </view>
+    <view class="section_recharge">
+      <view class="header"><text>票据收件信息</text></view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>收票人姓名</text></view>
+        <view class="right">{{invoices.consignee_name}}</view>
+      </view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>收票人手机号</text></view>
+        <view class="right">{{invoices.consignee_mobile_phone}}</view>
+      </view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>收票人省份</text></view>
+        <view class="right">{{invoices.province_name}}{{invoices.city_name}}{{invoices.district_name}}</view>
+      </view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>收票人地址</text></view>
+        <view class="right">{{invoices.consignee_address}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="ectouch-notcont">
+      <text class="iconfont icon-meiyougengduo"></text >
+        <text class="cont">亲,此处暂无增值发票信息</text>
+    </view>
+  </view>
+
+</view>
+<loading hidden="{{hidden}}">加载中…</loading>

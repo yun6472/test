@@ -1,0 +1,126 @@
+<view class="container">
+  <view class="">
+    <view wx:if="{{list!=''}}">
+
+      <!--分类nav-->
+      <view class="product_screen_header f-28 col-3" name="top" id="top">
+        <view class='list {{current == 0?"active":""}}' data-index="0" catchtap="bindHeaderTap">默认</view>
+        <view class='list {{current == 1?"active":""}}' data-index="1" bindtap="bindHeaderTap">销量</view>
+        <view class='list {{current == 2?"active":""}}' data-index="2" bindtap="bindHeaderTap">价格</view>
+        <!-- <view class='list product_screen {{current == 3?"active":""}}' data-index="3" bindtap="cascadePopup"> 筛选
+          <text class="iconfont icon-shaixuan"></text>
+        </view> -->
+      </view>
+
+      <!--list-->
+      <scroll-view class="list" scroll-y="true" bindscrolltolower="bindDownLoad" scroll-top="{{scrollTop}}" bindscroll="scroll">
+        <view class="index-goods-list  index-goods-list-box  dis-flex">
+          <view class="flex-five list-box b-f" wx:for="{{list}}" wx:key="list" bindtap="goodsDetail" data-index="{{index}}">
+            <image src="{{item.goods_thumb}}" mode="aspectFit" class="goodsImg" />
+            <text class="f-30 title twolist-hidden">{{item.goods_name}}</text>
+            <text class="price f-34 col-m">￥{{item.shop_price}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view wx:else>
+      <view class="ectouch-notcont">
+        <text class="iconfont icon-meiyougengduo"></text>
+        <text class="cont">亲，目前没有您想要的商品哦！</text>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{list}}">
+    <loading hidden="{{hidden}}" bindtap="loadingChange">加载中…</loading>
+  </view>
+  <view wx:else>
+    <view class="production-cont" hidden="{{hidden}}">没有更多了</view>
+  </view>
+
+  <!--top-->
+  <view class="production-top {{scrollTop>200?'active':''}}" bindtap="goToTop">
+    <image src="../../images/top.png"></image>
+  </view>
+  <!---筛选弹框 - s-->
+  <view class="t_product_screen" animation="{{animationData}}">
+    <scroll-view scroll-y="true" class="product_screen-box">
+
+      <view class="screen-list dis-box b-b b-f m-top20">
+        <view class="box-flex f-30 col-3">
+          <text class="title">自营产品</text>
+        </view>
+        <view class="box-flex">
+          <view class="body-view fr">
+            <switch bindchange="switch2Change" />
+          </view>
+        </view>
+      </view>
+      <view class=" b-f m-top20">
+        <view class="cont-box b-f goods-property-box screen-goods-property-box m-top20 b-b" bindtap="onChangeShowPrice">
+          <text class="col-3 f-30">价格区间</text>
+          <text class="col-3 f-28  fr cont">{{pricenName}}</text>
+          <view class="goods-property-jianTou">
+            <text class="iconfont icon-xiangyoujiantou user-orderJtou-1 {{showPrice?'user-orderJtou-2':''}}"></text>
+          </view>
+        </view>
+        <view class="tab-list   cont-box  {{showPrice?'screen_hide':''}}">
+          <view class="price-box">
+            <radio-group class="radio-group" bindchange="priceChange">
+              <label class="radio seconds-kill-li" wx:for="{{hotrecent}}" wx:key="brandsCate">
+                <view class="list {{currentPrice==item.id?'active':''}}" data-id="{{item.id}}" bindtap="tagPrice">
+                  <radio value="{{item.name}}" hidden='true' checked="{{item.checked}}" />
+                  <view class="price-button">{{item.name}}</view>
+                </view>
+              </label>
+            </radio-group>
+          </view>
+          <view class="override_price dis-box">
+            <view class="left">
+              <text class="col-3 f-28">自定义价格</text>
+            </view>
+            <view class="box-flex right">
+              <input class="f-28" confirm-type="" name="unitName" type="text" placeholder="输入自定义价格" value="{{unitName}}" bindinput="unitNameInput" />
+            </view>
+          </view>
+        </view>
+
+      </view>
+      <view class="cont-box b-f goods-property-box screen-goods-property-box m-top20" bindtap="onChangeShowState">
+        <text class="col-3 f-30">品牌</text>
+        <text class="col-3 f-28  fr cont">{{name}}</text>
+        <view class="goods-property-jianTou">
+          <text class="iconfont icon-xiangyoujiantou user-orderJtou-1 {{showView?'user-orderJtou-2':''}}"></text>
+        </view>
+      </view>
+      <view class=" cate-tab b-f b-t screen_show {{showView?'screen_hide':''}}">
+        <view class="tab-list">
+          <radio-group class="radio-group" bindchange="radioChange">
+            <label class="radio" wx:for="{{brandsCate}}" wx:key="brandsCate">
+              <view class="list {{currentItem==item.id?'active':''}}" data-id="{{item.id}}" bindtap="tagChoose">
+                <radio value="{{item.name}}" hidden='true' checked="{{item.checked}}" />{{item.name}}
+                <text class="iconfont fr icon-unif063"></text>
+              </view>
+            </label>
+          </radio-group>
+        </view>
+      </view>
+      <view class="cont-box">
+        <view class="dis-box m-top20 screen_btn">
+          <view class="box-flex list">
+            <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="cascadeDismiss" hover-class="other-button-hover"> 取消 </button>
+          </view>
+          <view class="box-flex list">
+            <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="cascadeDismiss"> 确认 </button>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!---筛选弹框 - e-->
+  <view class="modal-mask {{maskVisual}}" bindtap="cascadeDismiss">
+    <view class="close_box">
+      <text class="iconfont icon-fanhui db t-c"></text>
+      <text class=" f-22 col-f db t-c">关闭</text>
+    </view>
+  </view>
+</view>

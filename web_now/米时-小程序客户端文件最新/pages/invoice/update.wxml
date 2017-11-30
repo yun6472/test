@@ -1,0 +1,88 @@
+<!--index.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <!--list-->
+    <view class="section_recharge m-top10">
+      <view class="header"><text>增票资质信息</text></view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>单位名称</text></view>
+        <view class="right">
+          <input confirm-type="" name="company_name" type="text" placeholder="请输入单位名称" value="{{company_name}}" />
+        </view>
+      </view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>识别码</text></view>
+        <view class="right">
+          <input confirm-type="" name="tax_id" type="number" placeholder="请输入纳税人识别码" value="{{tax_id}}" />
+        </view>
+      </view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>注册地址</text></view>
+        <view class="right">
+          <input confirm-type="" name="company_address" type="text" placeholder="请输入注册地址" value="{{company_address}}" />
+        </view>
+      </view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>注册电话</text></view>
+        <view class="right">
+          <input confirm-type="" name="company_telephone" type="number" placeholder="请输入注册电话" value="{{company_telephone}}" />
+        </view>
+      </view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>开户银行</text></view>
+        <view class="right">
+          <input confirm-type="" name="bank_of_deposit" type="text"  placeholder="请输入开户银行" value="{{bank_of_deposit}}" />
+        </view>
+      </view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>银行账户</text></view>
+        <view class="right">
+          <input confirm-type="" name="bank_account" type="number"  placeholder="请输入银行账户" value="{{bank_account}}" />
+        </view>
+      </view>
+    </view>
+    <view class="section_recharge m-top20">
+      <view class="header"><text>票据收件信息</text></view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>姓名</text></view>
+        <view class="right">
+          <input confirm-type="" name="consignee_name" type="text" placeholder="请输入收票人姓名" value="{{consignee_name}}" />
+        </view>
+      </view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>手机号</text></view>
+        <view class="right">
+          <input confirm-type="" name="consignee_mobile_phone" maxlength="11" type="number" placeholder="请输入收票人手机号" value="{{consignee_mobile_phone}}" />
+        </view>
+      </view>
+       <view class="profile-list address-box b-f">
+        <view class="dis-box">
+          <view class="left-name">
+            <text class="admin">所在地区</text>
+          </view>
+          <view class="flex-box address-cont-box fr">
+            <picker bindchange="provinceTypeChange" name="province" value="{{provinceIndex}}" range="{{provinceList}}" range-key="{{'region_name'}}">
+              <text class="address-name f-30">{{provinceList[provinceIndex].region_name}}</text>
+            </picker>
+            <picker bindchange="cityTypeChange" name="city" value="{{cityIndex}}" range="{{cityList}}" range-key="{{'region_name'}}">
+              <text class="address-name f-30">{{cityList[cityIndex].region_name}}</text>
+            </picker>
+            <picker bindchange="districtTypeChange" name="district" value="{{districtIndex}}" range="{{districtList}}" range-key="{{'region_name'}}">
+              <text class="address-name f-30">{{districtList[districtIndex].region_name}}</text>
+            </picker>
+          </view>
+        </view>
+      </view>
+      <view class="section_input dis-box">
+        <view class="left col-3"><text>详细地址</text></view>
+        <view class="right">
+          <input confirm-type="" name="consignee_address" type="text" placeholder="请输入收票人地址" value="{{consignee_address}}" />
+        </view>
+      </view>
+    </view>
+    <view class="padding-box m-top20 ">
+      <button class="submit_btn" formType="submit">提 交</button>
+    </view>
+  </form>
+</view>
+<loading hidden="{{hidden}}">加载中…</loading>

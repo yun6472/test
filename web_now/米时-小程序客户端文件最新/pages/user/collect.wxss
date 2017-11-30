@@ -1,0 +1,87 @@
+.collect-box{
+  overflow:hidden;
+  padding:15px
+  }
+.user-left {
+  width:30%;
+  float:left;
+
+    box-sizing: border-box
+}
+
+.user-left image {
+  width: 180rpx;
+  height: 180rpx;
+  border: 1px solid #efeff4;
+}
+
+.user-right {
+  width: 70%;
+  float: left;
+  padding: 0;
+  box-sizing: border-box
+}
+
+.user-right .price {
+  padding-top: 20rpx;
+  display: block;
+}
+
+.index-goods-list {
+  border-bottom: 1px solid #efeff4;
+  padding: 10px 0;
+  position: relative
+}
+
+.index-list {
+  padding: 5px 0 0 0;
+}
+
+.index-goods-list {
+  border-bottom: 1px solid #efeff4;
+  padding: 10px 0;
+}
+
+.index-list {
+  padding: 5px 0 0 0;
+
+}
+.index-list .user-right .icon-lajixiang{font-size:36rpx;color:#999;position: absolute;right:15px;bottom:15px}
+
+.inner.txt{
+    background-color: #fff;
+    width: 100%;
+    z-index: 5;
+    padding:0 0;
+    transition: left 0.2s ease-in-out;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    height:240rpx
+}
+
+.item{
+    position: relative;
+    border-top: 2rpx solid #eee;
+    height: 240rpx;
+    overflow: hidden;
+    
+}
+.item:last-child{
+    border-bottom: 2rpx solid #eee;
+}
+.inner{
+    position: absolute;
+    top:0;
+}
+.inner.del{
+    background-color: #e64340;
+    width: 180rpx;text-align: center;
+    z-index: 4;
+    right: 0;
+    color: #fff;
+    height:240rpx;
+    line-height:240rpx;
+    font-size:30rpx;
+}
+.collect-del,.collect-del .icon-lajixiang{float:right;font-size:30rpx; color:#666}

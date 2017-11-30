@@ -1,0 +1,127 @@
+.user-left {
+  flex: 2;
+  padding-left: 15px;
+}
+
+.user-left image {
+  width: 180rpx;
+  height: 180rpx;
+  border: 1rpx solid #efeff4;
+  background:#fff;
+}
+
+.user-right {
+  flex: 5;
+  padding: 0 15px 0 10px;
+}
+
+.user-right .price {
+  padding-top: 20rpx;
+  display: block;
+}
+
+.index-goods-list {
+  border-bottom: 1rpx solid #efeff4;
+  padding: 10px 0;
+  position: relative;
+  background:#fff;
+}
+
+.index-list {
+  padding: 0 0 0 0;
+}
+
+
+.index-list .user-right .icon-lajixiang{font-size:36rpx;color:#999;position: absolute;right:15px;bottom:15px}
+.comment-btn text{border:1rpx solid #f42424;padding:10rpx 20rpx;color:#f42424;position:absolute;right:15px;bottom:15px;font-size:24rpx;border-radius:5px}
+
+
+.comment-cont button[type="primary"]{background:#f42424;color: #fff;}
+.comment-cont textarea{font-size:30rpx;width:100%}
+.order-box {
+  padding: 0 15px;
+}
+.order-header .title {
+  font-size: 32rpx;
+  color: #333;
+}
+.order-header .cont {
+  text-align: right;
+  display: block;
+  font-size: 28rpx;
+  color: #ff495e;
+
+}
+
+
+.order-btn {
+  padding:8px 15px;
+  background:#fff;
+  overflow:hidden;
+}
+.order-header{
+  padding:8px 15px;
+  border-bottom: 1rpx solid #eee;
+}
+
+.order-btn .order-left {
+  flex: 3;
+}
+
+.order-btn .order-left text, .order-btn .order-left .text {
+  font-size: 30rpx;
+}
+
+.order-btn .order-left .text {
+  color: #777;
+}
+
+.order-btn .order-right {
+  flex: 3;
+}
+
+.order-list-box .left {
+  flex: 4;
+  overflow: hidden;
+}
+
+.order-list-box .right {
+  flex: 1;
+}
+
+.goods-number {
+  position: absolute;
+  right: 12px;
+  top: 35%;
+  font-size: 28rpx;
+  color: #777;
+}
+
+.btn-default {
+  border-radius: 4px;
+  border: 1rpx solid #ccc;
+  padding: 6rpx 20rpx;
+  font-size: 28rpx;
+  color: #555;
+  float: right;
+}
+
+.btn-main {
+  border-radius: 4px;
+  border: 1rpx solid #fd4a5f;
+  padding: 6rpx 20rpx;
+  font-size: 28rpx;
+  color: #fd4a5f;
+  margin-left: 10rpx;
+  float: right;
+}
+
+.user-orderJtou {
+  font-size:24rpx;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top:-20rpx;
+  color:#888;
+
+}

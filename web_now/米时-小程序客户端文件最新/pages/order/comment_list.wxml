@@ -1,0 +1,26 @@
+<view class="container">
+  <!--推荐商品列表-->
+  <view wx:if="{{commentList!=''}}">
+    <block wx:for="{{commentList}}" wx:key="{{commentList}}">
+      <view class="index-list">
+        <view class="index-goods-list  dis-flex">
+          <view class="user-left" bindtap="siteDetail" data-index="{{index}}">
+            <image src="{{item.goods_thumb}}" mode="aspectFit" class="goodsImg" />
+          </view>
+          <view class="user-right">
+            <text class="f-30 col-3 twolist-hidden" bindtap="siteDetail" data-index="{{index}}">{{item.goods_name}}</text>
+            <text class="price col-m f-32">￥{{item.shop_price}}</text>
+            <view class="btn-main" bindtap='commentBtn' data-index="{{index}}" data-id="{{item.oid}}">去评价</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view wx:else>
+    <view class="ectouch-notcont">
+      <text class="iconfont icon-meiyougengduo"></text >
+      <text class="cont">亲，您还没有待评价的商品哦！</text>
+    </view>
+  </view>
+</view>
+<loading hidden="{{hidden}}">加载中…</loading>

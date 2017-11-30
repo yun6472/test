@@ -1,0 +1,48 @@
+<!--index.wxml-->
+<view class="container">
+  <form bindsubmit="saveData">
+
+    <!--list-->
+    <view class="profile-list address-box dis-box b-f m-top20">
+      <view class="left-name">
+        <text class="admin">收货人</text>
+      </view>
+      <view class="right-cont  fr">
+        <input placeholder="请输入收货人姓名" placeholder-style="color:#aba9a9" name="consignee" value="{{ consignee }}" />
+      </view>
+    </view>
+    <view class="profile-list address-box dis-box b-f">
+      <view class="left-name">
+        <text class="admin">手机号</text>
+      </view>
+      <view class="right-cont fr">
+        <input placeholder="请输入收货人联系电话" placeholder-style="color:#aba9a9" type="number" name="mobile" value="{{ mobile }}" />
+      </view>
+    </view>
+    <view class="profile-list address-box b-f m-top20">
+      <view class="dis-flex">
+        <view class="left-name">
+          <text class="admin">所在地区</text>
+        </view>
+        <view class="flex-box address-cont-box fr">
+          <picker bindchange="provinceTypeChange" name="province" value="{{provinceIndex}}" range="{{provinceList}}" range-key="{{'region_name'}}">
+            <text class="address-name f-30">{{provinceList[provinceIndex].region_name}}</text>
+          </picker>
+          <picker bindchange="cityTypeChange" name="city" value="{{cityIndex}}" range="{{cityList}}" range-key="{{'region_name'}}">
+            <text class="address-name f-30">{{cityList[cityIndex].region_name}}</text>
+          </picker>
+          <picker bindchange="districtTypeChange" name="district" value="{{districtIndex}}" range="{{districtList}}" range-key="{{'region_name'}}">
+            <text class="address-name f-30">{{districtList[districtIndex].region_name}}</text>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class="cont-box b-f">
+      <textarea class="address-detail" name="address" bindblur="bindTextAreaBlur" style="height: 5rem" placeholder-style="color:#aba9a9" placeholder="详细地址" value="{{ address }}" />
+    </view>
+    <view class="padding-box m-top20 profile-btn">
+      <button formType="submit">保 存</button>
+    </view>
+  </form>
+</view>
+<loading hidden="{{hidden}}">加载中…</loading>

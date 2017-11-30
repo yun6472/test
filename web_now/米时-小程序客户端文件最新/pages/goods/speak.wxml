@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<view class="container">
+  <!--代言header-s-->
+  <view class="speak_header">
+    <view class="speak_bg">
+      <image src="../../images/user-speak.png" />
+    </view>
+    <view class="speak_cont">
+      <view class=" dis-box">
+        <view class="left">
+          <view class="img">
+            <image src="{{speak.pic}}"></image>>
+          </view>
+        </view>
+        <view class="right">
+          <text class="name">我是{{speak.name}}</text>
+          <text class="cont">我为《{{speak.shop_name}}》代言</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--代言header-e-->
+
+
+<view class="dis-box goods_shop_list">
+  <view class="left"> <image src="../../images/header.jpg" /></view>
+  <view class="right box-flex">
+      <text class="f-26 col-3 twolist-hidden">精华部分结婚发觉你见过男人纪念馆进入你感觉看热闹空格内容来看个女人哭了功能来人呐管好好努力客户立刻</text>
+  </view>
+</view>
+  <!--推广内容-s-->
+  <view class="footer_cont cont-box">
+    <text class="title">推广规则</text>
+    <text class="cont">
+      {{speak.cont}}
+    </text>
+  </view>
+  <!--推广内容-e-->
+  <view class="footer-tishi">
+  <text>点击右上角分享给朋友</text>
+  </view>
+</view>

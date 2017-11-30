@@ -1,0 +1,29 @@
+<view class="container">
+  <view wx:if="{{list !=''}}">
+    <view class="items">
+      <view wx:for="{{list}}" wx:key="{{index}}" class="item b-f">
+        <view class="collect-box">
+          <view class="user-left" bindtap="siteDetail" data-index="{{index}}">
+            <image src="{{item.goods_thumb}}" mode="aspectFit" class="goodsImg" />
+          </view>
+          <view class="user-right">
+            <text class="f-30 col-3 twolist-hidden" bindtap="siteDetail" data-index="{{index}}">{{item.goods_name}}</text>
+            <text class="price col-m f-32">￥{{item.shop_price}}</text>
+            <view data-index="{{index}}" bindtap="delCollect" class="collect-del">
+                 <text class="iconfont icon-lajixiang"></text>
+            </view>
+          </view>
+        </view>
+
+
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="ectouch-notcont">
+      <text class="iconfont icon-meiyougengduo"></text >
+        <text class="cont">亲，您还没有收藏商品哦</text>
+    </view>
+  </view>
+</view>
+<loading hidden="{{hidden}}">加载中…</loading>
