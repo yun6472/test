@@ -110,11 +110,13 @@
   import Lyric from 'lyric-parser';
   import Scroll from 'base/scroll/scroll'
   import Playlist from '../../components/playlist/playlist'
+  import {playlistMixin} from 'common/js/mixin'
 
   const transform = prefixStyle('transform');
   const transitionDuration = prefixStyle('transitionDuration');
 
   export default {
+    mixins:[playlistMixin],
     data(){
       return{
         songReady:false,
@@ -137,9 +139,6 @@
       },
       cdPlay(){
         return this.playing ? 'play' : ' play pause'
-      },
-      iconMode(){
-        return this.mode === playMode.sequence ? 'icon-sequence' : this.mode === playMode.loop ? 'icon-loop' : 'icon-random';
       },
       disableCls(){
         return this.songReady ? '' : 'disable';
@@ -426,6 +425,9 @@
     },
     watch:{
       currentSong(newSong,oldSong){
+        if(!newSong.id){
+          return;
+        }
         if(newSong === oldSong){
           return;
         }

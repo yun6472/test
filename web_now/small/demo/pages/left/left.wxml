@@ -1,0 +1,11 @@
+<!--pages/left/left.wxml-->
+<view class='section'>
+  <scroll-view scroll-x class='scrollX-bar' scroll-into-view="{{toView}}" scroll-with-animation>
+    <block wx:for="{{sorllView}}">
+      <view id='{{item.id}}' class="scroll-item {{currentCls == index ? 'active' :''}}" bindtap='selectScroll'>{{item.text}}</view>
+    </block>
+  </scroll-view>
+  <view class='page1'>
+    
+  </view>
+</view>

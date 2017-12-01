@@ -1,0 +1,16 @@
+/* pages/left/left.wxss */
+.scrollX-bar{
+  width: 100%;
+  display: flex;
+  white-space: nowrap;
+  border-top:1px solid #cb2164;
+}
+.scrollX-bar .scroll-item{
+  display: inline-block;
+  padding: 20rpx;
+  border-bottom: 6rpx solid #fff;
+}
+.scrollX-bar .scroll-item.active{
+  color:#cb2164;
+  border-bottom: 6rpx solid #cb2164;
+}
