@@ -21,6 +21,7 @@ page{background: #efeff4;}
 .p-r{position:relative}
 .fl{float: left;}
 .fr{float: right;}
+.oh{overflow: hidden}
 .tb-lr-center{display: -webkit-box; display: -ms-flexbox;  display: -webkit-flex; display: flex !important;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -179,8 +180,8 @@ margin-left:6rpx; TEXT-DECORATION: line-through;}
 .coupons-ul .coupons-li .coupons-box .left .sup{color:#74d2d4;font-size:26rpx;position: absolute;left:24rpx;top:30rpx;}
 .coupons-ul .coupons-li .coupons-box .right{padding:8rpx 0 0 8rpx }
 .coupons-ul .coupons-li .coupons-box .right .s_name{display: block;color:#74d2d4}
-.coupons-ul .coupons-li.left .semi-circle{position:absolute;right:-3rpx;top:0;z-index:4999}
-.coupons-ul .coupons-li.left .semi-circle image{width:6rpx; height:154rpx}
+.coupons-ul .coupons-li.left .semi-circle{position:absolute;right:-3rpx;top:0;bottom:5rpx;z-index:4999}
+.coupons-ul .coupons-li.left .semi-circle image{width:6rpx; height:100%}
 .coupons-ul .coupons-li.left .print-img{position: absolute;right:10rpx;bottom:10rpx;}
 .coupons-ul .coupons-li.left .print-img image{width:90rpx;height:90rpx;}
 /*弹框 */
@@ -515,7 +516,6 @@ justify-content:space-between;}
 #adduser{background: #f5f5f5;}
 .section__title{float: left; width:30%;}
 .form-group{float: right; width: 70%;}
-.section{clear: both; width:90%; margin: 2rem auto;}
 .input-text{border: 1px solid #ddd;}
 .button{border: 1px solid #1aad19; border-radius: 2px;}
 .picker{padding: 13px; background-color: #FFFFFF;}

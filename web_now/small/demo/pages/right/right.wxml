@@ -10,10 +10,15 @@
     <view class="tab-item {{currentTab==7?'active':''}}" data-current="7" bindtap="swichNav">其他</view>
   </scroll-view>
   <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
-    <swiper-item wx:for="{{[0,1,2,3,4,5,6,7]}}">
+    <swiper-item wx:for="{{[0,1,2,3,4,5,6,7]}}"  wx:key="*this">
       <scroll-view scroll-y="true" class="scoll-h">
         <block wx:for="{{[1,2,3,4,5,6,7,8]}}" wx:key="*this">
           <view class="item-ans">
+          <swiper duration="300" autoplay="true" style="width:200px;height:20px;">
+            <swiper-item>1111</swiper-item> 
+            <swiper-item>1111</swiper-item> 
+            <swiper-item>1111</swiper-item> 
+          </swiper>
             <navigator url="/pages/askExpert/expertDetail" class="askBtn">问TA</navigator>
           </view>
         </block>

@@ -90,7 +90,9 @@ Page({
       },
 
       success: function (res) {
+
         WxParse.wxParse('goods_desc', 'html', res.data.data.goods_info.goods_desc.replace(/\/images/g, "\/images"), that, 5);
+
         that.setData({
           goodsImg: res.data.data.goods_img,
           goods: res.data.data.goods_info,
@@ -180,11 +182,32 @@ Page({
         var result = res.data.data;
         if (res.data.code == 0) {
           if (goodsbtn == 'cart') {
-          } else {
-            wx.redirectTo({
-              url: '../flow/checkout'
+            that.setData({
+              flowNum: res.data.data.total_number
+            })
+          }
+           else {
+            wx.request({
+              url: app.apiUrl('user/address/list'),
+              method: 'POST',
+              header: {
+                'Content-Type': 'application/json',
+                'X-ECTouch-Authorization': token
+              },
+              success: function (res) {
+                if (res.data.data != '') {
+                  wx.navigateTo({
+                    url: "../flow/checkout"
+                  });
+                } else {
+                  wx.navigateTo({
+                    url: "../address/index"
+                  });
 
-            });
+                }
+
+              }
+            })
           }
         } else {
           if (result == "商品已下架") {
@@ -195,9 +218,7 @@ Page({
             })
           }
         }
-        that.setData({
-          flowNum: res.data.data.total_number
-        })
+
       }
     })
 
