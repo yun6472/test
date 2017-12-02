@@ -20,7 +20,7 @@ Page({
     this.checkCor();
   },
   // 点击标题切换当前页时改变样式
-  swichNav: function (e) {
+  switchNav: function (e) {
     var cur = e.target.dataset.current;
     if (this.data.currentTaB == cur){ 
       return false; 

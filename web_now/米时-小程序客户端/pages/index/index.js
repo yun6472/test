@@ -20,10 +20,42 @@ Page({
       classifyUrl: "../../images/fenlei.png",
       name: "搜索商品",
     },
-    hasLocation: false
+    hasLocation: false,
+    currentTab:0,
+    toView:"index",
+    sorllView: [
+      { id: "index", text: "首页" },
+      { id: "books", text: "图书音像" },
+      { id: "phone", text: "手机数码" },
+      { id: "computer", text: "电脑办公" },
+      { id: "detail3", text: "详情3" },
+      { id: "detail4", text: "详情4" },
+      { id: "detail5", text: "详情5" },
+      { id: "detail6", text: "详情6" },
+      { id: "detail7", text: "详情7" },
+      { id: "detail8", text: "详情8" },
+      { id: "detail9", text: "详情9" },
+      { id: "detail10", text: "详情10" },
+      { id: "detail11", text: "详情11" },
+      { id: "detail12", text: "详情12" }
+    ],
+    winHeight: ""  //窗口高度
   },
   onLoad: function () {
-    var that = this
+    var that = this;
+    //获取窗口高度
+    wx.getSystemInfo({
+      success: function (res) {
+        var clientHeight = res.windowHeight,
+          clientWidth = res.windowWidth,
+          rpxR = 750 / clientWidth;
+        var calc = clientHeight * rpxR - 100;
+        that.setData({
+          winHeight: calc
+        });
+      }
+    });
+    
     //推荐商品列表
     var token = wx.getStorageSync('token')
     wx.request({
@@ -49,6 +81,33 @@ Page({
         hidden: true
       })
     }, 1000)
+  },
+
+  //点击顶部导航栏
+  selectScroll:function(e){
+    var cur = e.target.dataset.current;
+    if (this.data.currentTab == cur) {
+      return false;
+    } else {
+      for (var i = 0; i < this.data.sorllView.length; i++) {
+        if (e.currentTarget.id === this.data.sorllView[i].id) {
+          this.setData({
+            currentTab: cur,
+            toView: e.currentTarget.id
+          })
+        }
+      }
+    }
+  },
+
+  //滑动切换页面
+  switchTab:function(e){
+    var view = this.data.sorllView[e.detail.current].id;
+    this.setData({
+      currentTab: e.detail.current,
+      toView: view
+    });
+
   },
 
   //获取点击的id值

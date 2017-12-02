@@ -3,3 +3,99 @@
 .swiper-box .wx-swiper-dot{width:13rpx; display: inline-flex; height: 13rpx; margin-left: 10rpx; justify-content:space-between;}
 .swiper-box .wx-swiper-dot::before{content: ''; flex-grow: 1; background: #fff; border-radius: 13rpx}
 .swiper-box .wx-swiper-dot-active::before{background:#ff495e;}
+
+
+
+/*顶部导航轮播*/
+.scrollX-bar{
+  width: 100%;
+  display: flex;
+  white-space: nowrap;
+  height: 100rpx;
+  font-size: 28rpx;
+}
+.scrollX-bar .scroll-item{
+  display: inline-block;
+  padding:0 20rpx;
+  line-height: 92rpx;
+  border-bottom: 8rpx solid transparent;
+}
+.scrollX-bar .scroll-item.active{
+  color:rgb(240, 30, 128);
+  border-bottom: 8rpx solid rgb(240, 30, 128);
+}
+
+
+/*广告*/
+.ad-wrapper{
+  position: relative;
+  margin-top:20rpx;
+  background: #fff;
+}
+.ad-image{
+  width: 100%;
+}
+.ad-count{
+  color:rgb(240, 30, 128);
+  font-size: 32rpx;
+  padding:10rpx 10rpx;
+  display: block;
+}
+.ad-title{
+  font-size: 32rpx;
+  padding:0 0 4rpx 10rpx;
+  display: block;
+  width:60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ad-txt{
+  font-size: 24rpx;
+  color:#999;
+  display: block;
+  padding:0 0 20rpx 10rpx;
+}
+.ad-btn{
+  display: block;
+  position: absolute;
+  right: 10rpx;
+  bottom: 20rpx;
+  background-color: rgb(240, 30, 128);
+  color:#fff;
+  font-size:24rpx;
+  padding:14rpx 50rpx;
+  border-radius: 6rpx;
+}
+
+
+.index-goods-list .list-box .title{
+  height: 41rpx;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width:calc(48vw - 30rpx);
+}
+.index-goods-list .list-box .description{
+  font-size: 24rpx;
+  color:#999;
+  margin:4rpx 15rpx 0 15rpx;
+  display: block;
+}
+.index-goods-list .list-box .price{
+  display: block;
+  clear: both;
+  position: relative;
+}
+.index-goods-list .list-box .btn{
+  display:block;
+  position:absolute;
+  right:14rpx;
+  bottom:14rpx;
+  background-color:rgb(240, 30, 128);
+  color:#fff;
+  font-size:22rpx;
+  padding:12rpx 50rpx;
+  border-radius:4rpx;
+}
