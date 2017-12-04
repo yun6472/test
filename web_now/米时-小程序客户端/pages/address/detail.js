@@ -132,6 +132,7 @@ Page({
           provinceIndex: index,
           cityList: res.data.data,
           cityIndex: 0,
+          districtList: res.data.data,
           districtIndex: 0
         })
       }
@@ -177,6 +178,9 @@ Page({
     var region_id = 0;
     if (that.data.districts.length > 0) {
       var districtsIndex = parseInt(data.district) - 1
+        if(districtsIndex < 0){
+            districtsIndex = 0
+         }
       region_id = that.data.districts[districtsIndex].region_id;
     }
 

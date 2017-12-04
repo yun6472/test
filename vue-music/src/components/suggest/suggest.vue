@@ -28,12 +28,11 @@
   import Scroll from 'base/scroll/scroll'
   import Loading from 'base/loading/loading'
   import NoResult from 'base/no-result/no-result'
-  import Singer from 'common/js/singer'
   import {search} from 'api/search'
   import {ERR_OK} from 'api/config'
   import {createSong} from 'common/js/song'
   import {mapMutations, mapActions} from 'vuex'
-
+  import Singer from 'common/js/singer'
 
   const TYPE_SINGER = 'singer'
   const perpage = 20
@@ -80,7 +79,6 @@
         this.page++
         search(this.query, this.page, this.showSinger, perpage).then((res) => {
           if (res.code === ERR_OK) {
-
             this.result = this.result.concat(this._genResult(res.data))
             this._checkMore(res.data)
           }

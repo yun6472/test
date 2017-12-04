@@ -1,20 +1,18 @@
 function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+  return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
 export function shuffle(arr) {
-  let _arr = arr.slice();
+  let _arr = arr.slice()
   for (let i = 0; i < _arr.length; i++) {
-    let j = getRandomInt(0, i);
-    let t = _arr[i];
-    _arr[i] = _arr[j];
+    let j = getRandomInt(0, i)
+    let t = _arr[i]
+    _arr[i] = _arr[j]
     _arr[j] = t
   }
   return _arr
 }
 
-
-//延时调用同一个函数，减少同一个函数短时间内的多次请求
 export function debounce(func, delay) {
   let timer
 

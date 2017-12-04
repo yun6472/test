@@ -1,22 +1,26 @@
 import 'babel-polyfill'
-import Vue from 'vue';
-import App from './App';
-import router from './router';
+import Vue from 'vue'
+import App from './App'
+import router from './router'
+import fastclick from 'fastclick'
+import VueLazyload from 'vue-lazyload'
 import store from './store'
-import fastclick from 'fastclick';
-import VueLazyLoad from  'vue-lazyload'
 
-import 'common/stylus/index.styl';
+import 'common/stylus/index.styl'
 
-Vue.use(VueLazyLoad,{
-  loading:require('common/image/default.png')
-});
+/* eslint-disable no-unused-vars */
+// import vConsole from 'vconsole'
 
-fastclick.attach(document.body);
+fastclick.attach(document.body)
 
+Vue.use(VueLazyload, {
+  loading: require('common/image/default.png')
+})
+
+/* eslint-disable no-new */
 new Vue({
-  el: "#app",
+  el: '#app',
   router,
   store,
-  render:h =>h(App)
-});
+  render: h => h(App)
+})

@@ -372,3 +372,50 @@ body {
 	padding-top: 0.5rem;
 	width: 100%;
 }
+
+
+
+/*车型列表*/
+.list-title{
+	font-size: 1rem;
+	font-weight: normal;
+	padding:0.5rem 1rem;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.car-list li{
+	margin-left: 1rem;
+	padding: 1rem 0.5rem 1rem 0;
+	border-bottom: 1px solid #e8e8e8;
+	position: relative;
+}
+.car-list li a{
+	display: block;
+	overflow: hidden;
+}
+.car-list li::after{
+	content: '';
+	display: block;
+	position: absolute;
+	width:0.8rem;
+	height:1.6rem;
+	background: url("../images/arrow01.png") no-repeat;
+	background-size: 100%;
+	right:1rem;
+	top:2.3rem;
+}
+.car-list li .list-img{
+	float: left;
+	width: 5.0rem;
+	margin-right: 1rem;
+}
+
+.car-list li .list-txt1{
+	color: #252525;
+	font-size: 1.0rem;
+}
+
+.car-list li .list-txt2{
+	color:#ff6600;
+	font-size: 0.9rem;
+}

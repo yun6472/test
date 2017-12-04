@@ -1,43 +1,41 @@
 <template>
-    <div class="singer" ref="singer">
-      <list-view @select="selectSinger" :data="singers" ref="list"></list-view>
-      <router-view></router-view>
-    </div>
+  <div class="singer" ref="singer">
+    <list-view @select="selectSinger" :data="singers" ref="list"></list-view>
+    <router-view></router-view>
+  </div>
 </template>
 
-<script type="text/ecmascript-6">
-
+<script>
+  import ListView from 'base/listview/listview'
   import {getSingerList} from 'api/singer'
-  import Singer from 'common/js/singer'
   import {ERR_OK} from 'api/config'
-  import ListView from "base/listView/listView"
+  import Singer from 'common/js/singer'
   import {mapMutations} from 'vuex'
   import {playlistMixin} from 'common/js/mixin'
 
-  const HOT_NAME ="热门";
-  const HOT_SINGER_LENGTH = 10;
+  const HOT_SINGER_LEN = 10
+  const HOT_NAME = '热门'
 
   export default {
-    mixins:[playlistMixin],
-    data(){
-      return{
-        singers:[]
+    mixins: [playlistMixin],
+    data() {
+      return {
+        singers: []
       }
     },
-    created(){
+    created() {
       this._getSingerList()
     },
-    methods:{
+    methods: {
       handlePlaylist(playlist) {
         const bottom = playlist.length > 0 ? '60px' : ''
         this.$refs.singer.style.bottom = bottom
-        this.$refs.list.refresh();
+        this.$refs.list.refresh()
       },
-      selectSinger(singer){
+      selectSinger(singer) {
         this.$router.push({
-          path:`/singer/${singer.id}`
+          path: `/singer/${singer.id}`
         })
-        /*vuex*/
         this.setSinger(singer)
       },
       _getSingerList() {
@@ -47,62 +45,30 @@
           }
         })
       },
-      _normalizeSinger(list){
-        /**
-         * 要进行数据的格式化
-         * 首先创建一个对象map
-         * let map ={
-         * 对象里面需要分hot和其他的首字母
-         * hot则取前面的十条数据
-         * hot：{
-         *    title:"热门",
-         *    items:[]
-         *  }
-         * }
-         * 然后对list进行forEach遍历
-         * list.forEach((item,index) =>{
-         * 把前面10条放到hot里面
-         *  if(index<10){
-         *    map.hot.items.push(数据);
-         *  }
-         *
-         *  判断map里面有没有这个字母如果是第一次出现就创建这个字母
-         *  let key = item.Findex;
-         *
-         *  if(!map[key]){
-         *    map[key]:{
-         *      title:key,
-         *      items:[]
-         *    }
-         *  }
-         *
-         *
-         *  map[key].push(数据)
-         * })
-         * **/
+      _normalizeSinger(list) {
         let map = {
-          hot:{
-            title:HOT_NAME,
-            items:[]
+          hot: {
+            title: HOT_NAME,
+            items: []
           }
-        };
-        list.forEach((item, index) =>{
-          if( 0<index &&index<HOT_SINGER_LENGTH+1){
+        }
+        list.forEach((item, index) => {
+          if (index < HOT_SINGER_LEN) {
             map.hot.items.push(new Singer({
-              id:item.Fsinger_mid,
-              name:item.Fsinger_name
+              name: item.Fsinger_name,
+              id: item.Fsinger_mid
             }))
           }
-          const key = item.Findex;
-          if(!map[key]){
-            map[key] ={
-              title:key,
-              items:[]
+          const key = item.Findex
+          if (!map[key]) {
+            map[key] = {
+              title: key,
+              items: []
             }
           }
           map[key].items.push(new Singer({
-            id:item.Fsinger_mid,
-            name:item.Fsinger_name
+            name: item.Fsinger_name,
+            id: item.Fsinger_mid
           }))
         })
         // 为了得到有序列表，我们需要处理 map
@@ -122,20 +88,20 @@
         return hot.concat(ret)
       },
       ...mapMutations({
-        /*vuex*/
-        setSinger:'SET_SINGER'
+        setSinger: 'SET_SINGER'
       })
     },
-    components:{
+    components: {
       ListView
     }
   }
+
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
+<style scoped lang="stylus" rel="stylesheet/stylus">
   .singer
     position: fixed
     top: 88px
     bottom: 0
-    width:100%
+    width: 100%
 </style>

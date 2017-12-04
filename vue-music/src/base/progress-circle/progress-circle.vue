@@ -14,7 +14,7 @@
     props: {
       radius: {
         type: Number,
-        default: 32
+        default: 100
       },
       percent: {
         type: Number,

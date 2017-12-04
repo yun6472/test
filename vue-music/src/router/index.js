@@ -1,62 +1,105 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Recommend from 'src/components/recommend/recommend';
-import Rank from 'src/components/rank/rank';
-import Search from 'src/components/search/search';
-import Singer from 'src/components/singer/singer';
-import SingerDetail from 'src/components/singer-detail/singer-detail';
-import Disc from 'src/components/disc/disc'
-import topList from 'src/components/top-list/top-list'
-
-
 Vue.use(Router)
+
+const Recommend = (resolve) => {
+  import('components/recommend/recommend').then((module) => {
+    resolve(module)
+  })
+}
+
+const Singer = (resolve) => {
+  import('components/singer/singer').then((module) => {
+    resolve(module)
+  })
+}
+
+const Rank = (resolve) => {
+  import('components/rank/rank').then((module) => {
+    resolve(module)
+  })
+}
+
+const Search = (resolve) => {
+  import('components/search/search').then((module) => {
+    resolve(module)
+  })
+}
+
+const SingerDetail = (resolve) => {
+  import('components/singer-detail/singer-detail').then((module) => {
+    resolve(module)
+  })
+}
+
+const Disc = (resolve) => {
+  import('components/disc/disc').then((module) => {
+    resolve(module)
+  })
+}
+
+const TopList = (resolve) => {
+  import('components/top-list/top-list').then((module) => {
+    resolve(module)
+  })
+}
+
+const UserCenter = (resolve) => {
+  import('components/user-center/user-center').then((module) => {
+    resolve(module)
+  })
+}
 
 export default new Router({
   routes: [
     {
-      path:"/",
-      redirect:'/recommend'
+      path: '/',
+      redirect: '/recommend'
     },
     {
       path: '/recommend',
       component: Recommend,
-      children:[
+      children: [
         {
-          path:':id',
-          component:Disc
+          path: ':id',
+          component: Disc
         }
       ]
     },
     {
       path: '/singer',
       component: Singer,
-      children:[
+      children: [
         {
-          path:':id',
-          component:SingerDetail
+          path: ':id',
+          component: SingerDetail
         }
       ]
     },
     {
       path: '/rank',
       component: Rank,
-      children:[
+      children: [
         {
-          path:':id',
-          component:topList
+          path: ':id',
+          component: TopList
         }
       ]
     },
     {
       path: '/search',
       component: Search,
-      children:[
+      children: [
         {
-          path:':id',
-          component:SingerDetail
+          path: ':id',
+          component: SingerDetail
         }
       ]
+    },
+    {
+      path: '/user',
+      component: UserCenter
     }
   ]
 })
