@@ -1,0 +1,56 @@
+<view>
+  <scroll-view scroll-x="true" class="scrollX-bar" scroll-into-view="{{toView}}" scroll-with-animation="true">
+    <block wx:for="{{sorllView}}" wx:key="sorllView">
+      <view id="{{item.id}}" class="scroll-item {{currentTab==index? 'active' :''}}" bindtap='selectScroll' data-current="{{index}}">{{item.text}}</view>
+    </block>
+  </scroll-view>
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+    <!--第一屏-->
+    <swiper-item >
+      <scroll-view scroll-y="true" bindscroll="scroll"  style="position:absolute; top:0; left:0; right:0; bottom:0;">
+        <view class="container">
+        <!--轮播  -->
+          <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper-box">
+            <block wx:for="{{banner}}" wx:key="banner">
+              <navigator url="{{item.link}}" hover-class="navigator-hover">
+                <swiper-item>
+                  <image src="{{item.pic}}" class="slide-image" />
+                </swiper-item>
+              </navigator>
+            </block>
+          </swiper>
+          <!--tab  -->
+          <view class="tab-cell">
+            <block wx:for="{{tab}}" wx:key="tab">
+              <view class="tab-item">
+                <image src="{{item.url}}"></image>
+                <text class="tab-text">{{item.text}}</text>
+              </view>
+            </block>
+          </view>
+          <!--内容  -->
+          <view class="index-list">
+            <view class="list-title">
+              <text>教授新资讯</text>
+              <block>
+                <view class="list-item">
+                  <image src="../../images/banner.jpg" ></image>
+                  <text class="list-text1">最便宜的豪华车 奥迪A3配置解析</text>
+                  <text class="list-text2">1222人查看 / 叶文</text>
+                </view>
+              </block> 
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+     <!--第二屏-->
+    <swiper-item >
+      <view>2222</view>
+    </swiper-item>
+     <!--第三屏-->
+    <swiper-item >
+      <view>333</view>
+    </swiper-item>
+  </swiper>
+</view>

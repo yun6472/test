@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "车",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": "true"
+  },
+  "tabBar":{
+    "color": "#6e6d6b",
+    "selectedColor": "#ff495e",
+    "backgroundColor": "#f7f7f7",
+    "borderStyle": "white",
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "text":"系统"
+      },
+      {
+        "pagePath":"pages/index/index",
+        "text":"苹果"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "三星"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "oppo"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "联系我们"
+      }
+    ],
+    "position":"bottom"
+  }
+}

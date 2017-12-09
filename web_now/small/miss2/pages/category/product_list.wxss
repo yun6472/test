@@ -1,0 +1,37 @@
+.index-goods-list .list-box .title{
+  height: 41rpx;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width:calc(48vw - 30rpx);
+}
+.index-goods-list .list-box .description{
+  font-size: 24rpx;
+  color:#999;
+  margin:4rpx 15rpx 0 15rpx;
+  display: block;
+}
+.index-goods-list .list-box .price{
+  display: block;
+  clear: both;
+  position: relative;
+}
+.index-goods-list .list-box .btn{
+  display:block;
+  position:absolute;
+  right:14rpx;
+  bottom:14rpx;
+  background-color:#f72a7f;
+  color:#fff;
+  font-size:22rpx;
+  padding:12rpx 50rpx;
+  border-radius:0rpx;
+}
+
+.description{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width:calc(48vw - 30rpx);
+}

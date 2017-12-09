@@ -1,0 +1,59 @@
+.container, input {
+  font-family: PingFang-Medium,PingFangSC-Regular, Heiti,Heiti SC, DroidSans,DroidSansFallback,"Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*顶部导航轮播*/
+
+.scrollX-bar {
+  width: 100%;
+  display: flex;
+  white-space: nowrap;
+  height: 100rpx;
+  font-size: 28rpx;
+}
+
+.scrollX-bar .scroll-item {
+  display: inline-block;
+  padding: 0 20rpx;
+  line-height: 92rpx;
+  border-bottom: 8rpx solid transparent;
+}
+
+.scrollX-bar .scroll-item.active {
+  color: rgb(69, 132, 230);
+  border-bottom: 6rpx solid rgb(69, 132, 230);
+}
+
+
+/*swiper*/
+.swiper-box{
+  width: 100%;
+  height: 365rpx;
+}
+.swiper-box image{
+  width: 100%;
+  height: 365rpx;
+}
+
+/*tab*/
+.tab-cell{
+  display: flex;
+}
+.tab-item{
+  flex:1;
+  text-align: center;
+}
+.tab-item image{
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+  margin:10rpx auto;
+}
+.tab-item .tab-text{
+  text-align: center;
+  font-size:28rpx;
+}
+.list-title{
+ padding :20px;
+}
