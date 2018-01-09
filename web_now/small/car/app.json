@@ -1,41 +1,52 @@
 {
-  "pages":[
-    "pages/index/index"
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "车",
-    "navigationBarTextStyle":"black",
+    "navigationBarTextStyle": "black",
     "enablePullDownRefresh": "true"
   },
-  "tabBar":{
+  "tabBar": {
     "color": "#6e6d6b",
     "selectedColor": "#ff495e",
     "backgroundColor": "#f7f7f7",
     "borderStyle": "white",
-    "list":[
+    "list": [
       {
-        "pagePath":"pages/index/index",
-        "text":"系统"
-      },
-      {
-        "pagePath":"pages/index/index",
-        "text":"苹果"
+        "pagePath": "pages/index/index",
+        "text": "系统",
+        "iconPath":"images/home.png",
+        "selectedIconPath":"images/home-active.png"
       },
       {
         "pagePath": "pages/index/index",
-        "text": "三星"
+        "text": "苹果",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
       },
       {
         "pagePath": "pages/index/index",
-        "text": "oppo"
+        "text": "三星",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
       },
       {
         "pagePath": "pages/index/index",
-        "text": "联系我们"
+        "text": "oppo",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "联系我们",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-active.png"
       }
     ],
-    "position":"bottom"
+    "position": "bottom"
   }
 }

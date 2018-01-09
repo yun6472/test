@@ -95,7 +95,6 @@ Page({
       currentTab: e.detail.current,
       toView: view
     });
-
   },
   scroll: function (e) {
     if (e.detail.scrollTop > 500) {

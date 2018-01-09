@@ -1,0 +1,21 @@
+<view>
+  <video class="myVideo" autoplay="false" controls="false" objectFit="cover" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"></video>
+  <scroll-view scroll-y="true" bindscroll="scroll"  style="position:absolute; top:450rpx; left:0; right:0; bottom:0;">
+    <view  class="top-image">
+      <image src="../../images/banner.jpg"></image>
+    </view>
+    <view class="content">
+      <text class="title">今日新车绝对大饱眼福</text>
+      <text class="describe">原创 | 阅读 208911 | 12-05</text>
+      <text class="text">当大家都在讨论全球最快量产SUV</text>
+      <text class="text">兰博基尼Urus的诞生时</text>
+      <text class="text">考虑到有人买不起</text>
+      <text class="text">当大家都在讨论全球最快量产SUV</text>
+      <text class="text">兰博基尼Urus的诞生时</text>
+      <text class="text">考虑到有人买不起</text>
+      <text class="text">当大家都在讨论全球最快量产SUV</text>
+      <text class="text">兰博基尼Urus的诞生时</text>
+      <text class="text">考虑到有人买不起</text>
+    </view>
+  </scroll-view>
+</view>

@@ -1,11 +1,11 @@
 <template>
-  <div class="film">
+  <div class="film" v-if="moviesList">
 
     <scroll ref="scroll" class="film-wrapper" :data="moviesList">
       <div>
         <h3 class="title">{{title}}</h3>
         <ul>
-          <li v-for="item in moviesList">
+          <li v-for="item in moviesList" @click="filmDetail(item)">
             <img :src="item.images.medium" width="100" height="140" />
             <p class="film-title">{{item.title}}</p>
             <p class="directors">导演：<span v-for="name in item.directors">{{name.name}}</span></p>
@@ -16,33 +16,50 @@
         </ul>
       </div>
     </scroll>
+    <transition name="slide-left">
+      <router-view ></router-view>
+    </transition>
   </div>
 
 </template>
 
 <script type="text/ecmascript-6">
   import Star from 'src/base/star/star'
-  import axios from 'axios'
   import jsonp from 'src/common/js/jsonp'
   import Scroll from 'src/base/scroll/scroll'
+  import {mapMutations} from 'vuex'
+  import {Indicator} from "mint-ui"
+
 
   export default {
     data(){
       return{
         title:"",
-        moviesList :[]
+        moviesList :''
       }
     },
     created(){
-     this.getMovies();
+      this.getMovies();
+
+      if(!this.moviesList){
+        Indicator.open();
+      }
     },
     methods:{
       getMovies(){
         this._getMoviesList().then((res) =>{
           this.title = res.title;
           this.moviesList =  res.subjects;
-          console.log(this.moviesList);
+          Indicator.close();
+        }).catch((item) =>{
+          Indicator.close();
         })
+      },
+      filmDetail(item){
+        this.$router.push({
+          path:`/film/${item.id}`
+        });
+        this.change(item.id);
       },
       _getMoviesList(){
         const url = "https://api.douban.com/v2/movie/in_theaters";
@@ -51,7 +68,10 @@
       },
       rating(ratings){
         return (parseInt(ratings)/2);
-      }
+      },
+      ...mapMutations({
+        change:'changeMovies'
+      })
     },
     computed:{
 
@@ -118,4 +138,18 @@
       }
     }
   }
+
+  .slide-left-enter-active ,.slide-left-leave-active {
+    opacity: 0;
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100% 0);
+    transition: all .5s
+  }
+  .slide-left-enter,.slide-left-leave-to{
+    opacity: 0;
+    -webkit-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+  }
+
+
 </style>

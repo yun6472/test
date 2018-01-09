@@ -4,43 +4,39 @@ import Router from 'vue-router'
 
 Vue.use(Router);
 
+import Film from "components/film/film";
+import Rank from "components/rank/rank";
+import Search from "components/search/search";
+import FilmDetail from "components/film-detail/film-detail";
+import RankItem from "src/components/rank-item/rank-item";
 
-/**/
-const Film = (resolve) =>{
-  import('components/film/film').then((module) =>{
-    resolve(module);
-  })
-};
 
-const Rank = (resolve) =>{
-  import('components/rank/rank').then((module) =>{
-    resolve(module);
-  })
-};
 
-const Search = (resolve) =>{
-  import('components/search/search').then((module) =>{
-    resolve(module);
-  })
-};
 
 export default new Router({
-  routes:[
+  routes: [
     {
-      path:'/',
-      redirect:'/film'
+      path: '/',
+      redirect: '/film'
     },
     {
-      path:'/film',
-      component:Film
+      path: '/film',
+      component: Film,
+      children:[
+
+      ]
+    },
+    { path: '/film/:id', component: FilmDetail},
+    {
+      path: '/rank',
+      component: Rank,
+      children:[
+        { path: ':id', component: RankItem},
+      ]
     },
     {
-      path:'/rank',
-      component:Rank
-    },
-    {
-      path:'/search',
-      component:Search
-    },
+      path: '/search',
+      component: Search
+    }
   ]
 })

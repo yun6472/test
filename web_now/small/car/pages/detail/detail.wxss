@@ -1,0 +1,31 @@
+.myVideo{
+  width:100%;
+  height: 450rpx;
+
+}
+.top-image{
+  width: 100%;
+}
+.top-image image{
+  width: 100%;
+}
+.title{
+  display: block;
+  font-size: 40rpx;
+  font-weight: bold;
+  padding: 20rpx;
+  text-align: center;
+}
+.describe{
+  display: block;
+  font-size:24rpx;
+  text-align: center;
+  color:#ccc;
+  padding:30rpx 0;
+}
+.text{
+  display: block;
+  font-size:28rpx;
+  padding:0 20rpx;
+  line-height: 46rpx;
+}

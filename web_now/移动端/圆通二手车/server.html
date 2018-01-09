@@ -1,0 +1,80 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+		<title>车主服务</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="css/font/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<style type="text/css">
+			.banner{
+				width: 96%;
+				margin:0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="warper">
+			<header class="header2">
+				<div class="header2-container">
+					<div class="header2-top">
+						<img src="images/header.jpg" />
+						<span>圆通二手车</span>
+					</div>
+					<ul class="header2-list">
+						<li>
+							<a href="##">
+								<img src="images/icon12.png">
+								<span>爱车评估</span>
+							</a>
+						</li>
+						<li>
+							<a href="##">
+								<img src="images/icon13.png">
+								<span>车辆违章查询</span>
+							</a>
+						</li>
+						<li>
+							<a href="##">
+								<img src="images/icon14.png">
+								<span>一键挪车</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</header>
+			<div class="line"></div>
+			<div class="server-title">
+				<span class="server-title1">发现优惠</span>
+				<span class="server-title2">购买保险会获得一次刮奖机会</span>
+			</div>
+			<section class="swiper-container banner" >
+				<div class="swiper-wrapper">
+					<div class="swiper-slide "><img src="images/banner03.jpg" /></div>
+					<div class="swiper-slide"><img src="images/banner03.jpg" /></div>
+					<div class="swiper-slide "><img src="images/banner03.jpg" /></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</section>
+
+		</div>
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/foot.js"></script>
+		<script>
+			//设置底部导航栏
+    		setFootbtn(1);
+
+			var mySwiper = new Swiper('.swiper-container',{
+				loop : true,
+				autoplay : 3000,
+				pagination : '.swiper-pagination'
+			})
+		</script>
+	</body>
+</html>

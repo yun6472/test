@@ -32,14 +32,16 @@
           <view class="index-list">
             <view class="list-title">
               <text>教授新资讯</text>
-              <block>
+            </view>
+            <block>
+              <navigator url="../detail/detail" open-type="navigate" >
                 <view class="list-item">
                   <image src="../../images/banner.jpg" ></image>
                   <text class="list-text1">最便宜的豪华车 奥迪A3配置解析</text>
                   <text class="list-text2">1222人查看 / 叶文</text>
                 </view>
-              </block> 
-            </view>
+              </navigator>
+            </block> 
           </view>
         </view>
       </scroll-view>

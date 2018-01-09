@@ -54,6 +54,40 @@
   text-align: center;
   font-size:28rpx;
 }
+
+
+/*内容*/
+.index-list{
+  padding:0 0 0 40rpx;
+}
 .list-title{
- padding :20px;
+ padding :40rpx 0;
+ font-weight: bold;
+ font-size: 28rpx;
+}
+.list-item{
+  overflow: hidden;
+  border-bottom: 1px solid #dedede;
+  padding: 20rpx 0;
+}
+.list-item image{
+  width: 220rpx;
+  height:160rpx;
+  float: left;
+  padding-right: 30rpx;
+}
+.list-item .list-text1{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 30rpx;
+  float: left;
+  width: calc(100% - 250rpx);
+  font-weight: bold;
+}
+.list-item .list-text2{
+  font-size: 24rpx;
+  color:#ccc;
+  position: relative;
+  top: 80rpx;
 }
