@@ -11,7 +11,7 @@
       </li>
     </ul>
     <transition name="slide-left">
-      <router-view ></router-view>
+      <router-view class="child-view"></router-view>
     </transition>
   </div>
 
@@ -65,6 +65,7 @@
       value:function(newVal,val){
         let newVals = this.lTrim(newVal);
         if(newVals === ""){
+          this.searchList = [];
           return;
         }
         this.search(newVals);
@@ -80,6 +81,7 @@
     position: relative;
     .mint-search{
       height:calc(100vh - 100px);
+
     }
     .searchList{
       position: absolute;
@@ -96,5 +98,20 @@
         border-bottom:1px solid #ccc;
       }
     }
+  }
+  .child-view {
+    position: absolute;
+    width:100%;
+    transition: all .8s cubic-bezier(.55,0,.1,1);
+  }
+  .slide-left-enter, .slide-right-leave-active {
+    opacity: 0;
+    -webkit-transform: translate(50px, 0);
+    transform: translate(50px, 0);
+  }
+  .slide-left-leave-active, .slide-right-enter {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 0);
+    transform: translate(-50px, 0);
   }
 </style>

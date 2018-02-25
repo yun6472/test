@@ -31,8 +31,8 @@ body {
 }
 .header .left {
   position: absolute;
-  font-size: 20x;
+  font-size: 20px;
   font-weight: bold;
-  padding: 0px 20px;
+  padding: 0 20px;
 }
 </style>

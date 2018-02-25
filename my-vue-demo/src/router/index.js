@@ -11,8 +11,6 @@ import FilmDetail from "components/film-detail/film-detail";
 import RankItem from "src/components/rank-item/rank-item";
 
 
-
-
 export default new Router({
   routes: [
     {
@@ -23,15 +21,15 @@ export default new Router({
       path: '/film',
       component: Film,
       children:[
-
+        { path: ':id', component: FilmDetail}
       ]
     },
-    { path: '/film/:id', component: FilmDetail},
+
     {
       path: '/rank',
       component: Rank,
       children:[
-        { path: ':id', component: RankItem},
+        { path: ':id', component: RankItem}
       ]
     },
     {
